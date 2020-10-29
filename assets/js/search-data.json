@@ -2,25 +2,25 @@
     "doc": "Home",
     "title": "Releases",
     "content": ". Version: 0.22 UI Updates . ",
-    "url": "https://airelogic-dev.github.io/aireframe-doc/",
+    "url": "https://docs.aireframe.com/",
     "relUrl": "/"
   },"1": {
     "doc": "Home",
     "title": "Home",
     "content": "Latest Version: 0.22 . ",
-    "url": "https://airelogic-dev.github.io/aireframe-doc/",
+    "url": "https://docs.aireframe.com/",
     "relUrl": "/"
   },"2": {
     "doc": 0.22,
     "title": "0.22 Release",
     "content": "This release includes UI Updates to the . ",
-    "url": "https://airelogic-dev.github.io/aireframe-doc/releases/0.22/#022-release",
+    "url": "https://docs.aireframe.com/releases/0.22/#022-release",
     "relUrl": "/releases/0.22/#022-release"
   },"3": {
     "doc": 0.22,
     "title": 0.22,
     "content": " ",
-    "url": "https://airelogic-dev.github.io/aireframe-doc/releases/0.22/",
+    "url": "https://docs.aireframe.com/releases/0.22/",
     "relUrl": "/releases/0.22/"
   }
 }

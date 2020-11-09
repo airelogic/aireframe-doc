@@ -17,7 +17,7 @@ pipelines:
             - bundler --version
             - bundle install
             - JEKYLL_ENV=production bundle exec jekyll build -t  --config _config.yml
-            - bundle exec htmlproofer ./_site --url-ignore "/#.*/,/http://.*/,/https://.*/"
+            # - bundle exec htmlproofer ./_site --url-ignore "/#.*/,/http://.*/,/https://.*/"
             - git clone https://github.com/airelogic-dev/aireframe-doc.git
             - cp -r /opt/atlassian/pipelines/agent/build/_site/* aireframe-doc/
             - cd aireframe-doc

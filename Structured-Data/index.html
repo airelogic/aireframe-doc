@@ -6,19 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>AireFrame Docs | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
+<title>Structured Data Consumer | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="AireFrame Docs" />
+<meta property="og:title" content="Structured Data Consumer" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="https://docs.aireframe.com/" />
-<meta property="og:url" content="https://docs.aireframe.com/" />
+<meta name="description" content="Feature Notes We can now consume structured data from different data sources such as forms4health and FHIR R4 Observations. Data sources can also be added in the codebase to expand the offered range" />
+<meta property="og:description" content="Feature Notes We can now consume structured data from different data sources such as forms4health and FHIR R4 Observations. Data sources can also be added in the codebase to expand the offered range" />
+<link rel="canonical" href="https://docs.aireframe.com/Structured-Data/" />
+<meta property="og:url" content="https://docs.aireframe.com/Structured-Data/" />
 <meta property="og:site_name" content="AireFrame Docs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-10T12:20:49+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="AireFrame Docs" />
+<meta property="twitter:title" content="Structured Data Consumer" />
 <script type="application/ld+json">
-{"headline":"AireFrame Docs","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebSite","url":"https://docs.aireframe.com/","name":"AireFrame Docs","@context":"https://schema.org"}</script>
+{"headline":"Structured Data Consumer","dateModified":"2020-05-10T12:20:49+00:00","datePublished":"2020-05-10T12:20:49+00:00","description":"Feature Notes We can now consume structured data from different data sources such as forms4health and FHIR R4 Observations. Data sources can also be added in the codebase to expand the offered range","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/Structured-Data/"},"@type":"BlogPosting","url":"https://docs.aireframe.com/Structured-Data/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -64,7 +66,7 @@
                     
                     
                     
-                        <li class="uk-active"><a href="/" >Help</a></li>
+                        <li><a href="/" >Help</a></li>
                     
                 
                     
@@ -75,6 +77,25 @@
                 
             </ul>
 
+            
+            <div>
+                <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+                <div class="uk-drop uk-background-default uk-border-rounded" uk-drop="mode: click; pos: left-center; offset: 0">
+                    <form class="uk-search uk-search-navbar uk-width-1-1" onsubmit="return false;">
+                        <input id="navbar-search" class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                    </form>
+                    <ul id="navbar-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+                </div>
+            </div>
+            <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('navbar-search'),
+                resultsContainer: document.getElementById('navbar-search-results'),
+                noResultsText: '<li>No results found</li>',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                json: '/search.json'
+            });
+            </script>
             
 
             
@@ -92,56 +113,66 @@
 
 
     
-        <div class="uk-section section-hero" data-uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
-    <div class="uk-container uk-container-small">
-        
-        <p class="hero-image uk-text-center"><img src="https://docs.aireframe.com/assets/posts/imac.svg" alt="Hero"></p>
-        
-        <h1 class="uk-heading-hero uk-text-center uk-margin-remove-top">What would you like to know?</h1>
-        <p class="subtitle uk-text-lead uk-text-center">Search or browse in depth articles and videos on forms4health including how to create building blocks and assemble them into easy-to-use, dynamic forms.</p>
 
-        
-        <div class="hero-search">
+    <div class="uk-section">
+    <div class="uk-container uk-container-xsmall">
+        <article class="uk-article">
 
-            <!-- Html Elements for Search -->
-            <div class="uk-position-relative">
-                <form class="uk-search uk-search-default uk-width-1-1" name="search-hero" onsubmit="return false;">
-                    <span data-uk-search-icon></span>
-                    <input id="hero-search" class="uk-search-input" type="search" placeholder="Search for answers...">
-                </form>
-                <ul id="hero-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+            <h1 class="uk-article-title">Structured Data Consumer</h1>
+
+            <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
+                
+
+
+
+
+
+<time datetime="2020-05-10T12:20:49+00:00" itemprop="datePublished">
+    
+    May 10, 2020
+</time>
+
             </div>
 
-            <script>
-            SimpleJekyllSearch({
-                searchInput: document.getElementById('hero-search'),
-                resultsContainer: document.getElementById('hero-search-results'),
-                noResultsText: '<li>No results found</li>',
-                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
-                json: '/search.json'
-            });
-            </script>
+            <div class="uk-article-content">
+                <h2 id="feature-notes">Feature Notes</h2>
+<p>We can now consume structured data from different data sources such as forms4health and FHIR R4 Observations. 
+Data sources can also be added in the codebase to expand the offered range</p>
 
+                <div class="share uk-text-center">
+    <a href="https://twitter.com/intent/tweet?text=Structured Data Consumer&url=https://docs.aireframe.com/Structured-Data/&via=airelogic&related=airelogic" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    <a  class="uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdocs.aireframe.com%2FStructured-Data%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+</div>
+
+            </div>
+
+            <hr class="uk-margin-medium">
+
+            <div class="uk-margin-large-top paginate-post">
+    <div class="uk-child-width-expand@s uk-grid-large uk-pagi" data-uk-grid>
+        <div>
+            
         </div>
-        
-
+        <div>
+            
+        </div>
     </div>
 </div>
 
-    
 
-    
+            
+        </article>
 
+        <script>
+            // Table of contents scroll to
+            UIkit.scroll('#markdown-toc a', {
+                duration: 400,
+                offset: 120
+            });
+        </script>
 
-
-
-
-
-
-
-
-
-
+    </div>
+</div>
 
 
     <div id="offcanvas-docs" data-uk-offcanvas="overlay: true">
@@ -286,7 +317,7 @@
                     
                     
                     
-                        <li class="uk-active"><a href="/" >Help</a></li>
+                        <li><a href="/" >Help</a></li>
                     
                 
                     

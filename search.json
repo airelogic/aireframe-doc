@@ -5,7 +5,15 @@
       "category" : "",
       "tags"     : "featured",
       "url"      : "/docs/data-source-config/",
-      "date"     : "2021-01-25 15:42:27 +0000"
+      "date"     : "2021-01-25 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Subject Provider",
+      "category" : "",
+      "tags"     : "featured",
+      "url"      : "/docs/subject-provider/",
+      "date"     : "2021-01-25 00:00:00 +0000"
     } 
   
 ]

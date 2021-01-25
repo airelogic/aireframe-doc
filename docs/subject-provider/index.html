@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Data Source Configuration | AireFrame Docs</title>
+<title>Subject Provider | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Data Source Configuration" />
+<meta property="og:title" content="Subject Provider" />
 <meta name="author" content="Danny Heard" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This page explains how to add data sources in AireFrame. For example you may want to add a FHIR data source so that you can consume subjects or structured data instead of using AireFrame’s internal data store." />
-<meta property="og:description" content="This page explains how to add data sources in AireFrame. For example you may want to add a FHIR data source so that you can consume subjects or structured data instead of using AireFrame’s internal data store." />
-<link rel="canonical" href="https://docs.aireframe.com/docs/data-source-config/" />
-<meta property="og:url" content="https://docs.aireframe.com/docs/data-source-config/" />
+<meta name="description" content="This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source." />
+<meta property="og:description" content="This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source." />
+<link rel="canonical" href="https://docs.aireframe.com/docs/subject-provider/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/subject-provider/" />
 <meta property="og:site_name" content="AireFrame Docs" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-01-25T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Data Source Configuration" />
+<meta property="twitter:title" content="Subject Provider" />
 <script type="application/ld+json">
-{"dateModified":"2021-01-25T00:00:00+00:00","datePublished":"2021-01-25T00:00:00+00:00","description":"This page explains how to add data sources in AireFrame. For example you may want to add a FHIR data source so that you can consume subjects or structured data instead of using AireFrame’s internal data store.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/data-source-config/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"url":"https://docs.aireframe.com/docs/data-source-config/","headline":"Data Source Configuration","@context":"https://schema.org"}</script>
+{"dateModified":"2021-01-25T00:00:00+00:00","datePublished":"2021-01-25T00:00:00+00:00","description":"This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/subject-provider/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"url":"https://docs.aireframe.com/docs/subject-provider/","headline":"Subject Provider","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -133,11 +133,11 @@
         
           
           
-          <li class="uk-active"><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
         
           
           
-          <li class=""><a href="/docs/subject-provider/">Subject Provider</a></li>
+          <li class="uk-active"><a href="/docs/subject-provider/">Subject Provider</a></li>
         
         </ul>
         
@@ -148,9 +148,9 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Data Source Configuration</h1>
+                    <h1 class="uk-article-title">Subject Provider</h1>
 
-                    <p class="subtitle uk-text-lead uk-text-muted">Add and configure the data sources</p>
+                    <p class="subtitle uk-text-lead uk-text-muted">Configure the subject provider to use a custom data source</p>
 
                     <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
                         
@@ -167,40 +167,27 @@
                     </div>
 
                     <div class="article-content">
-                        <p>This page explains how to add data sources in AireFrame. For example you may want to add a FHIR data source so that you can consume subjects or structured data instead of using AireFrame’s internal data store.</p>
+                        <p>This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source.</p>
 
 <p>What you can find on this page:</p>
 
 <ul>
   <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
-  <li><a href="#add-data-source"><strong>Add Data Source</strong></a></li>
-  <li><a href="#edit-data-source"><strong>Edit Data Source</strong></a></li>
+  <li><a href="#configure-subject-provider"><strong>Configure Subject Provider</strong></a></li>
 </ul>
 
 <h4 id="required-permissions"><strong>Required Permissions</strong></h4>
 
 <ul>
-  <li>In order to add a data source you will need the <em>List Data Sources</em> and <em>Create Data Source</em> permissions.</li>
-  <li>In order to edit a source you will need the <em>List Data Sources</em>, <em>Get Data Source</em>, <em>Edit Data Source</em> permissions.</li>
+  <li>In order to configure the subject provider you will need the  <em>View Subject Configuration</em> and <em>Edit Subject Configuration</em> permissions.</li>
 </ul>
 
-<h4 id="add-data-source"><strong>Add Data Source</strong></h4>
+<h4 id="configure-subject-provider"><strong>Configure Subject Provider</strong></h4>
 
 <ol>
-  <li>Go to the data source configuration screen: Configuration -&gt; Data Sources.</li>
-  <li>Click Add Data Source, you will see a screen as follows <img src="/assets/screenshots/data-source/add-data-source.png" alt="add data source" /></li>
-  <li>Select the data source type, currently only FHIR R4 data sources can be configured</li>
-  <li>Enter a name for the data source</li>
-  <li>Enter the data source specific configuration values. Required values are indicated with an (*). <img src="/assets/screenshots/data-source/config-options.png" alt="configuration values" /></li>
-  <li>Click save</li>
-</ol>
-
-<h4 id="edit-data-source"><strong>Edit Data Source</strong></h4>
-
-<ol>
-  <li>Go to the data source configuration screen: Configuration -&gt; Data Sources.</li>
-  <li>Click the data source you wish to edit</li>
-  <li>Enter the values you wish to change. For security reasons, secret values must be re-entered on every edit</li>
+  <li>Go to the subject configuration screen: Configuration -&gt; Subject Configuration.</li>
+  <li>Choose the data source you wish to serve your subjects from the drop down list <img src="/assets/screenshots/subject-provider/subject-provider.png" alt="choose subject provider" /></li>
+  <li>Unless you are using the internal data store you will need to provide mappings for each of the custom fields so that the data source can provide the correct data for the subjects - In the case of the FHIR provider these are FHIR Paths.</li>
   <li>Click save</li>
 </ol>
 
@@ -224,18 +211,18 @@
     
 
     
-
-    
-
-    
-    
-
-    
-
-    
-        <li><a href="/docs/subject-provider/">Subject Provider</a></li>
+        <li><a href="/docs/data-source-config/">Data Source Configuration</a></li>
         
         
+    
+
+    
+
+    
+    
+
+    
+
     
 
     
@@ -279,11 +266,11 @@
         
           
           
-          <li class="uk-active"><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
         
           
           
-          <li class=""><a href="/docs/subject-provider/">Subject Provider</a></li>
+          <li class="uk-active"><a href="/docs/subject-provider/">Subject Provider</a></li>
         
         </ul>
         

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Visualisation Designer | AireFrame Docs</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Visualisation Designer" />
+<meta name="author" content="Danny Heard" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This page explains how to create custom visualisations in aireframe. For example you may want to consume data from a Forms4Health form or observations from a FHIR data source." />
+<meta property="og:description" content="This page explains how to create custom visualisations in aireframe. For example you may want to consume data from a Forms4Health form or observations from a FHIR data source." />
+<link rel="canonical" href="https://docs.aireframe.com/docs/visualisation-designer/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/visualisation-designer/" />
+<meta property="og:site_name" content="AireFrame Docs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-29T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Visualisation Designer" />
+<script type="application/ld+json">
+{"dateModified":"2021-01-29T00:00:00+00:00","datePublished":"2021-01-29T00:00:00+00:00","description":"This page explains how to create custom visualisations in aireframe. For example you may want to consume data from a Forms4Health form or observations from a FHIR data source.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/visualisation-designer/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"url":"https://docs.aireframe.com/docs/visualisation-designer/","headline":"Visualisation Designer","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" >
+  <script src="/assets/js/main.js"></script>
+  
+</head>
+
+    <body>
+    <!-- 
+<nav class="siblings dark">
+	
+	<div class="nav-bar wrapper wrapper-large">
+		
+			<a  href="https://forms4health.com">Home</a>
+		
+			<a  href="https://docs.forms4health.com">Learn</a>
+		
+			<a  href="https://demo.forms4health.com">Demo</a>
+		
+		<span class="no-active-replacement"></span>
+	</div>
+</nav> -->
+    <header class="uk-background-secondary">
+    <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky" class="uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1904px;">
+        <nav class="uk-navbar-container">
+            <div class="uk-container">
+    <div data-uk-navbar>
+        <div class="uk-navbar-left">
+            <a class="uk-navbar-item uk-logo uk-visible@m" href="/">AireFrame Docs</a>
+            
+              <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Mini-nav</span></a>
+            
+
+        </div>
+        <div class="uk-navbar-center uk-hidden@m">
+            <a class="uk-navbar-item uk-logo" href="/">AireFrame Docs</a>
+        </div>
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@m">
+                
+                    
+                    
+                    
+                        <li><a href="/docs/" >Docs</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/news/" >News</a></li>
+                    
+                
+                    
+                    
+                    
+                        <li><a href="/changelog/" >Changelog</a></li>
+                    
+                
+            </ul>
+
+            
+            <div>
+                <a class="uk-navbar-toggle" uk-search-icon href="#"></a>
+                <div class="uk-drop uk-background-default uk-border-rounded" uk-drop="mode: click; pos: left-center; offset: 0">
+                    <form class="uk-search uk-search-navbar uk-width-1-1" onsubmit="return false;">
+                        <input id="navbar-search" class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                    </form>
+                    <ul id="navbar-search-results" class="uk-position-absolute uk-width-1-1 uk-list"></ul>
+                </div>
+            </div>
+            <script>
+            SimpleJekyllSearch({
+                searchInput: document.getElementById('navbar-search'),
+                resultsContainer: document.getElementById('navbar-search-results'),
+                noResultsText: '<li>No results found</li>',
+                searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+                json: '/search.json'
+            });
+            </script>
+            
+
+            
+              <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span data-uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span></a>
+            
+
+
+        </div>
+    </div>
+</div>
+
+        </nav>
+    </div>
+</header>
+
+
+    
+
+    <div class="uk-section">
+    <div class="uk-container">
+        <div class="uk-grid-large" data-uk-grid>
+
+            <div class="sidebar-fixed-width uk-visible@m">
+    <div class="sidebar-docs uk-position-fixed">
+        
+        <h5>Data Providers</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/subject-provider/">Subject Provider</a></li>
+        
+        </ul>
+        
+        <h5>Visualisations</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class="uk-active"><a href="/docs/visualisation-designer/">Visualisation Designer</a></li>
+        
+        </ul>
+        
+    </div>
+</div>
+
+            <div class="uk-width-1-1 uk-width-expand@m">
+
+                <article class="uk-article">
+
+                    <h1 class="uk-article-title">Visualisation Designer</h1>
+
+                    <p class="subtitle uk-text-lead uk-text-muted">Create custom visualisations</p>
+
+                    <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
+                        
+
+
+
+
+
+<time datetime="2021-01-29T00:00:00+00:00" itemprop="datePublished">
+    
+    Jan 29, 2021
+</time>
+
+                    </div>
+
+                    <div class="article-content">
+                        <p>This page explains how to create custom visualisations in aireframe. For example you may want to consume data from a Forms4Health form or observations from a FHIR data source.</p>
+
+<p>What you can find on this page:</p>
+
+<ul>
+  <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
+  <li><a href="#create-visualisation"><strong>Create Visualisation</strong></a></li>
+  <li><a href="#enablingdisabling-visualisations"><strong>Enabling/Disabling Visualisations</strong></a></li>
+</ul>
+
+<h2 id="required-permissions"><strong>Required Permissions</strong></h2>
+
+<ul>
+  <li>In order to create visualisations you will the following permissions:
+    <ul>
+      <li><strong>Create Visualisation</strong></li>
+      <li><strong>List Data Sources</strong></li>
+      <li><strong>View Data Source</strong></li>
+    </ul>
+  </li>
+  <li>In order to enable visualisations you will need the following permissions:
+    <ul>
+      <li><strong>Edit Visualisation</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="create-visualisation"><strong>Create Visualisation</strong></h3>
+
+<ol>
+  <li>Go to the subject configuration screen: Configuration -&gt; Visualisation.</li>
+  <li>Click add new. You will see the following screen <img src="/assets/screenshots/visualisation-designer/designer.png" alt="visualisation designer" /></li>
+  <li>Enter a title for your visualisation.</li>
+</ol>
+
+<p>The following sections desrible each of the designer sections in detail.</p>
+
+<ul>
+  <li><a href="#data-source"><strong>Data Source</strong></a></li>
+  <li><a href="#display-type"><strong>Display Type</strong></a></li>
+  <li><a href="#dimensions"><strong>Dimensions</strong></a></li>
+  <li><a href="#default-ordering"><strong>Default Ordering</strong></a></li>
+  <li><a href="#time-frame"><strong>Time Frame</strong></a></li>
+  <li><a href="#max-results-per-subject"><strong>Max Results Per Subject</strong></a></li>
+</ul>
+
+<h4 id="data-source">Data Source</h4>
+
+<p>Select the data source that you wish to consume the data for your visualisation from. <em>See the guide on how to configure data sources <a href="/docs/data-source-config/">here</a></em>.</p>
+
+<p>If you have chosen a non-internal data source, you will need to provide a relevant JSON extract definition for that data source <em>(You will not be able to progress through the designer unless you have provided the extract definition)</em>:</p>
+
+<h5 id="forms4health-example"><strong>Forms4Health Example</strong></h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+   "key": "news2",
+   "type": "building-block",
+   "version": 1,
+   "dataPoints": [
+          {
+            "id": "2248312f-fb43-4443-be2c-1da975e2c645",
+            "controlId": "NEWSScore"
+          }
+        ]
+}
+</code></pre></div></div>
+<h5 id="fhir-r4-example"><strong>FHIR R4 Example</strong></h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "resourceType": "Observation",
+  "searchParameters": [
+    "code-value-concept=http://snomed.info/sct|364075005"
+  ],
+  "dimensions": [
+      {
+          "key": "date",
+          "fhirPath": "Observation.effective"
+      },
+      {
+          "key": "heartRate",
+          "fhirPath": "Observation.value.value"
+      }
+  ]
+}
+</code></pre></div></div>
+<p>Where:</p>
+<ul>
+  <li>The resource type is what you want to query from the FHIR server - it must be searchable by patient identifier</li>
+  <li>Search parameters are used to filter the resource type, in the example this is for the snomed code for heart rate observations. You can use as many as you like and use normal FHIR conventions (and/or) etc.</li>
+  <li>The dimensions are used to populate the widget with the fetched data, the keys are the data points that you want to show, they are resolved using FHIRPath, so any FHIRPath query is valid here. You can use FHIRPath to combine multiple expressions incase one or more do not resolve in the fetched data. The value returned for each data point will be the first FHIRPath expression that finds a value.</li>
+</ul>
+
+<h4 id="display-type">Display Type</h4>
+
+<p>Chose whether you want the visualisation to be a chart or a table.</p>
+
+<p>If you have chosen a chart type you will get extra options:</p>
+<ul>
+  <li><strong>Display Legend</strong> - Whether or not you want to show a legend for the dimensions on the chart <em>(default: false)</em></li>
+  <li><strong>Display Cartesian Grid</strong> - Whether or not you want to display the cartesian grid on the chart <em>(default: false)</em></li>
+  <li><strong>References</strong> - A list of references to render onto the chart <em>(default: none)</em></li>
+</ul>
+
+<h4 id="dimensions">Dimensions</h4>
+
+<p>This is the list of data points that you want to display on your visualisation. You must chose at least one dimension to display. <em>(Note these are calculated dynamically from the data source and extract definition)</em></p>
+
+<p>Options:</p>
+<ul>
+  <li><strong>Formatter</strong> - An optional formatter for the data. Available options are the CUI date time functions. <em>(default: none)</em></li>
+  <li><strong>Visualisation Type</strong> <em>(Charts Only)</em> - How to display the data on the chart. Available options are Chart/Bar/X-Axis. <em>Note - one option only must be chosen as the X-Axis in order for the visualisation to render, the other options are rendered on the y-axis.</em></li>
+  <li><strong>Colour</strong> <em>(Charts Only)</em> - What color to render the data on the chart <em>Note - this is only available for y-axis dimensions, By default the colours are chosen according from a system colour pallete</em></li>
+</ul>
+
+<h4 id="default-ordering">Default Ordering</h4>
+
+<p>You must choose a dimension and direction to order the data by default. This can be overriden by the viewer on table visualisations.
+<img src="/assets/screenshots/visualisation-designer/ordering-selector.png" alt="ordering selector" /></p>
+
+<h4 id="time-frame">Time Frame</h4>
+
+<p>You can choose a custom time frame to limit the data displayed. This consists of a period and a quantity. e.g. If a period of Rolling Hour and a quantity of 3 were chosen it would show data from the 3 hours leading up to the current time. <em>Rolling takes into account the current phase, absolute rounds down (e.g. if absolute day was the period and it was midday, it would get data up to midnight of the current day)</em>.</p>
+
+<p><em>By default there is no time frame.</em></p>
+
+<p>Viewers can override the timeframe by specificying a date-time window when viewing the visualisations (table or chart). <img src="/assets/screenshots/visualisation-designer/timeframe-picker.png" alt="time frame picker" /></p>
+
+<h4 id="max-results-per-subject">Max Results Per Subject</h4>
+
+<p>You can choose to specify the max number of results that should be returned for each subject. This might be useful for showing the latest record for a subject, or viewing data for a cohort.</p>
+
+<p><em>By default there is no limit as to the max number of results per subject.</em></p>
+
+<h3 id="enablingdisabling-visualisations"><strong>Enabling/Disabling Visualisations</strong></h3>
+
+<p>Once you create a visualisation you will need to enable it for the view that you wish to use it on.</p>
+
+<p>There are three views in AireFrame:</p>
+<ul>
+  <li><strong>Subject View</strong> - This is where you see the visualisation on the subject page with data only for that subject</li>
+  <li><strong>Structural Entity View</strong> - This is where you see the visualisation on the structural entity overview page with data for all subjects located within that structural entity. <em>Note that this is recursive - it shows data for subjects that are located in child structural entites and so on</em></li>
+  <li><strong>Multi Subject View</strong> - This is where you see the data shown on the subject list alongside their id and name. <em>On this view the visualisation is slightly altered to retrieve only the first data point for that subject (according to the default ordering)</em></li>
+</ul>
+
+<ol>
+  <li>Go to the subject configuration screen: Configuration -&gt; Visualisation.</li>
+  <li>Enable/Disable the relevant view(s) for the relevant visualisation(s).</li>
+</ol>
+
+<p><img src="/assets/screenshots/visualisation-designer/view-selector.png" alt="Visualisation View Configurer" /></p>
+
+                    </div>
+
+                    <hr class="uk-margin-medium">
+
+                    <div class="uk-margin-large-top">
+    <h3>Related Articles</h3>
+
+    
+    
+    
+
+    <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+        
+        
+    
+
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/docs/subject-provider/">Subject Provider</a></li>
+        
+        
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+    </ul>
+</div>
+
+                </article>
+
+                <div>
+                    <div class="uk-section uk-text-center uk-link-muted">
+    <div class="uk-margin-medium uk-text-small">
+        <div></div>
+        <div></div> 
+    </div> 
+</div>
+
+                </div>
+
+                <script>
+                    // Table of contents scroll to
+                    UIkit.scroll('#markdown-toc a', {
+                        duration: 400,
+                        offset: 120
+                    });
+                </script>
+
+            </div>
+
+    </div>
+</div>
+
+
+    <div id="offcanvas-docs" data-uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        
+        <h5 class="uk-margin-top">Data Providers</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/subject-provider/">Subject Provider</a></li>
+        
+        </ul>
+        
+        <h5 class="uk-margin-top">Visualisations</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class="uk-active"><a href="/docs/visualisation-designer/">Visualisation Designer</a></li>
+        
+        </ul>
+        
+
+    </div>
+</div>
+
+
+    <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close" type="button" data-uk-close></button>
+
+        <ul class="uk-nav uk-nav-default">
+            <li><a class="uk-logo uk-margin-small-bottom" href="/">AireFrame Docs</a></li>
+            
+                
+            <li><a href="https://docs.aireframe.com/docs/" >Docs</a></li>
+            
+                
+            <li><a href="https://docs.aireframe.com/news/" >News</a></li>
+            
+                
+            <li><a href="https://docs.aireframe.com/changelog/" >Changelog</a></li>
+            
+        </ul>
+
+        <div class="uk-margin-small-top uk-text-center uk-text-muted uk-link-muted">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    
+
+    </body>
+
+</html>

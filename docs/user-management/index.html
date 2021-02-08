@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Subject Provider | AireFrame Docs</title>
+<title>User Mangagment | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Subject Provider" />
+<meta property="og:title" content="User Mangagment" />
 <meta name="author" content="Danny Heard" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source." />
-<meta property="og:description" content="This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source." />
-<link rel="canonical" href="https://docs.aireframe.com/docs/subject-provider/" />
-<meta property="og:url" content="https://docs.aireframe.com/docs/subject-provider/" />
+<meta name="description" content="This page explains how to manage users in AireFrame (AirePolicy). For example you may want to invite a new user to your tenant, or remvoe an existing user." />
+<meta property="og:description" content="This page explains how to manage users in AireFrame (AirePolicy). For example you may want to invite a new user to your tenant, or remvoe an existing user." />
+<link rel="canonical" href="https://docs.aireframe.com/docs/user-management/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/user-management/" />
 <meta property="og:site_name" content="AireFrame Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-01-25T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-02-08T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Subject Provider" />
+<meta property="twitter:title" content="User Mangagment" />
 <script type="application/ld+json">
-{"dateModified":"2021-01-25T00:00:00+00:00","datePublished":"2021-01-25T00:00:00+00:00","description":"This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/subject-provider/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"url":"https://docs.aireframe.com/docs/subject-provider/","headline":"Subject Provider","@context":"https://schema.org"}</script>
+{"dateModified":"2021-02-08T00:00:00+00:00","datePublished":"2021-02-08T00:00:00+00:00","description":"This page explains how to manage users in AireFrame (AirePolicy). For example you may want to invite a new user to your tenant, or remvoe an existing user.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/user-management/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"url":"https://docs.aireframe.com/docs/user-management/","headline":"User Mangagment","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -137,7 +137,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/subject-provider/">Subject Provider</a></li>
+          <li class=""><a href="/docs/subject-provider/">Subject Provider</a></li>
         
         </ul>
         
@@ -155,7 +155,7 @@
         
           
           
-          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
+          <li class="uk-active"><a href="/docs/user-management/">User Mangagment</a></li>
         
         </ul>
         
@@ -166,9 +166,9 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Subject Provider</h1>
+                    <h1 class="uk-article-title">User Mangagment</h1>
 
-                    <p class="subtitle uk-text-lead uk-text-muted">Configure the subject provider to use a custom data source</p>
+                    <p class="subtitle uk-text-lead uk-text-muted">Manage users who have access to your tenant</p>
 
                     <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
                         
@@ -177,43 +177,76 @@
 
 
 
-<time datetime="2021-01-25T00:00:00+00:00" itemprop="datePublished">
+<time datetime="2021-02-08T00:00:00+00:00" itemprop="datePublished">
     
-    Jan 25, 2021
+    Feb 8, 2021
 </time>
 
                     </div>
 
                     <div class="article-content">
-                        <p>This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source.</p>
+                        <p>This page explains how to manage users in AireFrame (AirePolicy). For example you may want to invite a new user to your tenant, or remvoe an existing user.</p>
 
 <p>What you can find on this page:</p>
 
 <ul>
   <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
-  <li><a href="#configure-subject-provider"><strong>Configure Subject Provider</strong></a></li>
+  <li><a href="#add-tenant-user"><strong>Add Tenant User</strong></a></li>
+  <li><a href="#remove-tenant-user"><strong>Remove Tenant User</strong></a></li>
 </ul>
 
 <h4 id="required-permissions"><strong>Required Permissions</strong></h4>
 
 <ul>
-  <li>In order to configure the subject provider you will need the following permissions:
+  <li>In order to add a user you will need the following (AirePolicy) permissions:
     <ul>
-      <li><strong>View Subject Configuration</strong></li>
-      <li><strong>Edit Subject Configuration</strong></li>
-      <li><strong>List Data Sources</strong></li>
-      <li><strong>Get Data Source</strong></li>
+      <li><strong>Add Tenant User</strong></li>
+    </ul>
+  </li>
+  <li>In order to remove a user you will need the following (AirePolicy) permissions:
+    <ul>
+      <li><strong>List Tenant Users</strong></li>
+      <li><strong>Remove Tenant User</strong></li>
     </ul>
   </li>
 </ul>
 
-<h4 id="configure-subject-provider"><strong>Configure Subject Provider</strong></h4>
+<h4 id="add-tenant-user"><strong>Add Tenant User</strong></h4>
 
 <ol>
-  <li>Go to the subject configuration screen: Configuration -&gt; Subject Configuration.</li>
-  <li>Choose the data source you wish to serve your subjects from the drop down list <img src="/assets/screenshots/subject-provider/subject-provider.png" alt="choose subject provider" /></li>
-  <li>Unless you are using the internal data store you will need to provide mappings for each of the custom fields so that the data source can provide the correct data for the subjects - In the case of the FHIR provider these are FHIR Paths.</li>
-  <li>Click save</li>
+  <li>Go to <a href="https://dev.policy.airelogic.com/swagger" target="_blank">Aire Policy</a></li>
+  <li>Click Authorize, select all the scopes and click Authorize</li>
+  <li>Login and if applicable, select the tenant that you wish to manage</li>
+  <li>Go to the add user endpoint (POST /api/v1.0/tenants/{tenantKey}/users)</li>
+  <li>Enter the tenant key of the tenant you wish to manage (this must match the tenant you selected earlier) and in the body enter the email of the user you wish to add</li>
+  <li>Click Execute</li>
+</ol>
+
+<p>If this endpoint responds with a message saying you must invite this user then:</p>
+<ol>
+  <li>Go to the invite user endpoint (POST /api/v1.0/tenants/{tenantKey}/users/invite)</li>
+  <li>Enter the tenant key of the tenant you wish to manage (this must match the tenant you selected earlier) and in the body enter the email of the user you wish to add</li>
+  <li>Click Execute</li>
+  <li>Once the user signs up, they will be added to your tenant</li>
+</ol>
+
+<h4 id="remove-tenant-user"><strong>Remove Tenant User</strong></h4>
+
+<ol>
+  <li>Go to <a href="https://dev.policy.airelogic.com/swagger" target="_blank">Aire Policy</a></li>
+  <li>Click Authorize, select all the scopes and click Authorize</li>
+  <li>Login and if applicable, select the tenant that you wish to manage</li>
+  <li>Go to the remove user endpoint (DELETE /api/v1.0/tenants/{tenantKey}/users)</li>
+  <li>Enter the tenant key of the tenant you wish to manage (this must match the tenant you selected earlier) and the user id of the user you wish to delete (see below)</li>
+  <li>Click Execute</li>
+</ol>
+
+<p>To get the user id of the user you wish to delete</p>
+<ol>
+  <li>Go to the gets users endpoint (GET /api/v1.0/tenants/{tenantKey}/users)</li>
+  <li>Enter the tenant key of the tenant you wish to manage (this must match the tenant you selected earlier)</li>
+  <li>Click Execute</li>
+  <li>Find the user you wish to remove and copy the id value</li>
 </ol>
 
                     </div>
@@ -249,6 +282,10 @@
     
 
     
+        <li><a href="/docs/subject-provider/">Subject Provider</a></li>
+        
+        
+    
 
     
 
@@ -270,10 +307,6 @@
 
     
 
-    
-        <li><a href="/docs/user-management/">User Mangagment</a></li>
-        
-        
     
 
     
@@ -321,7 +354,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/subject-provider/">Subject Provider</a></li>
+          <li class=""><a href="/docs/subject-provider/">Subject Provider</a></li>
         
         </ul>
         
@@ -339,7 +372,7 @@
         
           
           
-          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
+          <li class="uk-active"><a href="/docs/user-management/">User Mangagment</a></li>
         
         </ul>
         

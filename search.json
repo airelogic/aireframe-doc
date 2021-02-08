@@ -22,6 +22,14 @@
       "tags"     : "featured",
       "url"      : "/docs/visualisation-designer/",
       "date"     : "2021-01-29 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "User Mangagment",
+      "category" : "",
+      "tags"     : "featured",
+      "url"      : "/docs/user-management/",
+      "date"     : "2021-02-08 00:00:00 +0000"
     } 
   
 ]

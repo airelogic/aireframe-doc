@@ -30,6 +30,14 @@
       "tags"     : "featured",
       "url"      : "/docs/user-management/",
       "date"     : "2021-02-08 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Tenant Structure",
+      "category" : "",
+      "tags"     : "featured",
+      "url"      : "/docs/tenant-structure/",
+      "date"     : "2021-03-11 00:00:00 +0000"
     } 
   
 ]

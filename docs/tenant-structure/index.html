@@ -6,19 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>AireFrame Docs | AireFrame Documentation - Find changelogs and tutorials and videos on how to setup and use AireFrame</title>
+<title>Tenant Structure | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="AireFrame Docs" />
+<meta property="og:title" content="Tenant Structure" />
+<meta name="author" content="Danny Heard" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="AireFrame Documentation - Find changelogs and tutorials and videos on how to setup and use AireFrame" />
-<meta property="og:description" content="AireFrame Documentation - Find changelogs and tutorials and videos on how to setup and use AireFrame" />
-<link rel="canonical" href="https://docs.aireframe.com/docs/" />
-<meta property="og:url" content="https://docs.aireframe.com/docs/" />
+<meta name="description" content="This page explains how manage organisation structure in AireFrame. The powerful recursive system allows you to configure the structure in aireframe to the needs of your organisation" />
+<meta property="og:description" content="This page explains how manage organisation structure in AireFrame. The powerful recursive system allows you to configure the structure in aireframe to the needs of your organisation" />
+<link rel="canonical" href="https://docs.aireframe.com/docs/tenant-structure/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/tenant-structure/" />
 <meta property="og:site_name" content="AireFrame Docs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-03-11T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="AireFrame Docs" />
+<meta property="twitter:title" content="Tenant Structure" />
 <script type="application/ld+json">
-{"description":"AireFrame Documentation - Find changelogs and tutorials and videos on how to setup and use AireFrame","@type":"WebPage","url":"https://docs.aireframe.com/docs/","headline":"AireFrame Docs","@context":"https://schema.org"}</script>
+{"dateModified":"2021-03-11T00:00:00+00:00","datePublished":"2021-03-11T00:00:00+00:00","description":"This page explains how manage organisation structure in AireFrame. The powerful recursive system allows you to configure the structure in aireframe to the needs of your organisation","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/tenant-structure/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"url":"https://docs.aireframe.com/docs/tenant-structure/","headline":"Tenant Structure","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -64,7 +67,7 @@
                     
                     
                     
-                        <li class="uk-active"><a href="/docs/" >Docs</a></li>
+                        <li><a href="/docs/" >Docs</a></li>
                     
                 
                     
@@ -143,7 +146,7 @@
         
           
           
-          <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
+          <li class="uk-active"><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
         </ul>
         
@@ -172,15 +175,178 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Docs</h1>
-                    <p>Select a relevant article to start reading the documentation</p>
+                    <h1 class="uk-article-title">Tenant Structure</h1>
+
+                    <p class="subtitle uk-text-lead uk-text-muted">Setting up and modifying organisational structure strcuture</p>
+
+                    <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
+                        
+
+
+
+
+
+<time datetime="2021-03-11T00:00:00+00:00" itemprop="datePublished">
+    
+    Mar 11, 2021
+</time>
+
+                    </div>
+
+                    <div class="article-content">
+                        <p>This page explains how manage organisation structure in AireFrame. The powerful recursive system allows you to configure the structure in aireframe to the needs of your organisation</p>
+
+<p>What you can find on this page:</p>
+
+<ul>
+  <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
+  <li><a href="#structure-types"><strong>Structure Types</strong></a></li>
+  <li><a href="#structural-entities"><strong>Structural Entities</strong></a></li>
+</ul>
+
+<h4 id="required-permissions"><strong>Required Permissions</strong></h4>
+
+<ul>
+  <li>In order to add a structural entity/type you will need the following permissions:
+    <ul>
+      <li><strong>List Structural Entities</strong></li>
+      <li><strong>Create Structural Entity</strong></li>
+    </ul>
+  </li>
+  <li>In order to edit a structural entity/type you will need the following permissions:
+    <ul>
+      <li><strong>List Structural Entities</strong></li>
+      <li><strong>View Structural Entity</strong></li>
+      <li><strong>Edit Structural Entity</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="structure-types"><strong>Structure Types</strong></h4>
+
+<p>Structure types are the possible ‘types’ that you would like in your organisation structure.
+For example, this could be ‘Hospital’, ‘Ward’ or ‘Clinic’.</p>
+
+<p>Structure types have config that limit what they can be used for - such as whether or not you can assign a subject to them (subject locations).
+Every structural entity must be of one particular type.</p>
+
+<ol>
+  <li>Go to the structure configuration screen: Configuration -&gt; Structure.</li>
+  <li>Click Add Structure Type, you will see a screen as follows <img src="/assets/screenshots/structure/add-structure-type.png" alt="add structure type" /></li>
+  <li>Enter a name for the structure type</li>
+  <li>Choose the structure type configuration</li>
+  <li>Click save</li>
+</ol>
+
+<p>Structure types can be edited by clicking the arrow at the right hand side of the structure type listing. <em>Please note, that configuration changes do not affect the current data. i.e. if a subject is assigned to a structural entity of a structure type and that type is changed to not be subject assignable, the subject is not removed from that structural entity</em></p>
+
+<h4 id="structural-entities"><strong>Structural Entities</strong></h4>
+
+<p>Structural entities make up the actual organisational structure that you see in AireFrame. It is a recursive structure so it is possible to have a deep nested strucutre of many different structure types, with user access control provided by the groups feature.</p>
+
+<ol>
+  <li>Go to the structure configuration screen: Configuration -&gt; Structure.</li>
+  <li>This shows a structure tree that starts at the top level and can be expanded to see all the children</li>
+</ol>
+
+<p>Structural entities can be added by clicking ‘Add new’ under the parent you wish the structural entity to sit.</p>
+
+<p>Note:</p>
+<ul>
+  <li>Each structural entity that is created must have a unique key - this is so that external integrations can reference structural entities in a tenant.</li>
+  <li>Once created, a structural entity cannot be moved to a different parent due to access controls.</li>
+  <li>Structural entities cannot currently be deleted</li>
+</ul>
+
+                    </div>
+
+                    <hr class="uk-margin-medium">
+
+                    <div class="uk-margin-large-top">
+    <h3>Related Articles</h3>
+
+    
+    
+    
+
+    <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+        
+        
+    
+
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/docs/subject-provider/">Subject Provider</a></li>
+        
+        
+    
+
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/docs/visualisation-designer/">Visualisation Designer</a></li>
+        
+        
+    
+
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/docs/user-management/">User Mangagment</a></li>
+        
+        
+            
+    </ul>
+</div>
 
                 </article>
+
+                <div>
+                    <div class="uk-section uk-text-center uk-link-muted">
+    <div class="uk-margin-medium uk-text-small">
+        <div></div>
+        <div></div> 
+    </div> 
+</div>
+
+                </div>
+
+                <script>
+                    // Table of contents scroll to
+                    UIkit.scroll('#markdown-toc a', {
+                        duration: 400,
+                        offset: 120
+                    });
+                </script>
 
             </div>
 
     </div>
-</div>
 </div>
 
 
@@ -208,7 +374,7 @@
         
           
           
-          <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
+          <li class="uk-active"><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
         </ul>
         
@@ -276,64 +442,6 @@
     </div>
 </div>
 
-
-    
-        <footer class="uk-section uk-text-center uk-text-muted uk-link-muted">
-    <div class="uk-container uk-container-small">
-
-        <div>
-            <ul class="uk-subnav uk-flex-center">
-                
-                    
-                    
-                    
-                        <li class="uk-active"><a href="/docs/" >Docs</a></li>
-                    
-                
-                    
-                    
-                    
-                        <li><a href="/news/" >News</a></li>
-                    
-                
-                    
-                    
-                    
-                        <li><a href="/changelog/" >Changelog</a></li>
-                    
-                
-                    
-                    
-                    
-                        <li><a href="/contact/" >Contact</a></li>
-                    
-                
-            </ul>
-        </div>
-        <div class="uk-margin-medium">
-            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-        </div>
-        <div class="uk-margin-medium uk-text-small">
-            <div class="copyright"></div>
-            <div> </div> 
-        </div>
-    </div>
-</footer>
 
     
 

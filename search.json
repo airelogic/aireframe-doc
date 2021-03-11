@@ -27,9 +27,17 @@
     {
       "title"    : "User Mangagment",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "access-control",
       "url"      : "/docs/user-management/",
       "date"     : "2021-02-08 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Groups",
+      "category" : "",
+      "tags"     : "access-control",
+      "url"      : "/docs/groups/",
+      "date"     : "2021-03-11 00:00:00 +0000"
     } ,
   
     {

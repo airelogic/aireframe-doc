@@ -257,20 +257,29 @@ Every structural entity must be of one particular type.</p>
 
 <h4 id="structural-entities"><strong>Structural Entities</strong></h4>
 
-<p>Structural entities make up the actual organisational structure that you see in AireFrame. It is a recursive structure so it is possible to have a deep nested strucutre of many different structure types, with user access control provided by the groups feature.</p>
+<p>Structural entities make up the actual organisational structure that you see in AireFrame. It is a recursive structure so it is possible to have a deep nested structure of many different structure types, with user access control provided by the groups feature.</p>
 
 <ol>
   <li>Go to the structure configuration screen: Configuration -&gt; Structure.</li>
-  <li>This shows a structure tree that starts at the top level and can be expanded to see all the children</li>
+  <li>This shows a structure tree that starts at the top level and can be expanded to see all the children.</li>
 </ol>
 
-<p>Structural entities can be added by clicking ‘Add new’ under the parent you wish the structural entity to sit.</p>
+<h5 id="how-to-add-structural-entities"><strong>How to add Structural Entities</strong></h5>
+
+<ol>
+  <li>Go to the structure configuration screen: Configuration -&gt; Structure.</li>
+  <li>Click Add icon, you will see a screen as follows <img src="/assets/screenshots/structure/add-structure-entity.png" alt="add structure type" /></li>
+  <li>Enter a display name, unique key and structure type for the new structure entity. If it has a parent, then it can be added under it’s parent entity using the Structural Entity Search.</li>
+  <li>Click save.</li>
+</ol>
 
 <p>Note:</p>
+
 <ul>
   <li>Each structural entity that is created must have a unique key - this is so that external integrations can reference structural entities in a tenant.</li>
   <li>Once created, a structural entity cannot be moved to a different parent due to access controls.</li>
   <li>Structural entities cannot currently be deleted</li>
+  <li>If no parent entity is selected in the Structural Entity Search the default parent will be the root tenant.</li>
 </ul>
 
                     </div>

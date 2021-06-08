@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Groups | AireFrame Docs</title>
+<title>Data Extract Configuration | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Groups" />
-<meta name="author" content="Danny Heard" />
+<meta property="og:title" content="Data Extract Configuration" />
+<meta name="author" content="Karsten Lloyd" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This page explains how manage groups in AireFrame. This allows the creation of groupings of structural entities that can then be assigned to users to allow access to specific areas in your organisation." />
-<meta property="og:description" content="This page explains how manage groups in AireFrame. This allows the creation of groupings of structural entities that can then be assigned to users to allow access to specific areas in your organisation." />
-<link rel="canonical" href="https://docs.aireframe.com/docs/groups/" />
-<meta property="og:url" content="https://docs.aireframe.com/docs/groups/" />
+<meta name="description" content="This page explains how to add data extracts in AireFrame. These data extracts will contain the schema for a data source which will be used to create a data visualisation. See the guide on how to configure data sources here." />
+<meta property="og:description" content="This page explains how to add data extracts in AireFrame. These data extracts will contain the schema for a data source which will be used to create a data visualisation. See the guide on how to configure data sources here." />
+<link rel="canonical" href="https://docs.aireframe.com/docs/data-extract-config/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/data-extract-config/" />
 <meta property="og:site_name" content="AireFrame Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-03-11T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-06-08T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Groups" />
+<meta property="twitter:title" content="Data Extract Configuration" />
 <script type="application/ld+json">
-{"dateModified":"2021-03-11T00:00:00+00:00","datePublished":"2021-03-11T00:00:00+00:00","description":"This page explains how manage groups in AireFrame. This allows the creation of groupings of structural entities that can then be assigned to users to allow access to specific areas in your organisation.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/groups/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"url":"https://docs.aireframe.com/docs/groups/","headline":"Groups","@context":"https://schema.org"}</script>
+{"dateModified":"2021-06-08T00:00:00+00:00","datePublished":"2021-06-08T00:00:00+00:00","description":"This page explains how to add data extracts in AireFrame. These data extracts will contain the schema for a data source which will be used to create a data visualisation. See the guide on how to configure data sources here.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/data-extract-config/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Karsten Lloyd"},"url":"https://docs.aireframe.com/docs/data-extract-config/","headline":"Data Extract Configuration","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -152,7 +152,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/groups/">Groups</a></li>
+          <li class=""><a href="/docs/groups/">Groups</a></li>
         
         </ul>
         
@@ -179,7 +179,7 @@
         
           
           
-          <li class=""><a href="/docs/data-extract-config/">Data Extract Configuration</a></li>
+          <li class="uk-active"><a href="/docs/data-extract-config/">Data Extract Configuration</a></li>
         
           
           
@@ -194,9 +194,9 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Groups</h1>
+                    <h1 class="uk-article-title">Data Extract Configuration</h1>
 
-                    <p class="subtitle uk-text-lead uk-text-muted">Setting up and modifying groups</p>
+                    <p class="subtitle uk-text-lead uk-text-muted">Add and configure the data extracts</p>
 
                     <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
                         
@@ -205,60 +205,102 @@
 
 
 
-<time datetime="2021-03-11T00:00:00+00:00" itemprop="datePublished">
+<time datetime="2021-06-08T00:00:00+00:00" itemprop="datePublished">
     
-    Mar 11, 2021
+    Jun 8, 2021
 </time>
 
                     </div>
 
                     <div class="article-content">
-                        <p>This page explains how manage groups in AireFrame. This allows the creation of groupings of structural entities that can then be assigned to users to allow access to specific areas in your organisation.</p>
+                        <p>This page explains how to add data extracts in AireFrame. These data extracts will contain the schema for a data source which will be used to create a data visualisation. <em>See the guide on how to configure data sources <a href="/docs/data-source-config/">here</a></em>.</p>
 
 <p>What you can find on this page:</p>
 
 <ul>
   <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
-  <li><a href="#groups"><strong>Groups</strong></a></li>
+  <li><a href="#add-data-extract"><strong>Add Data Extract</strong></a></li>
 </ul>
 
 <h4 id="required-permissions"><strong>Required Permissions</strong></h4>
 
 <ul>
-  <li>In order to create a group you will need the following permissions:
+  <li>In order to add a data extract you will need the following permissions:
     <ul>
-      <li><strong>List Groups</strong></li>
-      <li><strong>Create Groups</strong></li>
-      <li><strong>List Structural Entities</strong></li>
-    </ul>
-  </li>
-  <li>In order to edit a group you will need the following permissions:
-    <ul>
-      <li><strong>List Groups</strong></li>
-      <li><strong>View Groups</strong></li>
-      <li><strong>Edit Groups</strong></li>
-      <li><strong>List Structural Entities</strong></li>
+      <li><strong>List Data Extract</strong></li>
+      <li><strong>View Data Extract</strong></li>
+      <li><strong>Create Data Extract</strong></li>
     </ul>
   </li>
 </ul>
 
-<h4 id="groups"><strong>Groups</strong></h4>
+<h4 id="add-data-extract"><strong>Add Data Extract</strong></h4>
 
 <ol>
-  <li>Go to the groups configuration screen: Configuration -&gt; Groups.</li>
-  <li>Click Add Group, you will see a screen as follows <img src="/assets/screenshots/groups/create-group.png" alt="create group" /></li>
-  <li>Enter a name for the group</li>
-  <li>Use the structure tree view to select the structural entites that you want accessible in the group
+  <li>Go to the data visualisation configuration screen: Configuration -&gt; Data Visualisations.</li>
+  <li>Click Add Data Extract, you will see a screen as follows <img src="/assets/screenshots/data-extract/add-data-extract.png" alt="add data extract" /></li>
+  <li>Enter a title for the data extract</li>
+  <li>Select the data source</li>
+  <li>
+    <p>Select the data source that you wish to consume the data for your visualisation from.<br />
+ If you have chosen a non-internal data source, you will need to provide a relevant JSON extract definition for that data source <em>(You will not be able to add the data extract unless you have provided the extract definition)</em>:</p>
+
     <ul>
-      <li>Note that all parents of that entity must be accessible for that entity to be accessible (It is a good idea to assign your subjects at the lowest level possible so that the access control can be finegrained)</li>
+      <li><strong>Forms4Health Example</strong>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
+  "key": "news2",
+  "type": "building-block",
+  "version": 1,
+  "dataPoints": [
+      {
+          "id": "2248312f-fb43-4443-be2c-1da975e2c645",
+          "controlId": "NEWSScore"
+      }
+  ]
+  }
+</code></pre></div>        </div>
+      </li>
+      <li><strong>AireFlow Example</strong>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
+  "status": "NEW"
+  }
+</code></pre></div>        </div>
+        <p>Where:</p>
+        <ul>
+          <li>status is the Tasks’ status. Available options are <code class="language-plaintext highlighter-rouge">NEW</code>, <code class="language-plaintext highlighter-rouge">IN_PROGRESS</code> and <code class="language-plaintext highlighter-rouge">COMPLETED</code></li>
+        </ul>
+      </li>
+      <li><strong>FHIR R4 Example</strong>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
+  "resourceType": "Observation",
+  "searchParameters": [
+      "code-value-concept=http://snomed.info/sct|364075005"
+  ],
+  "dimensions": [
+      {
+          "key": "date",
+          "fhirPath": "Observation.effective"
+      },
+      {
+          "key": "heartRate",
+          "fhirPath": "Observation.value.value"
+      }
+  ]
+  }
+</code></pre></div>        </div>
+        <p>Where:</p>
+        <ul>
+          <li>The resource type is what you want to query from the FHIR server - it must be searchable by patient identifier</li>
+          <li>Search parameters are used to filter the resource type, in the example this is for the snomed code for heart rate observations. You can use as many as you like and use normal FHIR conventions (and/or) etc.</li>
+          <li>The dimensions are used to populate the widget with the fetched data, the keys are the data points that you want to show, they are resolved using FHIRPath, so any FHIRPath query is valid here. You can use FHIRPath to combine multiple expressions in case one or more do not resolve in the fetched data. The value returned for each data point will be the first FHIRPath expression that finds a value.</li>
+        </ul>
+      </li>
     </ul>
+
+    <p><img src="/assets/screenshots/data-extract/config-options.png" alt="configuration values" /></p>
   </li>
-  <li>Click save</li>
+  <li>Click create</li>
 </ol>
-
-<p>Groups can be edited by clicking the arrow at the right hand side of the group listing.</p>
-
-<p>You can assing a group to a user by going to the user management screen: Configuration -&gt; Users, finding the user that you wish to assign to a group and adding the group that you want to assign to them in the groups section of the user screen.</p>
 
                     </div>
 
@@ -280,14 +322,9 @@
     
 
     
-
-    
-
-    
-    
-
-    
-
+        <li><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+        
+        
     
 
     
@@ -298,7 +335,7 @@
     
 
     
-        <li><a href="/docs/user-management/">User Mangagment</a></li>
+        <li><a href="/docs/subject-provider/">Subject Provider</a></li>
         
         
     
@@ -329,6 +366,19 @@
     
 
     
+        <li><a href="/docs/tenant-structure/">Tenant Structure</a></li>
+        
+        
+    
+
+    
+
+    
+    
+
+    
+
+    
 
     
 
@@ -338,8 +388,10 @@
     
 
     
-
-    
+        <li><a href="/docs/visualisation-designer/">Visualisation Designer</a></li>
+        
+        
+            
     </ul>
 </div>
 
@@ -393,7 +445,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/groups/">Groups</a></li>
+          <li class=""><a href="/docs/groups/">Groups</a></li>
         
         </ul>
         
@@ -420,7 +472,7 @@
         
           
           
-          <li class=""><a href="/docs/data-extract-config/">Data Extract Configuration</a></li>
+          <li class="uk-active"><a href="/docs/data-extract-config/">Data Extract Configuration</a></li>
         
           
           

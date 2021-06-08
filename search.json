@@ -17,14 +17,6 @@
     } ,
   
     {
-      "title"    : "Visualisation Designer",
-      "category" : "",
-      "tags"     : "featured",
-      "url"      : "/docs/visualisation-designer/",
-      "date"     : "2021-01-29 00:00:00 +0000"
-    } ,
-  
-    {
       "title"    : "User Mangagment",
       "category" : "",
       "tags"     : "access-control",
@@ -46,6 +38,22 @@
       "tags"     : "featured",
       "url"      : "/docs/tenant-structure/",
       "date"     : "2021-03-11 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Data Extract Configuration",
+      "category" : "",
+      "tags"     : "featured",
+      "url"      : "/docs/data-extract-config/",
+      "date"     : "2021-06-08 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Visualisation Designer",
+      "category" : "",
+      "tags"     : "featured",
+      "url"      : "/docs/visualisation-designer/",
+      "date"     : "2021-06-08 00:00:00 +0000"
     } 
   
 ]

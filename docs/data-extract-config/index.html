@@ -253,10 +253,40 @@
   "version": 1,
   "dataPoints": [
       {
-          "id": "2248312f-fb43-4443-be2c-1da975e2c645",
           "controlId": "NEWSScore"
       }
   ]
+  }
+</code></pre></div>        </div>
+
+        <p>Form-level example</p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> {
+      "type":"form",
+      "key":"fluid-balance",
+      "version":1,
+      "dataPoints":[
+          {
+              "buildingBlock":{
+                  "key":"fluid-intake",
+                  "version":2
+              },
+              "controlId":"TotalFluidIntake"
+          },
+          {
+              "buildingBlock":{
+                  "key":"fluid-loss",
+                  "version":1
+              },
+              "controlId":"TotalFluidLoss"
+          },
+          {
+              "buildingBlock":{
+                  "key":"net-fluid-balance",
+                  "version":1
+              },
+              "controlId":"NetFluidIntake"
+          }
+      ]
   }
 </code></pre></div>        </div>
       </li>

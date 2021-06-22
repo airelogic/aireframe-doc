@@ -3,7 +3,7 @@
     {
       "title"    : "Data Source Configuration",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "",
       "url"      : "/docs/data-source-config/",
       "date"     : "2021-01-25 00:00:00 +0000"
     } ,
@@ -11,7 +11,7 @@
     {
       "title"    : "Subject Provider",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "subject",
       "url"      : "/docs/subject-provider/",
       "date"     : "2021-01-25 00:00:00 +0000"
     } ,
@@ -35,25 +35,41 @@
     {
       "title"    : "Tenant Structure",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "access-control,, structure,, organisation",
       "url"      : "/docs/tenant-structure/",
       "date"     : "2021-03-11 00:00:00 +0000"
     } ,
   
     {
-      "title"    : "Data Extract Configuration",
+      "title"    : "Data Extracts",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "widgets",
       "url"      : "/docs/data-extract-config/",
       "date"     : "2021-06-08 00:00:00 +0000"
     } ,
   
     {
-      "title"    : "Visualisation Designer",
+      "title"    : "Widget Designer",
       "category" : "",
-      "tags"     : "featured",
+      "tags"     : "widgets",
       "url"      : "/docs/visualisation-designer/",
       "date"     : "2021-06-08 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting Started",
+      "category" : "",
+      "tags"     : "featured",
+      "url"      : "/docs/getting-started/",
+      "date"     : "2021-06-22 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Subject Configuration",
+      "category" : "",
+      "tags"     : "subject",
+      "url"      : "/docs/subject-configuration/",
+      "date"     : "2021-06-22 00:00:00 +0000"
     } 
   
 ]

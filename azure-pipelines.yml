@@ -1,0 +1,39 @@
+trigger:
+  branches:
+    include:
+    - master
+    - develop
+  paths:
+    include:
+      - 'doc-site/'
+
+pr:
+  branches:
+    include:
+    - '*'
+  paths:
+    include:
+      - 'doc-site/'
+
+pool:
+  vmImage: 'ubuntu-latest'
+  
+stages:
+  - stage: Build
+    jobs:
+      - job: Build
+        steps:
+          - task: UseRubyVersion@0
+            inputs:
+              versionSpec: '2.6.8'
+     
+          - powershell: ./build-scripts/build.ps1
+            workingDirectory: doc-site
+            displayName: "Build"
+        
+          - powershell: ./build-scripts/push.ps1 -githubtoken $(githubtoken)
+            condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+            workingDirectory: doc-site
+            displayName: "Deploy"
+          
+  

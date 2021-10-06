@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Data Source Configuration | AireFrame Docs</title>
+<title>AireFrame SDK | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Data Source Configuration" />
+<meta property="og:title" content="AireFrame SDK" />
 <meta name="author" content="Danny Heard" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This page explains how to add data sources in AireFrame. For example you may want to add a FHIR data source so that you can consume subjects or structured data instead of using AireFrame’s internal data store." />
-<meta property="og:description" content="This page explains how to add data sources in AireFrame. For example you may want to add a FHIR data source so that you can consume subjects or structured data instead of using AireFrame’s internal data store." />
-<link rel="canonical" href="https://docs.aireframe.com/docs/data-source-config/" />
-<meta property="og:url" content="https://docs.aireframe.com/docs/data-source-config/" />
+<meta name="description" content="We publish a C# ASP.Net Core SDK that can be used to integrate AireFrame with custom data sources." />
+<meta property="og:description" content="We publish a C# ASP.Net Core SDK that can be used to integrate AireFrame with custom data sources." />
+<link rel="canonical" href="https://docs.aireframe.com/docs/sdk/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/sdk/" />
 <meta property="og:site_name" content="AireFrame Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-01-25T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-10-06T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Data Source Configuration" />
+<meta property="twitter:title" content="AireFrame SDK" />
 <script type="application/ld+json">
-{"headline":"Data Source Configuration","dateModified":"2021-01-25T00:00:00+00:00","datePublished":"2021-01-25T00:00:00+00:00","description":"This page explains how to add data sources in AireFrame. For example you may want to add a FHIR data source so that you can consume subjects or structured data instead of using AireFrame’s internal data store.","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/data-source-config/"},"url":"https://docs.aireframe.com/docs/data-source-config/","author":{"@type":"Person","name":"Danny Heard"},"@context":"https://schema.org"}</script>
+{"headline":"AireFrame SDK","dateModified":"2021-10-06T00:00:00+00:00","datePublished":"2021-10-06T00:00:00+00:00","description":"We publish a C# ASP.Net Core SDK that can be used to integrate AireFrame with custom data sources.","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/sdk/"},"url":"https://docs.aireframe.com/docs/sdk/","author":{"@type":"Person","name":"Danny Heard"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -148,7 +148,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
         
         </ul>
         
@@ -210,7 +210,7 @@
         
           
           
-          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
+          <li class="uk-active"><a href="/docs/sdk/">AireFrame SDK</a></li>
         
         </ul>
         
@@ -221,9 +221,9 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Data Source Configuration</h1>
+                    <h1 class="uk-article-title">AireFrame SDK</h1>
 
-                    <p class="subtitle uk-text-lead uk-text-muted">Add and configure the data sources</p>
+                    <p class="subtitle uk-text-lead uk-text-muted">Integrate custom data sources with AireFrame using the SDK</p>
 
                     <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
                         
@@ -232,61 +232,77 @@
 
 
 
-<time datetime="2021-01-25T00:00:00+00:00" itemprop="datePublished">
+<time datetime="2021-10-06T00:00:00+00:00" itemprop="datePublished">
     
-    Jan 25, 2021
+    Oct 6, 2021
 </time>
 
                     </div>
 
                     <div class="article-content">
-                        <p>This page explains how to add data sources in AireFrame. For example you may want to add a FHIR data source so that you can consume subjects or structured data instead of using AireFrame’s internal data store.</p>
+                        <p>We publish a <em>C# ASP.Net Core</em> SDK that can be used to integrate AireFrame with custom data sources.</p>
 
-<p>What you can find on this page:</p>
+<p>Currently the SDK only targets <em>.NET 5</em>, please contact us if you need to target a different version.</p>
 
+<h3 id="installation">Installation</h3>
+
+<p>The SDK is published to a custom AzureDevops package feed. To access it you need to add a <em>NuGet.config</em> file to your project with the following:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;configuration&gt;
+  &lt;packageSources&gt;
+    &lt;add key="AireFrame" value="https://pkgs.dev.azure.com/AireLogic/forms.api/_packaging/Aire-Frame/nuget/v3/index.json" /&gt;
+  &lt;/packageSources&gt;
+&lt;/configuration&gt;
+</code></pre></div></div>
+
+<p>Then install the package into your project.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;PackageReference Include="AireLogic.AireFrame.DataProviderSdk" Version="1.1.2" /&gt;
+</code></pre></div></div>
+
+<h3 id="usage">Usage</h3>
+
+<p>There are two interfaces that provide data to AireFrame. <code class="language-plaintext highlighter-rouge">ISubjectProvider</code> and <code class="language-plaintext highlighter-rouge">IStructuredDataProvider</code> (provides the data that powers the visualisations). You may implement just one or both depending on your data needs.</p>
+
+<p>In <code class="language-plaintext highlighter-rouge">Startup.ConfigureServices</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services
+    .AddDataProviderServer(
+        new DataProviderServerSettings(
+            new AuthOptions(
+                AUHTORITY_HOST,
+                ISSUER_HOST,
+                AUDIENCE)
+        )
+    )
+    .AddDataSource&lt;YourDataSource&gt;()
+    .AddSubjectProvider&lt;YourDataSource, YourSubjectProviderImplementation&gt;()
+    .AddStructuredDataProvider&lt;YourDataSource, YourStructuredDataProviderImplementation&gt;();
+</code></pre></div></div>
+
+<p>In <code class="language-plaintext highlighter-rouge">Startup.Configure</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>app.UseDataProviderServer();
+
+..
+
+app.UseEndpoints(endpoints =&gt;
+{
+    endpoints.MapDataProvider();
+});
+</code></pre></div></div>
+
+<h3 id="authentication">Authentication</h3>
+
+<p>To setup authentication for your service you need to create an application and a related scope on the OIDC server that AireFrame is using.</p>
 <ul>
-  <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
-  <li><a href="#add-data-source"><strong>Add Data Source</strong></a></li>
-  <li><a href="#edit-data-source"><strong>Edit Data Source</strong></a></li>
+  <li>For AireFrame demo this is <a href="https://dev.identity.airelogic.com">Staging AireIdentity</a> (https://dev.identity.airelogic.com)</li>
+  <li>For AireFrame production this is <a href="https://my.identity.airelogic.com">Production AireIdentity</a> (https://my.identity.airelogic.com)</li>
 </ul>
 
-<h4 id="required-permissions"><strong>Required Permissions</strong></h4>
+<p>This address is what you need to provide for both the <code class="language-plaintext highlighter-rouge">AUHTORITY_HOST</code> and <code class="language-plaintext highlighter-rouge">ISSUER_HOST</code> values.
+The application scope you created will be the <code class="language-plaintext highlighter-rouge">AUDIENCE</code> value.</p>
 
-<ul>
-  <li>In order to add a data source you will need the following permissions:
-    <ul>
-      <li><strong>List Data Sources</strong></li>
-      <li><strong>Create Data Source</strong></li>
-    </ul>
-  </li>
-  <li>In order to edit a data source you will need the following permissions:
-    <ul>
-      <li><strong>List Data Sources</strong></li>
-      <li><strong>View Data Source</strong></li>
-      <li><strong>Edit Data Source</strong></li>
-    </ul>
-  </li>
-</ul>
-
-<h4 id="add-data-source"><strong>Add Data Source</strong></h4>
-
-<ol>
-  <li>Go to the data source configuration screen: Configuration -&gt; Data Sources.</li>
-  <li>Click Add Data Source, you will see a screen as follows <img src="/assets/screenshots/data-source/add-data-source.png" alt="add data source" /></li>
-  <li>Select the data source type</li>
-  <li>Enter a name for the data source</li>
-  <li>Enter the data source specific configuration values. Required values are indicated with an (*). <img src="/assets/screenshots/data-source/config-options.png" alt="configuration values" /></li>
-  <li>Click save</li>
-</ol>
-
-<h4 id="edit-data-source"><strong>Edit Data Source</strong></h4>
-
-<ol>
-  <li>Go to the data source configuration screen: Configuration -&gt; Data Sources.</li>
-  <li>Click the data source you wish to edit</li>
-  <li>Enter the values you wish to change. For security reasons, secret values must be re-entered on every edit</li>
-  <li>Click save</li>
-</ol>
 
                     </div>
 
@@ -440,7 +456,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
         
         </ul>
         
@@ -502,7 +518,7 @@
         
           
           
-          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
+          <li class="uk-active"><a href="/docs/sdk/">AireFrame SDK</a></li>
         
         </ul>
         

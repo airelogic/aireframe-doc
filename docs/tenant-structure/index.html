@@ -270,8 +270,7 @@
 
 <h4 id="structure-types"><strong>Structure Types</strong></h4>
 
-<p>Structure types are the possible ‘types’ that you would like in your organisation structure.
-For example, this could be ‘Hospital’, ‘Ward’ or ‘Clinic’.</p>
+<p>Structure types are the possible ‘types’ that you would like in your organisation structure. For example, this could be ‘Hospital’, ‘Ward’ or ‘Clinic’.</p>
 
 <p>Structure types have config that limit what they can be used for - such as whether or not you can assign a subject to them (subject locations).
 Every structural entity must be of one particular type.</p>
@@ -312,6 +311,33 @@ Every structural entity must be of one particular type.</p>
   <li>Structural entities cannot currently be deleted</li>
   <li>If no parent entity is selected in the Structural Entity Search the default parent will be the root tenant.</li>
 </ul>
+
+<h5 id="the-no-location-structural-entity--type">The ‘No Location’ Structural Entity / Type</h5>
+
+<p>It is possible to remove all structural entities from a subject; in this case a special ‘No Location’ entity and type are attached to the subject automatically.</p>
+
+<p>Access to subjects with No Location can be controlled by creating a new Group.</p>
+
+<ol>
+  <li>Open the Settings (cog, bottom left)</li>
+  <li>Click ‘Groups’</li>
+  <li>Click the ‘+’ in the top right.</li>
+  <li>Name the new group (e.g. ‘Unattached Subjects’)</li>
+  <li>Select ‘No Location’</li>
+  <li>Click ‘Save’</li>
+</ol>
+
+<p>Access to this group can then be granted to a user or users.</p>
+
+<ol>
+  <li>Open the Settings (cog, bottom left)</li>
+  <li>Click ‘Users’</li>
+  <li>Open the user settings by clicking the right caret (‘&gt;’)</li>
+  <li>Click the ‘+’ under Groups</li>
+  <li>Select the group name (e.g. ‘Unattached Subjects’)</li>
+</ol>
+
+<p>Log out, then log in as a user to which you granted access to the group. You should now be able to select ‘No Location’ from the list of structural entities.</p>
 
                     </div>
 

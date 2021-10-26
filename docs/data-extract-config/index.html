@@ -273,21 +273,33 @@
  If you have chosen a non-internal data source, you will need to provide a relevant JSON extract definition for that data source <em>(You will not be able to add the data extract unless you have provided the extract definition)</em>:</p>
 
     <ul>
-      <li><strong>Forms4Health Example</strong>
+      <li>
+        <p><strong>Forms4Health</strong></p>
+
+        <p><b>Form instances extract:</b></p>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
-  "key": "news2",
-  "type": "building-block",
-  "version": 1,
-  "dataPoints": [
-      {
-          "controlId": "NEWSScore",
-          "valueType": "displayValue"
-      }
-  ]
+      "type": "form-instances",
+      "includeWithdrawn": false
   }
 </code></pre></div>        </div>
 
-        <p>Form-level example</p>
+        <p><b>Submitted data extract:</b></p>
+
+        <p>Building block level:</p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
+      "key": "news2",
+      "type": "building-block",
+      "version": 1,
+      "dataPoints": [
+          {
+              "controlId": "NEWSScore",
+              "valueType": "displayValue"
+          }
+      ]
+  }
+</code></pre></div>        </div>
+
+        <p>Form level:</p>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> {
       "type":"form",
       "key":"fluid-balance",

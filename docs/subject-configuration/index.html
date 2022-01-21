@@ -291,6 +291,12 @@
 
 <p>To use the custom fields as variables in the liquid mapping of a computed field, use the value from the ‘key’ column in the corresponding row above.  <em>Please note, the field keys are automatically generated from the field names and must be unique.</em></p>
 
+<h3 id="formatting">Formatting</h3>
+
+<p>We allow certain HTML tags to be rendered on the page. Currently these are: <code class="language-plaintext highlighter-rouge">&lt;b /&gt;</code>,  <code class="language-plaintext highlighter-rouge">&lt;strong /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;em /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;i /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;small /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;sub /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;sup /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;br /&gt;</code>.</p>
+
+<p>It is possible to use these tags in both the computed fields and the actual subject data. However, we reccomend only using it on the computed fields since downstream systems may be not be expecting HTML tags.</p>
+
                     </div>
 
                     <hr class="uk-margin-medium">

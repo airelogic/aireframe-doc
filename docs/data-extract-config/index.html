@@ -338,10 +338,12 @@
       <li><strong>AireFlow Example</strong>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
   "status": ["NEW", "COMPLETED"]
+  "workflowDefinitionId": "abcdefg"
   }
 </code></pre></div>        </div>
         <p>Where:</p>
         <ul>
+          <li>Workflow defintion id (optional, if omittied returns all tasks) is the id of the workflow definiton you want to see tasks for</li>
           <li>Status (optional, if omittied returns all tasks) is an array of statuses on which to filter the tasks. See <a href="https://docs.aireflow.co.uk/docs/task-statuses/">AireFlow docs</a> for the available statuses (These must be capitalised)</li>
         </ul>
       </li>

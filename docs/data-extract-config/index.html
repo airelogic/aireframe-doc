@@ -301,10 +301,27 @@
   }
 </code></pre></div>        </div>
 
-        <p>Where:</p>
-        <ul>
-          <li>valueType (optional, defaults to <code class="language-plaintext highlighter-rouge">value</code>) is <code class="language-plaintext highlighter-rouge">value</code> (underlying value) or <code class="language-plaintext highlighter-rouge">displayValue</code> (display text value)</li>
-        </ul>
+        <p>To extract a control’s display value instead of it’s underlying value. You need to specify the <code class="language-plaintext highlighter-rouge">controlId</code> and the <code class="language-plaintext highlighter-rouge">valueType</code> <code class="language-plaintext highlighter-rouge">[value/displayValue]</code></p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "dataPoints": [
+      {
+          "controlId": "my-control",
+          "valueType": "displayValue"
+      }
+  ]
+</code></pre></div>        </div>
+
+        <p>For a form level extract you also need to specify the building block for the control e.g.</p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "dataPoints": [
+      {
+          "controlId": "my-control",
+          "valueType": "displayValue",
+          "buildingBlock": {
+              "key": "my-building-block",
+              "version": 1
+          }
+      }
+  ]
+</code></pre></div>        </div>
       </li>
       <li><strong>AireFlow Example</strong>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {

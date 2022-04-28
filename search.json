@@ -78,6 +78,14 @@
       "tags"     : "subject",
       "url"      : "/docs/subject-configuration/",
       "date"     : "2021-12-07 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Collection Configurator",
+      "category" : "",
+      "tags"     : "featured",
+      "url"      : "/docs/collection-configurator/",
+      "date"     : "2022-04-28 00:00:00 +0000"
     } 
   
 ]

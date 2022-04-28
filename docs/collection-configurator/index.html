@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Subject Provider | AireFrame Docs</title>
+<title>Collection Configurator | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.2.1" />
-<meta property="og:title" content="Subject Provider" />
-<meta name="author" content="Danny Heard" />
+<meta property="og:title" content="Collection Configurator" />
+<meta name="author" content="Anisa Khan" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source." />
-<meta property="og:description" content="This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source." />
-<link rel="canonical" href="https://docs.aireframe.com/docs/subject-provider/" />
-<meta property="og:url" content="https://docs.aireframe.com/docs/subject-provider/" />
+<meta name="description" content="This page explains how to create custom views in aireframe. For example you may want to show different groups of visualisations on the subject view and the multi subject view." />
+<meta property="og:description" content="This page explains how to create custom views in aireframe. For example you may want to show different groups of visualisations on the subject view and the multi subject view." />
+<link rel="canonical" href="https://docs.aireframe.com/docs/collection-configurator/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/collection-configurator/" />
 <meta property="og:site_name" content="AireFrame Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-01-25T00:00:00+00:00" />
+<meta property="article:published_time" content="2022-04-28T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Subject Provider" />
+<meta property="twitter:title" content="Collection Configurator" />
 <script type="application/ld+json">
-{"description":"This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source.","@type":"BlogPosting","url":"https://docs.aireframe.com/docs/subject-provider/","headline":"Subject Provider","dateModified":"2021-01-25T00:00:00+00:00","datePublished":"2021-01-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/subject-provider/"},"author":{"@type":"Person","name":"Danny Heard"},"@context":"https://schema.org"}</script>
+{"description":"This page explains how to create custom views in aireframe. For example you may want to show different groups of visualisations on the subject view and the multi subject view.","@type":"BlogPosting","url":"https://docs.aireframe.com/docs/collection-configurator/","headline":"Collection Configurator","dateModified":"2022-04-28T00:00:00+00:00","datePublished":"2022-04-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/collection-configurator/"},"author":{"@type":"Person","name":"Anisa Khan"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -157,7 +157,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/subject-provider/">Subject Provider</a></li>
+          <li class=""><a href="/docs/subject-provider/">Subject Provider</a></li>
         
           
           
@@ -219,7 +219,7 @@
         
           
           
-          <li class=""><a href="/docs/collection-configurator/">Collection Configurator</a></li>
+          <li class="uk-active"><a href="/docs/collection-configurator/">Collection Configurator</a></li>
         
         </ul>
         
@@ -230,9 +230,9 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Subject Provider</h1>
+                    <h1 class="uk-article-title">Collection Configurator</h1>
 
-                    <p class="subtitle uk-text-lead uk-text-muted">Configure the subject provider to use a custom data source</p>
+                    <p class="subtitle uk-text-lead uk-text-muted">Configure Collection</p>
 
                     <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
                         
@@ -241,43 +241,86 @@
 
 
 
-<time datetime="2021-01-25T00:00:00+00:00" itemprop="datePublished">
+<time datetime="2022-04-28T00:00:00+00:00" itemprop="datePublished">
     
-    Jan 25, 2021
+    Apr 28, 2022
 </time>
 
                     </div>
 
                     <div class="article-content">
-                        <p>This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source.</p>
+                        <p>This page explains how to create custom views in aireframe. For example you may want to show different groups of visualisations on the subject view and the multi subject view.</p>
 
 <p>What you can find on this page:</p>
 
 <ul>
   <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
-  <li><a href="#configure-subject-provider"><strong>Configure Subject Provider</strong></a></li>
+  <li><a href="#create-collection"><strong>Create Collection</strong></a></li>
+  <li><a href="#enabling-collections"><strong>Enabling Collections</strong></a></li>
+  <li><a href="#edit-collection"><strong>Edit Collection</strong></a></li>
+  <li><a href="#delete-collection"><strong>Delete Collection</strong></a></li>
 </ul>
 
-<h4 id="required-permissions"><strong>Required Permissions</strong></h4>
+<h2 id="required-permissions"><strong>Required Permissions</strong></h2>
 
 <ul>
-  <li>In order to configure the subject provider you will need the following permissions:
+  <li>In order to create collections you will the following permissions:
     <ul>
-      <li><strong>View Subject Configuration</strong></li>
-      <li><strong>Edit Subject Configuration</strong></li>
-      <li><strong>List Data Sources</strong></li>
-      <li><strong>Get Data Source</strong></li>
+      <li><strong>Create Collection</strong></li>
+      <li><strong>List Collection</strong></li>
+      <li><strong>View Collection</strong></li>
+    </ul>
+  </li>
+  <li>In order to edit a collection you will need the following permissions:
+    <ul>
+      <li><strong>Edit Collection</strong></li>
     </ul>
   </li>
 </ul>
 
-<h4 id="configure-subject-provider"><strong>Configure Subject Provider</strong></h4>
+<h3 id="create-collection"><strong>Create Collection</strong></h3>
 
 <ol>
-  <li>Go to the subject configuration screen: Configuration -&gt; Subject Configuration.</li>
-  <li>Choose the data source you wish to serve your subjects from the drop down list <img src="/assets/screenshots/subject-configuration/subject-provider.png" alt="choose subject provider" /></li>
-  <li>Unless you are using the internal data store you will need to provide mappings for each of the custom fields so that the data source can provide the correct data for the subjects - In the case of the FHIR provider these are FHIR Paths.</li>
-  <li>Click save</li>
+  <li>Go to the subject configuration screen: Configuration -&gt; Collections.</li>
+  <li>Click add new. You will see the following screen
+<img src="/assets/screenshots/collection/create-collection.png" alt="add collection" /></li>
+  <li>Enter a title for your collection.</li>
+  <li>Select the view you want this collection to be available on from the four options.</li>
+  <li>Drag over the visualisations you want to enable from the Add Widgets section to the widgets input.</li>
+  <li>Click save changes.</li>
+</ol>
+
+<p>Options:
+There are four customizable views in AireFrame:</p>
+
+<ul>
+  <li><strong>Subject View</strong> - This is where you see the visualisation on the subject page with data only for that subject</li>
+  <li><strong>Dashboard</strong> - This is where you see the visualisation on the structural entity overview page with data for all subjects located within that structural entity. <em>Note that this is recursive - it shows data for subjects that are located in child structural entites and so on</em></li>
+  <li><strong>Multi Subject View</strong> - This is where you see the data shown on the subject list alongside their id and name. <em>On this view the visualisation is slightly altered to retrieve only the first data point for that subject (according to the default ordering)</em></li>
+  <li><strong>Subject Preview</strong> - This is where you see a preview of the visualisations seen on the subject page with data only for that subject when you go to view the full subject data on a full screen.</li>
+</ul>
+
+<h3 id="enabling-collections"><strong>Enabling Collections</strong></h3>
+
+<p>Once you create a collection you can select it using the selector on each of the four customizable views</p>
+
+<p><img src="/assets/screenshots/collection/select-collection.png" alt="select collection" />.</p>
+
+<h4 id="edit-collection"><strong>Edit Collection</strong></h4>
+
+<ol>
+  <li>Go to the collection configuration screen: Configuration -&gt; Collections.</li>
+  <li>Select the collection you wish to edit.</li>
+  <li>Enter the values you wish to change.</li>
+  <li>Click save changes.</li>
+</ol>
+
+<h4 id="delete-collection"><strong>Delete Collection</strong></h4>
+
+<ol>
+  <li>Go to the collection configuration screen: Configuration -&gt; Collections.</li>
+  <li>Select the collection you wish to delete.</li>
+  <li>Click remove dashboard.</li>
 </ol>
 
                     </div>
@@ -354,36 +397,36 @@
     
 
     
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-        <li><a href="/docs/subject-configuration/">Subject Configuration</a></li>
+        <li><a href="/docs/getting-started/">Getting Started</a></li>
         
         
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
     
 
     
@@ -454,7 +497,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/subject-provider/">Subject Provider</a></li>
+          <li class=""><a href="/docs/subject-provider/">Subject Provider</a></li>
         
           
           
@@ -516,7 +559,7 @@
         
           
           
-          <li class=""><a href="/docs/collection-configurator/">Collection Configurator</a></li>
+          <li class="uk-active"><a href="/docs/collection-configurator/">Collection Configurator</a></li>
         
         </ul>
         

@@ -255,10 +255,11 @@
 
 <ul>
   <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
-  <li><a href="#configure-subject-provider"><strong>Configure Subject Provider</strong></a></li>
+  <li><a href="#change-subject-configuration"><strong>Change subject configuration</strong></a></li>
+  <li><a href="#unsolicited-inbound-messages"><strong>Unsolicited Inbound Messages</strong></a></li>
 </ul>
 
-<h4 id="required-permissions"><strong>Required Permissions</strong></h4>
+<h3 id="required-permissions"><strong>Required Permissions</strong></h3>
 
 <ul>
   <li>In order to change the subject configuration you will need the following permissions:
@@ -269,7 +270,7 @@
   </li>
 </ul>
 
-<h4 id="change-subject-configuration"><strong>Change Subject Configuration</strong></h4>
+<h3 id="change-subject-configuration"><strong>Change Subject Configuration</strong></h3>
 
 <p>Go to the subject configuration screen: Configuration -&gt; Subject Configuration.</p>
 
@@ -317,11 +318,27 @@
 <p>Input fields can be declared as <b>unique</b>. This means that only one subject in the entire tenant can use this value e.g. for unqiue indentifier fields.
 These fields are case and whitespace insensitive.</p>
 
-<h3 id="formatting">Formatting</h3>
+<h4 id="formatting">Formatting</h4>
 
 <p>We allow certain HTML tags to be rendered on the page. Currently these are: <code class="language-plaintext highlighter-rouge">&lt;b /&gt;</code>,  <code class="language-plaintext highlighter-rouge">&lt;strong /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;em /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;i /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;small /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;sub /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;sup /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;br /&gt;</code>.</p>
 
 <p>It is possible to use these tags in both the computed fields and the actual subject data. However, we reccomend only using it on the computed fields since downstream systems may be not be expecting HTML tags.</p>
+
+<h3 id="unsolicited-inbound-messages"><strong>Unsolicited Inbound Messages</strong></h3>
+
+<p>AireFrame can be configured to allow messages from outside the system to create/update subjects.</p>
+
+<p>To configure this you must enable unsolicited inbound messaging.</p>
+
+<p>Go to the unsolicited inbound messaging configuration screen: Configuration -&gt; Subject Configuration -&gt; Unsolicited Inbound Messages.</p>
+
+<h4 id="matching-fields">Matching Fields</h4>
+
+<p>To use this feature you must specify which fields are used to match a subject.</p>
+
+<p>These can only be unique fields - if the values of the inbound messages match a subject, then their record will be updated, otherwise a new record will be created.</p>
+
+<p>You must also specify the location in which unmatched subjects are created.</p>
 
                     </div>
 

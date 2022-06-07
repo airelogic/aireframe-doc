@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Subject Configuration | AireFrame Docs</title>
+<title>API | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.2.1" />
-<meta property="og:title" content="Subject Configuration" />
-<meta name="author" content="Danny Heard, Karsten Lloyd" />
+<meta property="og:title" content="API" />
+<meta name="author" content="Danny Heard" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This page explains how to change the subject configuration in AireFrame. For example you may want to change the name of the subject or add/remove custom fields." />
-<meta property="og:description" content="This page explains how to change the subject configuration in AireFrame. For example you may want to change the name of the subject or add/remove custom fields." />
-<link rel="canonical" href="https://docs.aireframe.com/docs/subject-configuration/" />
-<meta property="og:url" content="https://docs.aireframe.com/docs/subject-configuration/" />
+<meta name="description" content="This page explains how to create use AireFrame’s apis to build custom integrations" />
+<meta property="og:description" content="This page explains how to create use AireFrame’s apis to build custom integrations" />
+<link rel="canonical" href="https://docs.aireframe.com/docs/api/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/api/" />
 <meta property="og:site_name" content="AireFrame Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-12-07T00:00:00+00:00" />
+<meta property="article:published_time" content="2022-06-07T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Subject Configuration" />
+<meta property="twitter:title" content="API" />
 <script type="application/ld+json">
-{"description":"This page explains how to change the subject configuration in AireFrame. For example you may want to change the name of the subject or add/remove custom fields.","@type":"BlogPosting","url":"https://docs.aireframe.com/docs/subject-configuration/","headline":"Subject Configuration","dateModified":"2021-12-07T00:00:00+00:00","datePublished":"2021-12-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/subject-configuration/"},"author":{"@type":"Person","name":"Danny Heard, Karsten Lloyd"},"@context":"https://schema.org"}</script>
+{"description":"This page explains how to create use AireFrame’s apis to build custom integrations","@type":"BlogPosting","url":"https://docs.aireframe.com/docs/api/","headline":"API","dateModified":"2022-06-07T00:00:00+00:00","datePublished":"2022-06-07T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/api/"},"author":{"@type":"Person","name":"Danny Heard"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -161,7 +161,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/subject-configuration/">Subject Configuration</a></li>
+          <li class=""><a href="/docs/subject-configuration/">Subject Configuration</a></li>
         
         </ul>
         
@@ -228,7 +228,7 @@
         
           
           
-          <li class=""><a href="/docs/api/">API</a></li>
+          <li class="uk-active"><a href="/docs/api/">API</a></li>
         
         </ul>
         
@@ -239,9 +239,9 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Subject Configuration</h1>
+                    <h1 class="uk-article-title">API</h1>
 
-                    <p class="subtitle uk-text-lead uk-text-muted">Configure the subject name, custom and computed fields</p>
+                    <p class="subtitle uk-text-lead uk-text-muted">Integration APIs</p>
 
                     <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
                         
@@ -250,104 +250,44 @@
 
 
 
-<time datetime="2021-12-07T00:00:00+00:00" itemprop="datePublished">
+<time datetime="2022-06-07T00:00:00+00:00" itemprop="datePublished">
     
-    Dec 7, 2021
+    Jun 7, 2022
 </time>
 
                     </div>
 
                     <div class="article-content">
-                        <p>This page explains how to change the subject configuration in AireFrame. For example you may want to change the name of the subject or add/remove custom fields.</p>
+                        <p>This page explains how to create use AireFrame’s apis to build custom integrations</p>
 
-<p>What you can find on this page:</p>
+<h2 id="authentication">Authentication</h2>
 
+<p>All integration APIs require a bearer token provided by the OAuth client credentials flow - this means that they cannot be called on behalf of a user.</p>
+
+<p>The bearer token must have a <code class="language-plaintext highlighter-rouge">tenant_key</code> claim.</p>
+
+<h2 id="unsolicited-inbound-subject-api">Unsolicited Inbound Subject API</h2>
+
+<p>AireFrame can handle unsolicited subject create/update messages provided that the unsolicited inbound configuration has been set for the tenant see <a href="/docs/subject-configuration#unsolicited-inbound-messages">here</a>.</p>
+
+<p>Endpoint: <code class="language-plaintext highlighter-rouge">https://aireframe.com/api/v1/messaging/subject</code></p>
+
+<p>Body:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "metadata": {
+        "key": value
+    },
+    "customFieldValues": {
+        "key": "value"
+    }
+}
+</code></pre></div></div>
+
+<p>Where:</p>
 <ul>
-  <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
-  <li><a href="#change-subject-configuration"><strong>Change subject configuration</strong></a></li>
-  <li><a href="#unsolicited-inbound-messages"><strong>Unsolicited Inbound Messages</strong></a></li>
+  <li><code class="language-plaintext highlighter-rouge">metadata</code> is an optional dictionary of values that are passed to downstream systems listening to AireFrame’s notifications e.g. AireFlow</li>
+  <li><code class="language-plaintext highlighter-rouge">customFieldValues</code> is a required dictionary of tenant custom field keys and the subject values, all required fields must be provided</li>
 </ul>
-
-<h3 id="required-permissions"><strong>Required Permissions</strong></h3>
-
-<ul>
-  <li>In order to change the subject configuration you will need the following permissions:
-    <ul>
-      <li><strong>View Subject Configuration</strong></li>
-      <li><strong>Edit Subject Configuration</strong></li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="change-subject-configuration"><strong>Change Subject Configuration</strong></h3>
-
-<p>Go to the subject configuration screen: Configuration -&gt; Subject Configuration.</p>
-
-<p><img src="/assets/screenshots/subject-configuration/subject-configuration.png" alt="Subject configuration page" /></p>
-
-<p>Here you can:</p>
-<ul>
-  <li>Change the subject name</li>
-  <li>Change the subject provider</li>
-  <li>Change the properties of the custom fields</li>
-  <li>Remove a custom field</li>
-  <li>Add a custom field - drag new fields from the left hand side into the relevant section</li>
-  <li>Re-order the subject banner - drag and drop fields to re-arrange</li>
-</ul>
-
-<h4 id="subject-banner-grouping">Subject banner grouping</h4>
-
-<p>On this page you can re-order the custom fields to alter how they are shown on the subject banner.</p>
-
-<ul>
-  <li>Primary field - A single field that is shown at the top of the banner, even when minimised</li>
-  <li>Secondary fields - These fields are shown when the banner is expanded, in the specified order (top to bottom)</li>
-  <li>Hidden fields - These are input fields that are not shown on the subject banner but still appear in subject forms. E.g. You can capture information about a subject using several input fields; then use a computed field to join these together and hide the induvidual fields.</li>
-</ul>
-
-<h4 id="dropdown-lists">Dropdown lists</h4>
-
-<p>Dropdown lists allow you to add your own custom options. This is useful when there are a set number of answers which are very long, or where it will useful to pull the data straight into a histogram or pie chart without needing any additional processing (e.g. natural language processing).</p>
-
-<p>To create a dropdown list:</p>
-<ul>
-  <li>Drag the ‘Dropdown List’ control from the list of available fields</li>
-  <li>Give the field a name, such as Nationality, Ethnicity, or even Favourite Colour</li>
-  <li>Click the plus symbol [ + ] next to ‘Add Value’ for as many options as you need</li>
-  <li>Write the text for each option</li>
-  <li>Use the cross [ x ] next to each option to remove any which are unnecessary</li>
-</ul>
-
-<h4 id="computed-fields">Computed Fields</h4>
-<p>Computed fields are flexible and allow you to reformat or combine the custom fields from the table above. This is achieved by using the <a href="https://shopify.github.io/liquid/basics/introduction/">liquid</a> syntax.</p>
-
-<p>To use the custom fields as variables in the liquid mapping of a computed field, use the value from the ‘key’ column in the corresponding row above.  <em>Please note, the field keys are automatically generated from the field names and must be unique.</em></p>
-
-<h4 id="unique-fields">Unique Fields</h4>
-<p>Input fields can be declared as <b>unique</b>. This means that only one subject in the entire tenant can use this value e.g. for unqiue indentifier fields.
-These fields are case and whitespace insensitive.</p>
-
-<h4 id="formatting">Formatting</h4>
-
-<p>We allow certain HTML tags to be rendered on the page. Currently these are: <code class="language-plaintext highlighter-rouge">&lt;b /&gt;</code>,  <code class="language-plaintext highlighter-rouge">&lt;strong /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;em /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;i /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;small /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;sub /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;sup /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;br /&gt;</code>.</p>
-
-<p>It is possible to use these tags in both the computed fields and the actual subject data. However, we reccomend only using it on the computed fields since downstream systems may be not be expecting HTML tags.</p>
-
-<h3 id="unsolicited-inbound-messages"><strong>Unsolicited Inbound Messages</strong></h3>
-
-<p>AireFrame can be configured to allow messages from outside the system to create/update subjects.</p>
-
-<p>To configure this you must enable unsolicited inbound messaging.</p>
-
-<p>Go to the unsolicited inbound messaging configuration screen: Configuration -&gt; Subject Configuration -&gt; Unsolicited Inbound Messages.</p>
-
-<h4 id="matching-fields">Matching Fields</h4>
-
-<p>To use this feature you must specify which fields are used to match a subject.</p>
-
-<p>These can only be unique fields - if the values of the inbound messages match a subject, then their record will be updated, otherwise a new record will be created.</p>
-
-<p>You must also specify the location in which unmatched subjects are created.</p>
 
                     </div>
 
@@ -377,10 +317,6 @@ These fields are case and whitespace insensitive.</p>
 
     
 
-    
-        <li><a href="/docs/subject-provider/">Subject Provider</a></li>
-        
-        
     
 
     
@@ -536,7 +472,7 @@ These fields are case and whitespace insensitive.</p>
         
           
           
-          <li class="uk-active"><a href="/docs/subject-configuration/">Subject Configuration</a></li>
+          <li class=""><a href="/docs/subject-configuration/">Subject Configuration</a></li>
         
         </ul>
         
@@ -603,7 +539,7 @@ These fields are case and whitespace insensitive.</p>
         
           
           
-          <li class=""><a href="/docs/api/">API</a></li>
+          <li class="uk-active"><a href="/docs/api/">API</a></li>
         
         </ul>
         

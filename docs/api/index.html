@@ -284,6 +284,24 @@
   <li><code class="language-plaintext highlighter-rouge">customFieldValues</code> is a required dictionary of tenant custom field keys and the subject values, all required fields must be provided</li>
 </ul>
 
+<p>The response will be the created subject:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "internalId": "d6df60bb-0c6d-47ab-855b-23c98d58ee79",
+    "externalId": "b38a64fe-df82-4510-92bb-314e26ff5509",
+    "customFieldValues": [
+        {
+            "customField": {
+                "id": "0eabc586-c18a-4ff5-8883-081e1615ea72"
+            },
+            "value": "value"
+        }
+    ]
+}
+</code></pre></div></div>
+
+<p>Where <code class="language-plaintext highlighter-rouge">internalId</code> is AireFrame’s subject identifier</p>
+
                     </div>
 
                     <hr class="uk-margin-medium">

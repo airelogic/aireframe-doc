@@ -302,6 +302,44 @@
 
 <p>Where <code class="language-plaintext highlighter-rouge">internalId</code> is AireFrame’s subject identifier</p>
 
+<h2 id="create-subject-form-api">Create Subject Form API</h2>
+
+<p>Endpoint: <code class="language-plaintext highlighter-rouge">https://aireframe.com/api/v1/messaging/form</code></p>
+
+<p>Body:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "metadata": {
+        "key": value
+    },
+    "subjectId": guid,
+    "key": string,
+    "version": integer (optional),
+    "correlationId": string (optional),
+    "userId": string (optional)
+}
+</code></pre></div></div>
+
+<p>Where:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">metadata</code> is an optional dictionary of values that are passed to downstream systems listening to AireFrame’s notifications e.g. AireFlow</li>
+  <li><code class="language-plaintext highlighter-rouge">subjectId</code> is AireFrame’s internal identifier for the subject (guid)</li>
+  <li><code class="language-plaintext highlighter-rouge">key</code> is the key for the form that is to be created</li>
+  <li><code class="language-plaintext highlighter-rouge">version</code> is the optional version of the form that is to be created, if omitted it will default to the latest version of the form</li>
+  <li><code class="language-plaintext highlighter-rouge">correlationId</code> is an optional identifier to group together forms and events</li>
+  <li><code class="language-plaintext highlighter-rouge">userId</code> is an optional identifier of the user who should be shown the created form if they are currently active</li>
+</ul>
+
+<p>The response will be the created form:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+    "instanceId": "56ba2e87-32db-423f-ab11-997cc81b3dfb",
+    "subjectId": "f0a8a0ec-6eba-43d9-bcf9-029315876b59",
+    "createdAt": "2022-08-10T14:45:06.54816Z",
+    "viewLink": "http://localhost:8081/patient/f0a8a0ec-6eba-43d9-bcf9-029315876b59/instance/56ba2e87-32db-423f-ab11-997cc81b3dfb/view",
+    "editLink": "http://localhost:8081/patient/f0a8a0ec-6eba-43d9-bcf9-029315876b59/instance/56ba2e87-32db-423f-ab11-997cc81b3dfb/edit"
+}
+</code></pre></div></div>
+
                     </div>
 
                     <hr class="uk-margin-medium">

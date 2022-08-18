@@ -340,12 +340,19 @@
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
   "status": ["NEW", "COMPLETED"]
   "workflowDefinitionId": "abcdefg"
+  "stateDimensions": [
+      {
+          "key": "state-key",
+          "dataType": "Integer"
+      }
+  ]
   }
 </code></pre></div>        </div>
         <p>Where:</p>
         <ul>
           <li>Workflow defintion id (optional, if omittied returns all tasks) is the id of the workflow definiton you want to see tasks for</li>
           <li>Status (optional, if omittied returns all tasks) is an array of statuses on which to filter the tasks. See <a href="https://docs.aireflow.co.uk/docs/task-statuses/">AireFlow docs</a> for the available statuses (These must be capitalised)</li>
+          <li>State dimensions (optional) allows dimensions to be populated with data from the AireFlow task state.</li>
         </ul>
       </li>
       <li><strong>FHIR R4 Example</strong>
@@ -357,11 +364,13 @@
   "dimensions": [
       {
           "key": "date",
-          "fhirPath": "Observation.effective"
+          "fhirPath": "Observation.effective",
+          "dataType": "DateTime"
       },
       {
           "key": "heartRate",
-          "fhirPath": "Observation.value.value"
+          "fhirPath": "Observation.value.value",
+          "dataType": "Decimal"
       }
   ]
   }
@@ -370,7 +379,8 @@
         <ul>
           <li>The resource type is what you want to query from the FHIR server - it must be searchable by patient identifier</li>
           <li>Search parameters are used to filter the resource type, in the example this is for the snomed code for heart rate observations. You can use as many as you like and use normal FHIR conventions (and/or) etc.</li>
-          <li>The dimensions are used to populate the widget with the fetched data, the keys are the data points that you want to show, they are resolved using FHIRPath, so any FHIRPath query is valid here. You can use FHIRPath to combine multiple expressions in case one or more do not resolve in the fetched data. The value returned for each data point will be the first FHIRPath expression that finds a value.</li>
+          <li>The dimensions are used to populate the widget with the fetched data, the keys are the data points that you want to show, they are resolved using the provided FHIRPath, so any FHIRPath query is valid here. You can use FHIRPath to combine multiple expressions in case one or more do not resolve in the fetched data. The value returned for each data point will be the first FHIRPath expression that finds a value.
+  You must specify the data type for each dimension.</li>
         </ul>
       </li>
     </ul>

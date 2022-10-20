@@ -286,9 +286,23 @@
 <ol>
   <li>Go to the data source configuration screen: Configuration -&gt; Data Sources.</li>
   <li>Click Add Data Source, you will see a screen as follows <img src="/assets/screenshots/data-source/add-data-source.png" alt="add data source" /></li>
-  <li>Select the data source type</li>
+  <li>Choose between a bundled data source (These are out-of-the-box integrations) and a custom data source (a custom-built integration using the <a href="/docs/sdk/">SDK</a>)</li>
+</ol>
+
+<p>If adding a bundled data source:</p>
+<ol>
+  <li>Select the bundle</li>
   <li>Enter a name for the data source</li>
   <li>Enter the data source specific configuration values. Required values are indicated with an (*). <img src="/assets/screenshots/data-source/config-options.png" alt="configuration values" /></li>
+  <li>Click save</li>
+</ol>
+
+<p>If adding a custom data source:</p>
+<ol>
+  <li>Enter the connection details for the custom data source. The authority server must be the same as the AireFrame instance (AireIdentity if using the SaaS instance)</li>
+  <li>Click connect to test the connection, you will not be able to continue if it does not connect successfuly</li>
+  <li>Enter a name for the data source</li>
+  <li>Enter the data source specific configuration values. Required values are indicated with an (*).</li>
   <li>Click save</li>
 </ol>
 

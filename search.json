@@ -94,6 +94,14 @@
       "tags"     : "developer,, integration",
       "url"      : "/docs/api/",
       "date"     : "2022-06-07 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Options",
+      "category" : "",
+      "tags"     : "developer",
+      "url"      : "/docs/options/",
+      "date"     : "2022-10-20 00:00:00 +0000"
     } 
   
 ]

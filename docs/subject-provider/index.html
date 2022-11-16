@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Subject Provider" />
 <script type="application/ld+json">
-{"description":"This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source.","@type":"BlogPosting","url":"https://docs.aireframe.com/docs/subject-provider/","headline":"Subject Provider","dateModified":"2021-01-25T00:00:00+00:00","datePublished":"2021-01-25T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/subject-provider/"},"author":{"@type":"Person","name":"Danny Heard"},"@context":"https://schema.org"}</script>
+{"datePublished":"2021-01-25T00:00:00+00:00","description":"This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/subject-provider/"},"url":"https://docs.aireframe.com/docs/subject-provider/","author":{"@type":"Person","name":"Danny Heard"},"@type":"BlogPosting","headline":"Subject Provider","dateModified":"2021-01-25T00:00:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -284,7 +284,12 @@
 <ol>
   <li>Go to the subject configuration screen: Configuration -&gt; Subject Configuration.</li>
   <li>Choose the data source you wish to serve your subjects from the drop down list <img src="/assets/screenshots/subject-configuration/subject-provider.png" alt="choose subject provider" /></li>
-  <li>Unless you are using the internal data store you will need to provide mappings for the external subject id and each of the custom fields so that the data source can provide the correct data for the subjects - In the case of the FHIR provider these are FHIR Paths.</li>
+  <li>Unless you are using the internal data store you will need to provide mappings for the external subject id and each of the custom fields so that the data source can provide the correct data for the subjects.
+    <ul>
+      <li>In the case of the FHIR provider these are FHIR Paths.</li>
+      <li>You will also need to provide a lookup expression that will be used to find subjects by id. This is a liquid expression that can reference the external subject id <code class="language-plaintext highlighter-rouge">{{ externalId }}</code>, and the internal subject id <code class="language-plaintext highlighter-rouge">{{ internalId }}</code></li>
+    </ul>
+  </li>
   <li>Click save</li>
 </ol>
 

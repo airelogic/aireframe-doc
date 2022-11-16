@@ -25,7 +25,7 @@ stages:
         steps:
           - task: UseRubyVersion@0
             inputs:
-              versionSpec: '~> 2.6' 
+              versionSpec: '~> 3.1' 
      
           - powershell: ./build-scripts/build.ps1
             workingDirectory: doc-site

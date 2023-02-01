@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Subject Configuration | AireFrame Docs</title>
-<meta name="generator" content="Jekyll v4.3.1" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Subject Configuration" />
 <meta name="author" content="Danny Heard, Karsten Lloyd" />
 <meta property="og:locale" content="en_US" />
@@ -336,7 +336,7 @@ These fields are case and whitespace insensitive.</p>
 
 <p>To change the order of the fields on the subject form page, click on the <b>Form Layout</b> then drag and drop the fields to change the order of the fields.</p>
 
-<h3 id="unsolicited-inbound-messages"><strong>Unsolicited Inbound Messages</strong></h3>
+<h2 id="unsolicited-inbound-messages"><strong>Unsolicited Inbound Messages</strong></h2>
 
 <p>AireFrame can be configured to allow messages from outside the system to create/update subjects.</p>
 
@@ -351,6 +351,34 @@ These fields are case and whitespace insensitive.</p>
 <p>These can only be unique fields - if the values of the inbound messages match a subject, then their record will be updated, otherwise a new record will be created.</p>
 
 <p>You must also specify the location in which unmatched subjects are created.</p>
+
+<h4 id="override-location-behaviour">Override Location Behaviour</h4>
+
+<p>It is possible to override the location(s) a subject is placed into from an inbound subject message. 
+This option defines the how AireFrame treats the structural entity keys that are sent on the inbound subject message.</p>
+
+<ul>
+  <li><em>Ignore</em>
+    <ul>
+      <li>This is the default option</li>
+      <li>For a new subject, they will be added to the ‘Unmatched Location’ and the location(s) passed in on the message will be ignored</li>
+      <li>For an existing subject, they will remain in their existing location(s) and the location(s) passed in on the message will be ignored</li>
+    </ul>
+  </li>
+  <li><em>Add</em>
+    <ul>
+      <li>For a new subject, they will be added to the ‘Unmatched Location’ and any locations specified on the message</li>
+      <li>For an existing subject, they will be added to the any locations specified on the message while remaining in any existing locations</li>
+    </ul>
+  </li>
+  <li><em>Replace</em>
+    <ul>
+      <li>For a new subject, they will only be added to the location(s) specified on the message</li>
+      <li>For an existing subject, they will be removed from any existing locations and added to the location(s) specified on the message</li>
+      <li>If no locations are specified on the message, the default (Ignore) behaviour will be followed</li>
+    </ul>
+  </li>
+</ul>
 
                     </div>
 

@@ -41,14 +41,6 @@
     } ,
   
     {
-      "title"    : "Widget Designer",
-      "category" : "",
-      "tags"     : "widgets",
-      "url"      : "/docs/visualisation-designer/",
-      "date"     : "2021-06-08 00:00:00 +0000"
-    } ,
-  
-    {
       "title"    : "Getting Started",
       "category" : "",
       "tags"     : "featured",
@@ -102,6 +94,14 @@
       "tags"     : "developer",
       "url"      : "/docs/options/",
       "date"     : "2022-10-20 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Widget Designer",
+      "category" : "",
+      "tags"     : "widgets",
+      "url"      : "/docs/visualisation-designer/",
+      "date"     : "2023-04-03 00:00:00 +0000"
     } 
   
 ]

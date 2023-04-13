@@ -102,6 +102,14 @@
       "tags"     : "widgets",
       "url"      : "/docs/visualisation-designer/",
       "date"     : "2023-04-03 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Transfer Configuration",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/docs/import-export-configuration/",
+      "date"     : "2023-04-11 00:00:00 +0000"
     } 
   
 ]

@@ -6,20 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>AireFrame Docs | AireFrame Documentation - Find changelogs and tutorials and videos on how to setup and use AireFrame</title>
+<title>Transfer Configuration | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="AireFrame Docs" />
+<meta property="og:title" content="Transfer Configuration" />
+<meta name="author" content="Andy Cunningham" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="AireFrame Documentation - Find changelogs and tutorials and videos on how to setup and use AireFrame" />
-<meta property="og:description" content="AireFrame Documentation - Find changelogs and tutorials and videos on how to setup and use AireFrame" />
-<link rel="canonical" href="https://docs.aireframe.com/docs/" />
-<meta property="og:url" content="https://docs.aireframe.com/docs/" />
+<meta name="description" content="This page details how to export and import a configuration into Aire Frame. This allows you to easily transfer your configuration across multiple tenants." />
+<meta property="og:description" content="This page details how to export and import a configuration into Aire Frame. This allows you to easily transfer your configuration across multiple tenants." />
+<link rel="canonical" href="https://docs.aireframe.com/docs/import-export-configuration/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/import-export-configuration/" />
 <meta property="og:site_name" content="AireFrame Docs" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-11T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="AireFrame Docs" />
+<meta property="twitter:title" content="Transfer Configuration" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"AireFrame Documentation - Find changelogs and tutorials and videos on how to setup and use AireFrame","headline":"AireFrame Docs","url":"https://docs.aireframe.com/docs/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Andy Cunningham"},"dateModified":"2023-04-11T00:00:00+00:00","datePublished":"2023-04-11T00:00:00+00:00","description":"This page details how to export and import a configuration into Aire Frame. This allows you to easily transfer your configuration across multiple tenants.","headline":"Transfer Configuration","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/import-export-configuration/"},"url":"https://docs.aireframe.com/docs/import-export-configuration/"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -65,7 +67,7 @@
                     
                     
                     
-                        <li class="uk-active"><a href="/docs/" >Documentation</a></li>
+                        <li><a href="/docs/" >Documentation</a></li>
                     
                 
                     
@@ -217,7 +219,7 @@
         
           
           
-          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
+          <li class="uk-active"><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
         
         </ul>
         
@@ -245,15 +247,332 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Docs</h1>
-                    <p>Select a relevant article to start reading the documentation</p>
+                    <h1 class="uk-article-title">Transfer Configuration</h1>
+
+                    <p class="subtitle uk-text-lead uk-text-muted">Exporting and importing a tenants configuration</p>
+
+                    <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
+                        
+
+
+
+
+
+<time datetime="2023-04-11T00:00:00+00:00" itemprop="datePublished">
+    
+    Apr 11, 2023
+</time>
+
+                    </div>
+
+                    <div class="article-content">
+                        <p>This page details how to export and import a configuration into Aire Frame. This allows you to easily transfer your configuration across multiple tenants.</p>
+
+<p>What can you find on this page:</p>
+
+<ul>
+  <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
+  <li><a href="#export-configuration"><strong>Export Configuration</strong></a></li>
+  <li><a href="#import-configuration"><strong>Import Configuration</strong></a></li>
+</ul>
+
+<h4 id="required-permissions"><strong>Required Permissions</strong></h4>
+
+<ul>
+  <li>In order for you to export a configuration you will need the <strong>Export Configuration</strong> permission.</li>
+  <li>For you to import a configuration you will need the <strong>Import Configuration</strong> and then any of these following permissions depending upon what you are trying to import:
+    <ul>
+      <li><strong>Create Structural Entities</strong></li>
+      <li><strong>Create Group</strong></li>
+      <li><strong>Create Data Sources</strong></li>
+      <li><strong>Edit Subject Configuration</strong></li>
+      <li><strong>Create Data Extract</strong></li>
+      <li><strong>Create Visualisation</strong></li>
+      <li><strong>Create Collection</strong></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="export-configuration"><strong>Export Configuration</strong></h4>
+
+<p>Exporting a configuration will generate a JSON output of the selected items within your current configuration ready to be imported into a different tenant. This json output can either be copied or downloaded onto your hard drive.</p>
+
+<p>Some items have particular rules to stop any conflicts and will therefore need to be exported together. Here is a list of the requirements necessary for each item:</p>
+
+<table class="uk-table dependency-matrix">
+  <thead>
+    <tr>
+      <th><strong>Dependencies</strong></th>
+      <th>Structure</th>
+      <th>Groups</th>
+      <th>Data Sources</th>
+      <th>Subject Configuration</th>
+      <th>Data Extracts</th>
+      <th>Widgets</th>
+      <th>Collections</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>STRUCTURE</td>
+      <td> </td>
+      <td>X</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>GROUPS</td>
+      <td>X</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>DATA SOURCES</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>SUBJECT CONFIGURATION</td>
+      <td> </td>
+      <td> </td>
+      <td>X</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>DATA EXTRACTS</td>
+      <td> </td>
+      <td> </td>
+      <td>X</td>
+      <td> </td>
+      <td> </td>
+      <td>X</td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>WIDGETS</td>
+      <td> </td>
+      <td> </td>
+      <td>X</td>
+      <td> </td>
+      <td>X</td>
+      <td> </td>
+      <td>X</td>
+    </tr>
+    <tr>
+      <td>COLLECTIONS</td>
+      <td> </td>
+      <td> </td>
+      <td>X</td>
+      <td> </td>
+      <td>X</td>
+      <td>X</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>Go to the Transfer Configuration screen: Configuration -&gt; Transfer</li>
+  <li>Select which items you would like to export</li>
+  <li>Click the export button</li>
+  <li>You will get a JSON response as follows <img src="/assets/screenshots/transfer-configuration/export-configuration-json-response.png" alt="export configuration JSON response" /></li>
+  <li>Either copy your json response into a text file or click the download button to download the JSON</li>
+</ol>
+
+<h4 id="import-configuration"><strong>Import Configuration</strong></h4>
+
+<p>Importing a configuration will take a JSON or text file and upload it to the current configuration. This will update any items that it matches the key and type to and create any that it cannot find. This can be a risky endeavour so if any of the imports fail it will restore back to the latest version of the configuration.</p>
+
+<p>After clicking confirm you will be navigated away from the Transfer Configuration area while the job runs in the background. This may take some time however you will be notified after completion.</p>
+
+<ol>
+  <li>Go to the Transfer Configuration screen: Configuration -&gt; Transfer</li>
+  <li>Select the Import tab from the top bar. You should see a screen as follows <img src="/assets/screenshots/transfer-configuration/import-configuration-screen.png" alt="import configuration screen" /></li>
+  <li>Either drag a file or click the draggable area and find the file which you would like to upload</li>
+  <li>Click the Import button</li>
+  <li>A warning will remind you that this could cause complications where you can either cancel or continue with the import</li>
+</ol>
+
+                    </div>
+
+                    <hr class="uk-margin-medium">
+
+                    <div class="uk-margin-large-top">
+    <h3>Related Articles</h3>
+
+    
+    
+    
+
+    <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+    </ul>
+</div>
 
                 </article>
+
+                <div>
+                    <div class="uk-section uk-text-center uk-link-muted">
+    <div class="uk-margin-medium uk-text-small">
+        <div></div>
+        <div></div> 
+    </div> 
+</div>
+
+                </div>
+
+                <script>
+                    // Table of contents scroll to
+                    UIkit.scroll('#markdown-toc a', {
+                        duration: 400,
+                        offset: 120
+                    });
+                </script>
 
             </div>
 
     </div>
-</div>
 </div>
 
 
@@ -348,7 +667,7 @@
         
           
           
-          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
+          <li class="uk-active"><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
         
         </ul>
         
@@ -418,64 +737,6 @@
     </div>
 </div>
 
-
-    
-        <footer class="uk-section uk-text-center uk-text-muted uk-link-muted">
-    <div class="uk-container uk-container-small">
-
-        <div>
-            <ul class="uk-subnav uk-flex-center">
-                
-                    
-                    
-                    
-                        <li class="uk-active"><a href="/docs/" >Documentation</a></li>
-                    
-                
-                    
-                    
-                    
-                        <li><a href="/news/" >News</a></li>
-                    
-                
-                    
-                    
-                    
-                        <li><a href="/changelog/" >Changelog</a></li>
-                    
-                
-                    
-                    
-                    
-                        <li><a href="/contact/" >Contact</a></li>
-                    
-                
-            </ul>
-        </div>
-        <div class="uk-margin-medium">
-            <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center uk-grid">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-        </div>
-        <div class="uk-margin-medium uk-text-small">
-            <div class="copyright"></div>
-            <div> </div> 
-        </div>
-    </div>
-</footer>
 
     
 

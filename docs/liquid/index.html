@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>API | AireFrame Docs</title>
+<title>Liquid | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="API" />
+<meta property="og:title" content="Liquid" />
 <meta name="author" content="Danny Heard" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This page explains how to create use AireFrame’s apis to build custom integrations" />
-<meta property="og:description" content="This page explains how to create use AireFrame’s apis to build custom integrations" />
-<link rel="canonical" href="https://docs.aireframe.com/docs/api/" />
-<meta property="og:url" content="https://docs.aireframe.com/docs/api/" />
+<meta name="description" content="This page explains how to use the Liquid templating language in AireFrame" />
+<meta property="og:description" content="This page explains how to use the Liquid templating language in AireFrame" />
+<link rel="canonical" href="https://docs.aireframe.com/docs/liquid/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/liquid/" />
 <meta property="og:site_name" content="AireFrame Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-06-07T00:00:00+00:00" />
+<meta property="article:published_time" content="2023-05-04T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="API" />
+<meta property="twitter:title" content="Liquid" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"dateModified":"2022-06-07T00:00:00+00:00","datePublished":"2022-06-07T00:00:00+00:00","description":"This page explains how to create use AireFrame’s apis to build custom integrations","headline":"API","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/api/"},"url":"https://docs.aireframe.com/docs/api/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"dateModified":"2023-05-04T00:00:00+00:00","datePublished":"2023-05-04T00:00:00+00:00","description":"This page explains how to use the Liquid templating language in AireFrame","headline":"Liquid","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/liquid/"},"url":"https://docs.aireframe.com/docs/liquid/"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -228,11 +228,11 @@
         
           
           
-          <li class="uk-active"><a href="/docs/api/">API</a></li>
+          <li class=""><a href="/docs/api/">API</a></li>
         
           
           
-          <li class=""><a href="/docs/liquid/">Liquid</a></li>
+          <li class="uk-active"><a href="/docs/liquid/">Liquid</a></li>
         
           
           
@@ -251,9 +251,9 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">API</h1>
+                    <h1 class="uk-article-title">Liquid</h1>
 
-                    <p class="subtitle uk-text-lead uk-text-muted">Integration APIs</p>
+                    
 
                     <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
                         
@@ -262,101 +262,37 @@
 
 
 
-<time datetime="2022-06-07T00:00:00+00:00" itemprop="datePublished">
+<time datetime="2023-05-04T00:00:00+00:00" itemprop="datePublished">
     
-    Jun 7, 2022
+    May 4, 2023
 </time>
 
                     </div>
 
                     <div class="article-content">
-                        <p>This page explains how to create use AireFrame’s apis to build custom integrations</p>
+                        <p>This page explains how to use the Liquid templating language in AireFrame</p>
 
-<h2 id="authentication">Authentication</h2>
+<h3 id="custom-filters">Custom Filters</h3>
 
-<p>All integration APIs require a bearer token provided by the OAuth client credentials flow - this means that they cannot be called on behalf of a user.</p>
+<p>AireFrame offers a number of custom filters that can be used in Liquid templates to make common operations easier.</p>
 
-<p>The bearer token must have a <code class="language-plaintext highlighter-rouge">tenant_key</code> claim.</p>
+<h4 id="age">Age</h4>
 
-<h2 id="unsolicited-inbound-subject-api">Unsolicited Inbound Subject API</h2>
+<p>There is an age filter that can be used to calculate the age of a date/date time value.</p>
 
-<p>AireFrame can handle unsolicited subject create/update messages provided that the unsolicited inbound configuration has been set for the tenant see <a href="/docs/subject-configuration#unsolicited-inbound-messages">here</a>.</p>
-
-<p>Endpoint: <code class="language-plaintext highlighter-rouge">https://aireframe.com/api/v1/messaging/subject</code></p>
-
-<p>Body:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-    "metadata": {
-        "key": value
-    },
-    "customFieldValues": {
-        "key": "value"
-    },
-    "structuralEntityKeys": ["key"]
-}
-</code></pre></div></div>
-
-<p>Where:</p>
+<p>It takes one argument specifying what unit should be used to calcualte the age, the options are:</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">metadata</code> is an optional dictionary of values that are passed to downstream systems listening to AireFrame’s notifications e.g. AireFlow</li>
-  <li><code class="language-plaintext highlighter-rouge">customFieldValues</code> is a required dictionary of tenant custom field keys and the subject values, all required fields must be provided</li>
-  <li><code class="language-plaintext highlighter-rouge">structuralEntityKeys</code> is an optional list of structural entity keys, for behaviour see <a href="/docs/subject-configuration#override-location-behaviour">Subject Configuration</a></li>
+  <li><code class="language-plaintext highlighter-rouge">year</code></li>
+  <li><code class="language-plaintext highlighter-rouge">month</code></li>
+  <li><code class="language-plaintext highlighter-rouge">week</code></li>
+  <li><code class="language-plaintext highlighter-rouge">day</code></li>
+  <li><code class="language-plaintext highlighter-rouge">hour</code></li>
+  <li><code class="language-plaintext highlighter-rouge">minute</code></li>
 </ul>
 
-<p>The response will be the created subject:</p>
+<p>Example:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-    "internalId": "d6df60bb-0c6d-47ab-855b-23c98d58ee79",
-    "externalId": "b38a64fe-df82-4510-92bb-314e26ff5509",
-    "customFieldValues": [
-        {
-            "customField": {
-                "id": "0eabc586-c18a-4ff5-8883-081e1615ea72"
-            },
-            "value": "value"
-        }
-    ]
-}
-</code></pre></div></div>
-
-<p>Where <code class="language-plaintext highlighter-rouge">internalId</code> is AireFrame’s subject identifier</p>
-
-<h2 id="create-subject-form-api">Create Subject Form API</h2>
-
-<p>Endpoint: <code class="language-plaintext highlighter-rouge">https://aireframe.com/api/v1/messaging/form</code></p>
-
-<p>Body:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-    "metadata": {
-        "key": value
-    },
-    "subjectId": guid,
-    "key": string,
-    "version": integer (optional),
-    "correlationId": string (optional),
-    "userId": string (optional)
-}
-</code></pre></div></div>
-
-<p>Where:</p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">metadata</code> is an optional dictionary of values that are passed to downstream systems listening to AireFrame’s notifications e.g. AireFlow</li>
-  <li><code class="language-plaintext highlighter-rouge">subjectId</code> is AireFrame’s internal identifier for the subject (guid)</li>
-  <li><code class="language-plaintext highlighter-rouge">key</code> is the key for the form that is to be created</li>
-  <li><code class="language-plaintext highlighter-rouge">version</code> is the optional version of the form that is to be created, if omitted it will default to the latest version of the form</li>
-  <li><code class="language-plaintext highlighter-rouge">correlationId</code> is an optional identifier to group together forms and events</li>
-  <li><code class="language-plaintext highlighter-rouge">userId</code> is an optional identifier of the user who should be shown the created form if they are currently active</li>
-</ul>
-
-<p>The response will be the created form:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
-    "instanceId": "56ba2e87-32db-423f-ab11-997cc81b3dfb",
-    "subjectId": "f0a8a0ec-6eba-43d9-bcf9-029315876b59",
-    "createdAt": "2022-08-10T14:45:06.54816Z",
-    "viewLink": "http://localhost:8081/patient/f0a8a0ec-6eba-43d9-bcf9-029315876b59/instance/56ba2e87-32db-423f-ab11-997cc81b3dfb/view",
-    "editLink": "http://localhost:8081/patient/f0a8a0ec-6eba-43d9-bcf9-029315876b59/instance/56ba2e87-32db-423f-ab11-997cc81b3dfb/edit"
-}
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ dateOfBirth | age: 'year' }}
 </code></pre></div></div>
 
                     </div>
@@ -469,45 +405,45 @@
     
 
     
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-        <li><a href="/docs/liquid/">Liquid</a></li>
+        <li><a href="/docs/api/">API</a></li>
         
         
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
     
 
     
@@ -640,11 +576,11 @@
         
           
           
-          <li class="uk-active"><a href="/docs/api/">API</a></li>
+          <li class=""><a href="/docs/api/">API</a></li>
         
           
           
-          <li class=""><a href="/docs/liquid/">Liquid</a></li>
+          <li class="uk-active"><a href="/docs/liquid/">Liquid</a></li>
         
           
           

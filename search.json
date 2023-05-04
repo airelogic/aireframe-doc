@@ -110,6 +110,14 @@
       "tags"     : "",
       "url"      : "/docs/import-export-configuration/",
       "date"     : "2023-04-11 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Liquid",
+      "category" : "",
+      "tags"     : "developer,, templating",
+      "url"      : "/docs/liquid/",
+      "date"     : "2023-05-04 00:00:00 +0000"
     } 
   
 ]

@@ -272,7 +272,7 @@
                     <div class="article-content">
                         <p>We publish a <em>C# ASP.Net Core</em> SDK that can be used to integrate AireFrame with custom data sources.</p>
 
-<p>Currently the SDK targets <em>.NET 6</em> and <em>.NET 5</em>, please contact us if you need to target a different version.</p>
+<p>Currently the SDK targets <em>.NET 6</em> and <em>.NET 7</em>, please contact us if you need to target a different version.</p>
 
 <h3 id="installation">Installation</h3>
 
@@ -295,12 +295,17 @@
 
 <h3 id="usage">Usage</h3>
 
-<p>There are two interfaces that provide data to AireFrame. <code class="language-plaintext highlighter-rouge">ISubjectProvider</code> and <code class="language-plaintext highlighter-rouge">IStructuredDataProvider</code> (provides the data that powers the visualisations). You may implement just one or both depending on your data needs.</p>
+<p>These are the interfaces you can implement:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">ISubjectProvider</code> and <code class="language-plaintext highlighter-rouge">ISubjectLocationProvider</code></li>
+  <li><code class="language-plaintext highlighter-rouge">IStructuredDataProvider</code></li>
+  <li><code class="language-plaintext highlighter-rouge">IEventHandler</code></li>
+</ul>
 
 <p>In <code class="language-plaintext highlighter-rouge">Startup.ConfigureServices</code>:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services
-    .AddDataProviderServer(
+    .AddDataProviderServer&lt;YourDataSource&gt;(
         new DataProviderServerSettings(
             new AuthOptions(
                 AUHTORITY_HOST,
@@ -308,9 +313,9 @@
                 AUDIENCE)
         )
     )
-    .AddDataSource&lt;YourDataSource&gt;()
-    .AddSubjectProvider&lt;YourDataSource, YourSubjectProviderImplementation&gt;()
-    .AddStructuredDataProvider&lt;YourDataSource, YourStructuredDataProviderImplementation&gt;();
+    .AddSubjectProvider&lt;YourSubjectProviderImplementation, YourSubjectLocationProviderImplementation&gt;()
+    .AddStructuredDataProvider&lt;YourStructuredDataProviderImplementation&gt;()
+    .AddEventHandler&lt;YourEventHandlerImplementation&gt;();
 </code></pre></div></div>
 
 <p>In <code class="language-plaintext highlighter-rouge">Startup.Configure</code>:</p>

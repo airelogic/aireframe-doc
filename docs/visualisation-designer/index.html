@@ -369,13 +369,13 @@
   <li>Drag and drop the columns you wish to display on the table</li>
   <li>The columns can be reordered by dragging them to a new position. (Top-bottom = Left-Right)</li>
   <li>The columns can be removed by clicking the bin icon within each series.</li>
-  <li>Customise each column by changing the display name and selecting a formatter (if applicable)</li>
+  <li>Customise each column by changing the display name and providing a liquid expression to format the value (if applicable) e.g. <code class="language-plaintext highlighter-rouge">{{ value | round: 2 }}</code></li>
 </ol>
 
 <p>For a pie chart:</p>
 <ol>
   <li>Select the series you want to display on the pie chart</li>
-  <li>Customise the series by changing the display name and selecting a formatter (if applicable)</li>
+  <li>Customise the series by changing the display name  and providing a liquid expression to format the value (if applicable) e.g. <code class="language-plaintext highlighter-rouge">{{ value | round: 2 }}</code></li>
 </ol>
 
 <p>For a graph:</p>
@@ -391,7 +391,7 @@
       <li>Each series on the y-axis must have a chart type selected</li>
     </ul>
   </li>
-  <li>Customise the series by changing the display name and selecting a formatter (if applicable)</li>
+  <li>Customise the series by changing the display name  and providing a liquid expression to format the value (if applicable) e.g. <code class="language-plaintext highlighter-rouge">{{ value | round: 2 }}</code></li>
 </ol>
 
 <p>Once you are happy with your visualisation click next to continue.</p>

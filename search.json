@@ -1,7 +1,7 @@
 [
   
     {
-      "title"    : "Data Source Configuration",
+      "title"    : "Data Sources",
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/data-source-config/",
@@ -73,19 +73,19 @@
     } ,
   
     {
-      "title"    : "Collection Configurator",
-      "category" : "",
-      "tags"     : "featured",
-      "url"      : "/docs/collection-configurator/",
-      "date"     : "2022-04-28 00:00:00 +0000"
-    } ,
-  
-    {
       "title"    : "API",
       "category" : "",
       "tags"     : "developer,, integration",
       "url"      : "/docs/api/",
       "date"     : "2022-06-07 00:00:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Dashboards",
+      "category" : "",
+      "tags"     : "widgets",
+      "url"      : "/docs/dashboards/",
+      "date"     : "2022-06-19 00:00:00 +0000"
     } ,
   
     {

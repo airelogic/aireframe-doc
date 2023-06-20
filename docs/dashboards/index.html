@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>User Mangagment | AireFrame Docs</title>
+<title>Dashboards | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="User Mangagment" />
-<meta name="author" content="Danny Heard" />
+<meta property="og:title" content="Dashboards" />
+<meta name="author" content="Anisa Khan, Danny Heard" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This page explains how to manage users in AireFrame (AirePolicy). For example you may want to invite a new user to your tenant, or remvoe an existing user." />
-<meta property="og:description" content="This page explains how to manage users in AireFrame (AirePolicy). For example you may want to invite a new user to your tenant, or remvoe an existing user." />
-<link rel="canonical" href="https://docs.aireframe.com/docs/user-management/" />
-<meta property="og:url" content="https://docs.aireframe.com/docs/user-management/" />
+<meta name="description" content="This page explains how to create dashboards in aireframe. For example you may want to show different widgets on the home or subject pages." />
+<meta property="og:description" content="This page explains how to create dashboards in aireframe. For example you may want to show different widgets on the home or subject pages." />
+<link rel="canonical" href="https://docs.aireframe.com/docs/dashboards/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/dashboards/" />
 <meta property="og:site_name" content="AireFrame Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-02-08T00:00:00+00:00" />
+<meta property="article:published_time" content="2022-06-19T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="User Mangagment" />
+<meta property="twitter:title" content="Dashboards" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"dateModified":"2021-02-08T00:00:00+00:00","datePublished":"2021-02-08T00:00:00+00:00","description":"This page explains how to manage users in AireFrame (AirePolicy). For example you may want to invite a new user to your tenant, or remvoe an existing user.","headline":"User Mangagment","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/user-management/"},"url":"https://docs.aireframe.com/docs/user-management/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Anisa Khan, Danny Heard"},"dateModified":"2022-06-19T00:00:00+00:00","datePublished":"2022-06-19T00:00:00+00:00","description":"This page explains how to create dashboards in aireframe. For example you may want to show different widgets on the home or subject pages.","headline":"Dashboards","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/dashboards/"},"url":"https://docs.aireframe.com/docs/dashboards/"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -177,7 +177,7 @@
         
           
           
-          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
+          <li class="uk-active"><a href="/docs/dashboards/">Dashboards</a></li>
         
         </ul>
         
@@ -194,7 +194,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/user-management/">User Mangagment</a></li>
+          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
         
         </ul>
         
@@ -235,9 +235,9 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">User Mangagment</h1>
+                    <h1 class="uk-article-title">Dashboards</h1>
 
-                    <p class="subtitle uk-text-lead uk-text-muted">Manage users who have access to your tenant</p>
+                    
 
                     <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
                         
@@ -246,77 +246,83 @@
 
 
 
-<time datetime="2021-02-08T00:00:00+00:00" itemprop="datePublished">
+<time datetime="2022-06-19T00:00:00+00:00" itemprop="datePublished">
     
-    Feb 8, 2021
+    Jun 19, 2022
 </time>
 
                     </div>
 
                     <div class="article-content">
-                        <p>This page explains how to manage users in AireFrame (AirePolicy). For example you may want to invite a new user to your tenant, or remvoe an existing user.</p>
+                        <p>This page explains how to create dashboards in aireframe. For example you may want to show different widgets on the home or subject pages.</p>
 
 <p>What you can find on this page:</p>
 
 <ul>
   <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
-  <li><a href="#add-tenant-user"><strong>Add Tenant User</strong></a></li>
-  <li><a href="#remove-tenant-user"><strong>Remove Tenant User</strong></a></li>
+  <li><a href="#create-dashboard"><strong>Create Dashboard</strong></a></li>
+  <li><a href="#delete-dashboard"><strong>Delete Dashboard</strong></a></li>
 </ul>
 
 <h4 id="required-permissions"><strong>Required Permissions</strong></h4>
 
 <ul>
-  <li>In order to add a user you will need the following (AirePolicy) permissions:
+  <li>In order to create dashboards you will the following permissions:
     <ul>
-      <li><strong>Add Tenant User</strong></li>
+      <li><strong>Create Dashboard</strong></li>
+      <li><strong>List Dashboard</strong></li>
+      <li><strong>View Dashboard</strong></li>
     </ul>
   </li>
-  <li>In order to remove a user you will need the following (AirePolicy) permissions:
+  <li>In order to edit a dashboard you will need the following permissions:
     <ul>
-      <li><strong>List Tenant Users</strong></li>
-      <li><strong>Remove Tenant User</strong></li>
+      <li><strong>Edit Dashboard</strong></li>
     </ul>
   </li>
 </ul>
 
-<h4 id="add-tenant-user"><strong>Add Tenant User</strong></h4>
+<h4 id="create-dashboard"><strong>Create Dashboard</strong></h4>
 
 <ol>
-  <li>Go to <a href="https://dev.policy.airelogic.com/swagger" target="_blank">Aire Policy</a></li>
-  <li>Click Authorize, select all the scopes and click Authorize</li>
-  <li>Login and if applicable, select the tenant that you wish to manage</li>
-  <li>Go to the add user endpoint (POST /api/v1.0/tenants/{tenantKey}/users)</li>
-  <li>Enter the tenant key of the tenant you wish to manage (this must match the tenant you selected earlier) and in the body enter the email of the user you wish to add</li>
-  <li>Click Execute</li>
+  <li>Go to the dashboards configuration screen: Configuration -&gt; Data Visualisations -&gt; Dashboards (Tab).</li>
+  <li>Click add new. You will see the following screen
+<img src="/assets/screenshots/collection/create-collection.png" alt="add dashboards" /></li>
+  <li>Enter a title and key for your dashboard.</li>
+  <li>Drag over the widgets you want to enable from the Add Widgets section to the widgets input.</li>
+  <li>Click save changes.</li>
 </ol>
 
-<p>If this endpoint responds with a message saying you must invite this user then:</p>
-<ol>
-  <li>Go to the invite user endpoint (POST /api/v1.0/tenants/{tenantKey}/users/invite)</li>
-  <li>Enter the tenant key of the tenant you wish to manage (this must match the tenant you selected earlier) and in the body enter the email of the user you wish to add</li>
-  <li>Click Execute</li>
-  <li>Once the user signs up, they will be added to your tenant</li>
-</ol>
+<p>You can also use this page to edit dashboards.</p>
 
-<h4 id="remove-tenant-user"><strong>Remove Tenant User</strong></h4>
+<h4 id="delete-dashboard"><strong>Delete Dashboard</strong></h4>
 
 <ol>
-  <li>Go to <a href="https://dev.policy.airelogic.com/swagger" target="_blank">Aire Policy</a></li>
-  <li>Click Authorize, select all the scopes and click Authorize</li>
-  <li>Login and if applicable, select the tenant that you wish to manage</li>
-  <li>Go to the remove user endpoint (DELETE /api/v1.0/tenants/{tenantKey}/users)</li>
-  <li>Enter the tenant key of the tenant you wish to manage (this must match the tenant you selected earlier) and the user id of the user you wish to delete (see below)</li>
-  <li>Click Execute</li>
+  <li>Go to the dashboard configuration screen: Configuration -&gt; Data Visualisations -&gt; Dashboards (Tab).</li>
+  <li>Select the dashboard you wish to delete.</li>
+  <li>Click remove dashboard.</li>
 </ol>
 
-<p>To get the user id of the user you wish to delete</p>
-<ol>
-  <li>Go to the gets users endpoint (GET /api/v1.0/tenants/{tenantKey}/users)</li>
-  <li>Enter the tenant key of the tenant you wish to manage (this must match the tenant you selected earlier)</li>
-  <li>Click Execute</li>
-  <li>Find the user you wish to remove and copy the id value</li>
-</ol>
+<h4 id="section-configuration"><strong>Section Configuration</strong></h4>
+
+<p><img src="/assets/screenshots/collection/section-configuration.png" alt="section configuration" /></p>
+
+<p>Once you have created a dashboard you need to configure which section(s) it should be shown on.
+You can do this by clicking on the ‘Sections’ tab on the configure visualisations page.</p>
+
+<p>This page also allows you to set the default dashboard that should be shown on each section. <em>Note, this is only used if the user has not selected a dashboard to show.</em></p>
+
+<p>Options:
+In AireFrame, there are currently four sections where dashboards can be shown:</p>
+
+<ul>
+  <li><strong>Location</strong> - This is where you see the widgets on the structural entity (location) overview page. In this section, the widgets are populated with data for
+all subjects located within that structural entity. <em>Note that this is recursive - it shows data for subjects that are located in child structural entites and so on</em></li>
+  <li><strong>Subject List</strong> - This is where you see the data shown on the subject list alongside their id and name.
+<em>In this section, the visualisation is slightly altered to retrieve only the first data point for that subject (according to the default ordering)</em></li>
+  <li><strong>Subject Record</strong> - This is where you see the widgets on the subject page with data only for that subject</li>
+  <li><strong>Subject Preview</strong> - This is where the subject information is shown in the right hand side as a preview, as well as any widgets that are configured to show in this section.</li>
+</ul>
+
 
                     </div>
 
@@ -365,7 +371,34 @@
     
 
     
-        <li><a href="/docs/groups/">Groups</a></li>
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/docs/data-extract-config/">Data Extracts</a></li>
         
         
     
@@ -423,32 +456,9 @@
     
 
     
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
+        <li><a href="/docs/visualisation-designer/">Widget Designer</a></li>
+        
+        
     
 
     
@@ -548,7 +558,7 @@
         
           
           
-          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
+          <li class="uk-active"><a href="/docs/dashboards/">Dashboards</a></li>
         
         </ul>
         
@@ -565,7 +575,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/user-management/">User Mangagment</a></li>
+          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
         
         </ul>
         

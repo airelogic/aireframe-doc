@@ -325,7 +325,23 @@ These fields are case and whitespace insensitive.</p>
 
 <h4 id="formatting">Formatting</h4>
 
-<p>We allow certain HTML tags to be rendered on the page. Currently these are: <code class="language-plaintext highlighter-rouge">&lt;b /&gt;</code>,  <code class="language-plaintext highlighter-rouge">&lt;strong /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;em /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;i /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;small /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;sub /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;sup /&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;br /&gt;</code>.</p>
+<p>We allow certain HTML tags to be rendered on the page. Currently these are:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;b /&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;strong /&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;em /&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;i /&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;small /&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;sub /&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;sup /&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;br /&gt;</code></li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;span /&gt;</code>
+    <ul>
+      <li>The <code class="language-plaintext highlighter-rouge">style</code> attribute is allowed on the span tag. The allowed css properties are: <code class="language-plaintext highlighter-rouge">color</code>, <code class="language-plaintext highlighter-rouge">background-color</code>, <code class="language-plaintext highlighter-rouge">font-weight</code>, <code class="language-plaintext highlighter-rouge">font-size</code>, <code class="language-plaintext highlighter-rouge">text-decoration</code>, <code class="language-plaintext highlighter-rouge">text-shadow</code>, <code class="language-plaintext highlighter-rouge">text-transform</code>, <code class="language-plaintext highlighter-rouge">text-emphasis</code>, <code class="language-plaintext highlighter-rouge">letter-spacing</code></li>
+    </ul>
+  </li>
+</ul>
 
 <p>It is possible to use these tags in both the computed fields and the actual subject data. However, we reccomend only using it on the computed fields since downstream systems may be not be expecting HTML tags.</p>
 

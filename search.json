@@ -49,10 +49,10 @@
     } ,
   
     {
-      "title"    : "Data Extracts",
+      "title"    : "Data Sets",
       "category" : "",
       "tags"     : "widgets",
-      "url"      : "/docs/data-extract-config/",
+      "url"      : "/docs/data-set-config/",
       "date"     : "2021-07-13 00:00:00 +0000"
     } ,
   

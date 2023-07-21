@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Liquid | AireFrame Docs</title>
+<title>Data Sets | AireFrame Docs</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="Liquid" />
-<meta name="author" content="Danny Heard" />
+<meta property="og:title" content="Data Sets" />
+<meta name="author" content="Danny Heard, Karsten Lloyd" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This page explains how to use the Liquid templating language in AireFrame" />
-<meta property="og:description" content="This page explains how to use the Liquid templating language in AireFrame" />
-<link rel="canonical" href="https://docs.aireframe.com/docs/liquid/" />
-<meta property="og:url" content="https://docs.aireframe.com/docs/liquid/" />
+<meta name="description" content="This page explains how to add data sets in AireFrame. These data sets will contain the schema for a data source which will be used to create a data visualisation. See the guide on how to configure data sources here." />
+<meta property="og:description" content="This page explains how to add data sets in AireFrame. These data sets will contain the schema for a data source which will be used to create a data visualisation. See the guide on how to configure data sources here." />
+<link rel="canonical" href="https://docs.aireframe.com/docs/data-set-config/" />
+<meta property="og:url" content="https://docs.aireframe.com/docs/data-set-config/" />
 <meta property="og:site_name" content="AireFrame Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-05-04T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-07-13T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Liquid" />
+<meta property="twitter:title" content="Data Sets" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"dateModified":"2023-05-04T00:00:00+00:00","datePublished":"2023-05-04T00:00:00+00:00","description":"This page explains how to use the Liquid templating language in AireFrame","headline":"Liquid","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/liquid/"},"url":"https://docs.aireframe.com/docs/liquid/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard, Karsten Lloyd"},"dateModified":"2021-07-13T00:00:00+00:00","datePublished":"2021-07-13T00:00:00+00:00","description":"This page explains how to add data sets in AireFrame. These data sets will contain the schema for a data source which will be used to create a data visualisation. See the guide on how to configure data sources here.","headline":"Data Sets","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/data-set-config/"},"url":"https://docs.aireframe.com/docs/data-set-config/"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -216,7 +216,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/liquid/">Liquid</a></li>
+          <li class=""><a href="/docs/liquid/">Liquid</a></li>
         
           
           
@@ -235,9 +235,9 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Liquid</h1>
+                    <h1 class="uk-article-title">Data Sets</h1>
 
-                    
+                    <p class="subtitle uk-text-lead uk-text-muted">Add and configure the data sets</p>
 
                     <div class="uk-article-meta uk-margin-top uk-margin-medium-bottom">
                         
@@ -246,66 +246,181 @@
 
 
 
-<time datetime="2023-05-04T00:00:00+00:00" itemprop="datePublished">
+<time datetime="2021-07-13T00:00:00+00:00" itemprop="datePublished">
     
-    May 4, 2023
+    Jul 13, 2021
 </time>
 
                     </div>
 
                     <div class="article-content">
-                        <p>This page explains how to use the Liquid templating language in AireFrame</p>
+                        <p>This page explains how to add data sets in AireFrame. These data sets will contain the schema for a data source which will be used to create a data visualisation. <em>See the guide on how to configure data sources <a href="/docs/data-source-config/">here</a></em>.</p>
 
-<h3 id="custom-filters">Custom Filters</h3>
+<p>What you can find on this page:</p>
 
-<p>AireFrame offers a number of custom filters that can be used in Liquid templates to make common operations easier.</p>
-
-<h4 id="age">Age</h4>
-
-<p>There is an age filter that can be used to calculate the age of a date/date time value.</p>
-
-<p>It takes one argument specifying what unit should be used to calcualte the age, the options are:</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">year</code></li>
-  <li><code class="language-plaintext highlighter-rouge">month</code></li>
-  <li><code class="language-plaintext highlighter-rouge">week</code></li>
-  <li><code class="language-plaintext highlighter-rouge">day</code></li>
-  <li><code class="language-plaintext highlighter-rouge">hour</code></li>
-  <li><code class="language-plaintext highlighter-rouge">minute</code></li>
+  <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
+  <li><a href="#add-data-set"><strong>Add Data Set</strong></a></li>
 </ul>
 
-<p>Example:</p>
+<h4 id="required-permissions"><strong>Required Permissions</strong></h4>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ dateOfBirth | age: 'year' }}
-</code></pre></div></div>
+<ul>
+  <li>In order to add a data set you will need the following permissions:
+    <ul>
+      <li><strong>List Data Set</strong></li>
+      <li><strong>View Data Set</strong></li>
+      <li><strong>Create Data Set</strong></li>
+    </ul>
+  </li>
+</ul>
 
-<h4 id="cui-datetime">CUI DateTime</h4>
+<h4 id="add-data-set"><strong>Add Data Set</strong></h4>
 
-<p>There is an CUI DateTime filter that can be used to format a date time value into a CUI date time string (e.g. 10-May-2023 10:53)</p>
+<ol>
+  <li>Go to the data visualisation configuration screen: Configuration -&gt; Dashboards and Data.</li>
+  <li>Select the Data Sets tab and click the ‘+’ button to add a new Data Set, you will see a screen as follows <img src="/assets/screenshots/data-set/add-data-set.png" alt="add data set" /></li>
+  <li>Select the data source</li>
+  <li>Enter a title and description for the data set</li>
+  <li>
+    <p>If you have chosen a non-internal data source, you will need to provide a relevant JSON data set definition for that data source <em>(You will not be able to add the data set unless you have provided the  definition)</em>:</p>
 
-<p>Example:</p>
+    <ul>
+      <li><strong>Internal</strong>
+ <b>Documents (PDFs) Extract</b>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> {
+  "type": "documents"
+ }
+</code></pre></div>        </div>
+      </li>
+    </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ date | cui_date_time }}
-</code></pre></div></div>
+    <p><b>Demographics Extract</b></p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> {
+     "type": "demographics"
+ }
+</code></pre></div>    </div>
 
-<h4 id="cui-date">CUI Date</h4>
+    <ul>
+      <li>
+        <p><strong>Forms4Health</strong></p>
 
-<p>There is an CUI Date filter that can be used to format a date or date time value into a CUI date string (e.g. 10-May-2023)</p>
+        <p><b>Form instances data set:</b></p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
+      "type": "form-instances",
+      "includeWithdrawn": false
+  }
+</code></pre></div>        </div>
 
-<p>Example:</p>
+        <p><b>Submitted data set:</b></p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ date | cui_date }}
-</code></pre></div></div>
+        <p>Building block level:</p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
+      "key": "news2",
+      "type": "building-block",
+      "version": 1
+  }
+</code></pre></div>        </div>
 
-<h4 id="cui-time">CUI Time</h4>
+        <p>Form level:</p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> {
+      "type":"form",
+      "key":"fluid-balance",
+      "version":1
+  }
+</code></pre></div>        </div>
 
-<p>There is an CUI Time filter that can be used to format a time or date time value into a CUI time string (e.g. 13:21)</p>
+        <p>To extract a control’s display value instead of it’s underlying value. You need to specify the <code class="language-plaintext highlighter-rouge">controlId</code> and the <code class="language-plaintext highlighter-rouge">valueType</code> <code class="language-plaintext highlighter-rouge">[value/displayValue]</code></p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "dataPoints": [
+      {
+          "controlId": "my-control",
+          "valueType": "displayValue"
+      }
+  ]
+</code></pre></div>        </div>
 
-<p>Example:</p>
+        <p>For a form level data set you also need to specify the building block for the control e.g.</p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "dataPoints": [
+      {
+          "controlId": "my-control",
+          "valueType": "displayValue",
+          "buildingBlock": {
+              "key": "my-building-block",
+              "version": 1
+          }
+      }
+  ]
+</code></pre></div>        </div>
+      </li>
+      <li><strong>AireFlow Example</strong>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
+  "status": ["NEW", "COMPLETED"],
+  "workflowDefinitionKey": "key",
+  "taskKey": "key",
+  "stateDimensions": [
+      {
+          "key": "state-key",
+          "dataType": "Integer"
+      }
+  ]
+  }
+</code></pre></div>        </div>
+        <p>Where:</p>
+        <ul>
+          <li>Workflow defintion key (optional, if omittied returns all tasks) is the key of the workflow definiton you want to see tasks for</li>
+          <li>Task key (optional, if omittied returns all tasks) is the key of the task you want to see</li>
+          <li>Status (optional, if omittied returns all tasks) is an array of statuses on which to filter the tasks. See <a href="https://docs.aireflow.co.uk/docs/task-statuses/">AireFlow docs</a> for the available statuses (These must be capitalised)</li>
+          <li>State dimensions (optional) allows dimensions to be populated with data from the AireFlow task state.</li>
+        </ul>
+      </li>
+      <li><strong>FHIR R4 Example</strong>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
+  "resourceType": "Observation",
+  "searchParameters": [
+      "code-value-concept=http://snomed.info/sct|364075005"
+  ],
+  "dimensions": [
+      {
+          "key": "date",
+          "fhirPath": "Observation.effective",
+          "dataType": "DateTime"
+      },
+      {
+          "key": "heartRate",
+          "fhirPath": "Observation.value.value",
+          "dataType": "Decimal"
+      }
+  ]
+  }
+</code></pre></div>        </div>
+        <p>Where:</p>
+        <ul>
+          <li>The resource type is what you want to query from the FHIR server - it must be searchable by patient identifier</li>
+          <li>Search parameters are used to filter the resource type, in the example this is for the snomed code for heart rate observations. You can use as many as you like and use normal FHIR conventions (and/or) etc.</li>
+          <li>The dimensions are used to populate the widget with the fetched data, the keys are the data points that you want to show, they are resolved using the provided FHIRPath, so any FHIRPath query is valid here. You can use FHIRPath to combine multiple expressions in case one or more do not resolve in the fetched data. The value returned for each data point will be the first FHIRPath expression that finds a value.
+  You must specify the data type for each dimension.</li>
+        </ul>
+      </li>
+    </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{{ time | cui_time }}
-</code></pre></div></div>
+    <p><img src="/assets/screenshots/data-set/config-options.png" alt="configuration values" /></p>
+  </li>
+  <li>Click create</li>
+</ol>
 
+<h5 id="subject-identifier">Subject Identifier</h5>
+
+<p>For some data sources (e.g. FHIR) you will need to specify what subject identifier should be passed down the the data source with the data set.
+For example, you may want to use the value of a custom field instead of the default internal aireframe identifier.</p>
+
+<p>The options are:</p>
+<ul>
+  <li>Internal - AireFrame’s internal identifier</li>
+  <li>External - The identifier received from the subject provider (configurable on the <a href="/docs/subject-provider#configure-subject-provider">subject configuration page</a>)</li>
+  <li>Custom Field - Any required custom field (configurable on the <a href="/docs/subject-configuration#change-subject-configuration">subject configuration page</a>). <em>Note, An error will occur if this field is not populated for the subject(s) being viewed</em></li>
+</ul>
+
+<p><img src="/assets/screenshots/data-set/subject-identifier.png" alt="subject identifer configuration" /></p>
 
                     </div>
 
@@ -408,7 +523,16 @@
     
 
     
-        <li><a href="/docs/api/">API</a></li>
+
+    
+
+    
+    
+
+    
+
+    
+        <li><a href="/docs/dashboards/">Dashboards</a></li>
         
         
     
@@ -430,14 +554,9 @@
     
 
     
-
-    
-
-    
-    
-
-    
-
+        <li><a href="/docs/visualisation-designer/">Widget Designer</a></li>
+        
+        
     
 
     
@@ -576,7 +695,7 @@
         
           
           
-          <li class="uk-active"><a href="/docs/liquid/">Liquid</a></li>
+          <li class=""><a href="/docs/liquid/">Liquid</a></li>
         
           
           

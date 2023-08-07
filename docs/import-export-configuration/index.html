@@ -260,6 +260,7 @@
 
 <ul>
   <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
+  <li><a href="#setup-git-repository"><strong>Setup Git Repository</strong></a></li>
   <li><a href="#export-configuration"><strong>Export Configuration</strong></a></li>
   <li><a href="#import-configuration"><strong>Import Configuration</strong></a></li>
 </ul>
@@ -267,19 +268,33 @@
 <h4 id="required-permissions"><strong>Required Permissions</strong></h4>
 
 <ul>
+  <li>To setup the git repository used for import/export you will need the <strong>View Git Repository</strong> and <strong>Set Git Repository</strong> permissions.</li>
   <li>In order for you to export a configuration you will need the <strong>Export Configuration</strong> permission.</li>
-  <li>For you to import a configuration you will need the <strong>Import Configuration</strong> and then any of these following permissions depending upon what you are trying to import:
+  <li>For you to import a configuration you will need the <strong>Import Configuration</strong> permission.</li>
+</ul>
+
+<h3 id="setup-git-repository"><strong>Setup Git Repository</strong></h3>
+
+<p>In order to use the import/export functionality you will need to setup a git repository.
+This is where the configuration files will be written to and read from.</p>
+
+<p>The git repository settings use <a href="https://vault.aireinnovate.com">AireVault</a> variables and secrets so the configuration can be shared across products.</p>
+
+<ol>
+  <li>Go to the Transfer Configuration screen: Configuration -&gt; Transfer</li>
+  <li>Select the Git Repository tab from the top bar. You should see a screen as follows <img src="/assets/screenshots/transfer-configuration/configure-repository.png" alt="git repository screen" /></li>
+  <li>Select the relevant airevault variables and secrets for the options.
     <ul>
-      <li><strong>Create Structural Entities</strong></li>
-      <li><strong>Create Group</strong></li>
-      <li><strong>Create Data Sources</strong></li>
-      <li><strong>Edit Subject Configuration</strong></li>
-      <li><strong>Create Data Set</strong></li>
-      <li><strong>Create Visualisation</strong></li>
-      <li><strong>Create Collection</strong></li>
+      <li>Note when using SSH authentication, the uri must be in the format <code class="language-plaintext highlighter-rouge">ssh://[user]@[host][:port?]/[path]</code> e.g. <code class="language-plaintext highlighter-rouge">ssh://git@github.com/my/repo"</code></li>
     </ul>
   </li>
-</ul>
+  <li>Save the settings, this will attempt to connect to the repository
+    <ul>
+      <li>If the connection is successful, the settings will be saved and you will be able to export and import configurations</li>
+      <li>If the connection is unsuccessful, you will be presented with an error message and the settings will not be saved</li>
+    </ul>
+  </li>
+</ol>
 
 <h4 id="export-configuration"><strong>Export Configuration</strong></h4>
 

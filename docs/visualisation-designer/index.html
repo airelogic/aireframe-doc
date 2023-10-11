@@ -310,6 +310,7 @@
     <ul>
       <li>These are boolean liquid expressions that remove any data points which evaluate to false (e.g. <code class="language-plaintext highlighter-rouge">{{ numerical_value &gt; 10 }}</code>, <code class="language-plaintext highlighter-rouge">{{ string_value == "some_value" }}</code>)</li>
       <li>If more than one filter is defined, these are applied as union (i.e all filters must evaluate to true for the data point to be included)</li>
+      <li>Date related filters (e.g. <code class="language-plaintext highlighter-rouge">date</code> and <code class="language-plaintext highlighter-rouge">cui_date_time</code>) are not available at this stage</li>
     </ul>
   </li>
   <li>Mappers
@@ -319,6 +320,7 @@
       <li>The output datatype is inferred from the expression, however if the expression contains more than one statement it will always evaluate as a string</li>
       <li>The output key must be unique amongst the initial and mapped field</li>
       <li>Capture, Unless, case/when and loops are not currently supported</li>
+      <li>Date related filters (e.g. <code class="language-plaintext highlighter-rouge">date</code> and <code class="language-plaintext highlighter-rouge">cui_date_time</code>) are not available at this stage. If you wish to use them, you can provide a series liquid formatter instead</li>
     </ul>
   </li>
   <li>Group

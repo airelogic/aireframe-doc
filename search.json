@@ -17,7 +17,7 @@
     } ,
   
     {
-      "title"    : "User Mangagment",
+      "title"    : "User Management",
       "category" : "",
       "tags"     : "access-control",
       "url"      : "/docs/user-management/",

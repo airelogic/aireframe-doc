@@ -1,7 +1,7 @@
 [
   
     {
-      "title"    : "Data Sources",
+      "title"    : "Data Source Configuration",
       "category" : "",
       "tags"     : "",
       "url"      : "/docs/data-source-config/",
@@ -17,7 +17,7 @@
     } ,
   
     {
-      "title"    : "User Management",
+      "title"    : "User Mangagment",
       "category" : "",
       "tags"     : "access-control",
       "url"      : "/docs/user-management/",
@@ -41,6 +41,14 @@
     } ,
   
     {
+      "title"    : "Widget Designer",
+      "category" : "",
+      "tags"     : "widgets",
+      "url"      : "/docs/visualisation-designer/",
+      "date"     : "2021-06-08 00:00:00 +0000"
+    } ,
+  
+    {
       "title"    : "Getting Started",
       "category" : "",
       "tags"     : "featured",
@@ -49,75 +57,19 @@
     } ,
   
     {
-      "title"    : "Data Sets",
-      "category" : "",
-      "tags"     : "widgets",
-      "url"      : "/docs/data-set-config/",
-      "date"     : "2021-07-13 00:00:00 +0000"
-    } ,
-  
-    {
-      "title"    : "AireFrame SDK",
-      "category" : "",
-      "tags"     : "integration,, sdk,, developer",
-      "url"      : "/docs/sdk/",
-      "date"     : "2021-10-06 00:00:00 +0000"
-    } ,
-  
-    {
       "title"    : "Subject Configuration",
       "category" : "",
       "tags"     : "subject",
       "url"      : "/docs/subject-configuration/",
-      "date"     : "2021-12-07 00:00:00 +0000"
+      "date"     : "2021-07-08 00:00:00 +0000"
     } ,
   
     {
-      "title"    : "API",
-      "category" : "",
-      "tags"     : "developer,, integration",
-      "url"      : "/docs/api/",
-      "date"     : "2022-06-07 00:00:00 +0000"
-    } ,
-  
-    {
-      "title"    : "Dashboards",
+      "title"    : "Data Extracts",
       "category" : "",
       "tags"     : "widgets",
-      "url"      : "/docs/dashboards/",
-      "date"     : "2022-06-19 00:00:00 +0000"
-    } ,
-  
-    {
-      "title"    : "Options",
-      "category" : "",
-      "tags"     : "developer",
-      "url"      : "/docs/options/",
-      "date"     : "2022-10-20 00:00:00 +0000"
-    } ,
-  
-    {
-      "title"    : "Widget Designer",
-      "category" : "",
-      "tags"     : "widgets",
-      "url"      : "/docs/visualisation-designer/",
-      "date"     : "2023-04-03 00:00:00 +0000"
-    } ,
-  
-    {
-      "title"    : "Transfer Configuration",
-      "category" : "",
-      "tags"     : "",
-      "url"      : "/docs/import-export-configuration/",
-      "date"     : "2023-04-11 00:00:00 +0000"
-    } ,
-  
-    {
-      "title"    : "Liquid",
-      "category" : "",
-      "tags"     : "developer,, templating",
-      "url"      : "/docs/liquid/",
-      "date"     : "2023-05-04 00:00:00 +0000"
+      "url"      : "/docs/data-extract-config/",
+      "date"     : "2021-07-13 00:00:00 +0000"
     } 
   
 ]

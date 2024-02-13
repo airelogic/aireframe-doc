@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Data Extracts | AireFrame Docs</title>
-<meta name="generator" content="Jekyll v4.3.2" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Data Extracts" />
 <meta name="author" content="Danny Heard, Karsten Lloyd" />
 <meta property="og:locale" content="en_US" />
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Data Extracts" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard, Karsten Lloyd"},"dateModified":"2021-07-13T00:00:00+00:00","datePublished":"2021-07-13T00:00:00+00:00","description":"This page explains how to add data extracts in AireFrame. These data extracts will contain the schema for a data source which will be used to create a data visualisation. See the guide on how to configure data sources here.","headline":"Data Extracts","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/data-extract-config/"},"url":"https://docs.aireframe.com/docs/data-extract-config/"}</script>
+{"dateModified":"2021-07-13T00:00:00+00:00","datePublished":"2021-07-13T00:00:00+00:00","description":"This page explains how to add data extracts in AireFrame. These data extracts will contain the schema for a data source which will be used to create a data visualisation. See the guide on how to configure data sources here.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/data-extract-config/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard, Karsten Lloyd"},"url":"https://docs.aireframe.com/docs/data-extract-config/","headline":"Data Extracts","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -143,12 +143,17 @@
         
         </ul>
         
-        <h5>Subject Configuration</h5>
+        <h5>Data Sources</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+        
+        </ul>
+        
+        <h5>Subject Configuration</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
@@ -165,66 +170,38 @@
         
           
           
-          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
-        
-          
-          
           <li class="uk-active"><a href="/docs/data-extract-config/">Data Extracts</a></li>
         
           
           
           <li class=""><a href="/docs/visualisation-designer/">Widget Designer</a></li>
         
+        </ul>
+        
+        <h5>Groups</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
           
           
-          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
+          <li class=""><a href="/docs/groups/">Groups</a></li>
         
         </ul>
         
-        <h5>Structure & User Management</h5>
+        <h5>Structure</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
-          
-          
-          <li class=""><a href="/docs/groups/">Groups</a></li>
+        </ul>
+        
+        <h5>User Management</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
-        
-        </ul>
-        
-        <h5>Transfer Configuration</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
-        
-        </ul>
-        
-        <h5>Developer</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/api/">API</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/liquid/">Liquid</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/options/">Options</a></li>
         
         </ul>
         
@@ -287,91 +264,64 @@
  If you have chosen a non-internal data source, you will need to provide a relevant JSON extract definition for that data source <em>(You will not be able to add the data extract unless you have provided the extract definition)</em>:</p>
 
     <ul>
-      <li><strong>Internal</strong>
- <b>Documents (PDFs) Extract</b>
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> {
-  "type": "documents"
- }
-</code></pre></div>        </div>
-      </li>
-    </ul>
-
-    <p><b>Demographics Extract</b></p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> {
-     "type": "demographics"
- }
-</code></pre></div>    </div>
-
-    <ul>
-      <li>
-        <p><strong>Forms4Health</strong></p>
-
-        <p><b>Form instances extract:</b></p>
+      <li><strong>Forms4Health Example</strong>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
-      "type": "form-instances",
-      "includeWithdrawn": false
-  }
-</code></pre></div>        </div>
-
-        <p><b>Submitted data extract:</b></p>
-
-        <p>Building block level:</p>
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
-      "key": "news2",
-      "type": "building-block",
-      "version": 1
-  }
-</code></pre></div>        </div>
-
-        <p>Form level:</p>
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> {
-      "type":"form",
-      "key":"fluid-balance",
-      "version":1
-  }
-</code></pre></div>        </div>
-
-        <p>To extract a control’s display value instead of it’s underlying value. You need to specify the <code class="language-plaintext highlighter-rouge">controlId</code> and the <code class="language-plaintext highlighter-rouge">valueType</code> <code class="language-plaintext highlighter-rouge">[value/displayValue]</code></p>
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "dataPoints": [
+  "key": "news2",
+  "type": "building-block",
+  "version": 1,
+  "dataPoints": [
       {
-          "controlId": "my-control",
+          "controlId": "NEWSScore",
           "valueType": "displayValue"
       }
   ]
+  }
 </code></pre></div>        </div>
 
-        <p>For a form level extract you also need to specify the building block for the control e.g.</p>
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  "dataPoints": [
-      {
-          "controlId": "my-control",
-          "valueType": "displayValue",
-          "buildingBlock": {
-              "key": "my-building-block",
-              "version": 1
+        <p>Form-level example</p>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> {
+      "type":"form",
+      "key":"fluid-balance",
+      "version":1,
+      "dataPoints":[
+          {
+              "buildingBlock":{
+                  "key":"fluid-intake",
+                  "version":2
+              },
+              "controlId":"TotalFluidIntake"
+          },
+          {
+              "buildingBlock":{
+                  "key":"fluid-loss",
+                  "version":1
+              },
+              "controlId":"TotalFluidLoss"
+          },
+          {
+              "buildingBlock":{
+                  "key":"net-fluid-balance",
+                  "version":1
+              },
+              "controlId":"NetFluidIntake"
           }
-      }
-  ]
+      ]
+  }
 </code></pre></div>        </div>
+
+        <p>Where:</p>
+        <ul>
+          <li>valueType (optional, defaults to <code class="language-plaintext highlighter-rouge">value</code>) is <code class="language-plaintext highlighter-rouge">value</code> (underlying value) or <code class="language-plaintext highlighter-rouge">displayValue</code> (display text value)</li>
+        </ul>
       </li>
       <li><strong>AireFlow Example</strong>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  {
-  "status": ["NEW", "COMPLETED"],
-  "workflowDefinitionKey": "key",
-  "taskKey": "key",
-  "stateDimensions": [
-      {
-          "key": "state-key",
-          "dataType": "Integer"
-      }
-  ]
+  "status": "NEW"
   }
 </code></pre></div>        </div>
         <p>Where:</p>
         <ul>
-          <li>Workflow defintion key (optional, if omittied returns all tasks) is the key of the workflow definiton you want to see tasks for</li>
-          <li>Task key (optional, if omittied returns all tasks) is the key of the task you want to see</li>
-          <li>Status (optional, if omittied returns all tasks) is an array of statuses on which to filter the tasks. See <a href="https://docs.aireflow.co.uk/docs/task-statuses/">AireFlow docs</a> for the available statuses (These must be capitalised)</li>
-          <li>State dimensions (optional) allows dimensions to be populated with data from the AireFlow task state.</li>
+          <li>status (optional, if omittied returns all tasks) is the Tasks’ status. Available options are <code class="language-plaintext highlighter-rouge">NEW</code>, <code class="language-plaintext highlighter-rouge">IN_PROGRESS</code> and <code class="language-plaintext highlighter-rouge">COMPLETED</code></li>
         </ul>
       </li>
       <li><strong>FHIR R4 Example</strong>
@@ -383,13 +333,11 @@
   "dimensions": [
       {
           "key": "date",
-          "fhirPath": "Observation.effective",
-          "dataType": "DateTime"
+          "fhirPath": "Observation.effective"
       },
       {
           "key": "heartRate",
-          "fhirPath": "Observation.value.value",
-          "dataType": "Decimal"
+          "fhirPath": "Observation.value.value"
       }
   ]
   }
@@ -398,8 +346,7 @@
         <ul>
           <li>The resource type is what you want to query from the FHIR server - it must be searchable by patient identifier</li>
           <li>Search parameters are used to filter the resource type, in the example this is for the snomed code for heart rate observations. You can use as many as you like and use normal FHIR conventions (and/or) etc.</li>
-          <li>The dimensions are used to populate the widget with the fetched data, the keys are the data points that you want to show, they are resolved using the provided FHIRPath, so any FHIRPath query is valid here. You can use FHIRPath to combine multiple expressions in case one or more do not resolve in the fetched data. The value returned for each data point will be the first FHIRPath expression that finds a value.
-  You must specify the data type for each dimension.</li>
+          <li>The dimensions are used to populate the widget with the fetched data, the keys are the data points that you want to show, they are resolved using FHIRPath, so any FHIRPath query is valid here. You can use FHIRPath to combine multiple expressions in case one or more do not resolve in the fetched data. The value returned for each data point will be the first FHIRPath expression that finds a value.</li>
         </ul>
       </li>
     </ul>
@@ -408,20 +355,6 @@
   </li>
   <li>Click create</li>
 </ol>
-
-<h5 id="subject-identifier">Subject Identifier</h5>
-
-<p>For some data sources (e.g. FHIR) you will need to specify what subject identifier should be passed down the the data source with the data extract.
-For example, you may want to use the value of a custom field instead of the default internal aireframe identifier.</p>
-
-<p>The options are:</p>
-<ul>
-  <li>Internal - AireFrame’s internal identifier</li>
-  <li>External - The identifier received from the subject provider (configurable on the <a href="/docs/subject-provider#configure-subject-provider">subject configuration page</a>)</li>
-  <li>Custom Field - Any required custom field (configurable on the <a href="/docs/subject-configuration#change-subject-configuration">subject configuration page</a>). <em>Note, An error will occur if this field is not populated for the subject(s) being viewed</em></li>
-</ul>
-
-<p><img src="/assets/screenshots/data-extract/subject-identifier.png" alt="subject identifer configuration" /></p>
 
                     </div>
 
@@ -488,76 +421,18 @@ For example, you may want to use the value of a custom field instead of the defa
     
 
     
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-        <li><a href="/docs/dashboards/">Dashboards</a></li>
-        
-        
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
         <li><a href="/docs/visualisation-designer/">Widget Designer</a></li>
         
         
+    
+
+    
+
+    
+    
+
+    
+
     
 
     
@@ -623,12 +498,17 @@ For example, you may want to use the value of a custom field instead of the defa
         
         </ul>
         
-        <h5 class="uk-margin-top">Subject Configuration</h5>
+        <h5 class="uk-margin-top">Data Sources</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+        
+        </ul>
+        
+        <h5 class="uk-margin-top">Subject Configuration</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
@@ -645,66 +525,38 @@ For example, you may want to use the value of a custom field instead of the defa
         
           
           
-          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
-        
-          
-          
           <li class="uk-active"><a href="/docs/data-extract-config/">Data Extracts</a></li>
         
           
           
           <li class=""><a href="/docs/visualisation-designer/">Widget Designer</a></li>
         
+        </ul>
+        
+        <h5 class="uk-margin-top">Groups</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
           
           
-          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
+          <li class=""><a href="/docs/groups/">Groups</a></li>
         
         </ul>
         
-        <h5 class="uk-margin-top">Structure & User Management</h5>
+        <h5 class="uk-margin-top">Structure</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
-          
-          
-          <li class=""><a href="/docs/groups/">Groups</a></li>
+        </ul>
+        
+        <h5 class="uk-margin-top">User Management</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
-        
-        </ul>
-        
-        <h5 class="uk-margin-top">Transfer Configuration</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
-        
-        </ul>
-        
-        <h5 class="uk-margin-top">Developer</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/api/">API</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/liquid/">Liquid</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/options/">Options</a></li>
         
         </ul>
         

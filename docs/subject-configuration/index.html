@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Subject Configuration | AireFrame Docs</title>
-<meta name="generator" content="Jekyll v4.3.2" />
+<meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Subject Configuration" />
 <meta name="author" content="Danny Heard, Karsten Lloyd" />
 <meta property="og:locale" content="en_US" />
@@ -17,11 +17,11 @@
 <meta property="og:url" content="https://docs.aireframe.com/docs/subject-configuration/" />
 <meta property="og:site_name" content="AireFrame Docs" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-12-07T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-07-08T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Subject Configuration" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard, Karsten Lloyd"},"dateModified":"2021-12-07T00:00:00+00:00","datePublished":"2021-12-07T00:00:00+00:00","description":"This page explains how to change the subject configuration in AireFrame. For example you may want to change the name of the subject or add/remove custom fields.","headline":"Subject Configuration","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/subject-configuration/"},"url":"https://docs.aireframe.com/docs/subject-configuration/"}</script>
+{"dateModified":"2021-07-08T00:00:00+00:00","datePublished":"2021-07-08T00:00:00+00:00","description":"This page explains how to change the subject configuration in AireFrame. For example you may want to change the name of the subject or add/remove custom fields.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/subject-configuration/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard, Karsten Lloyd"},"url":"https://docs.aireframe.com/docs/subject-configuration/","headline":"Subject Configuration","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -143,12 +143,17 @@
         
         </ul>
         
-        <h5>Subject Configuration</h5>
+        <h5>Data Sources</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+        
+        </ul>
+        
+        <h5>Subject Configuration</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
@@ -165,66 +170,38 @@
         
           
           
-          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
-        
-          
-          
-          <li class=""><a href=""></a></li>
+          <li class=""><a href="/docs/data-extract-config/">Data Extracts</a></li>
         
           
           
           <li class=""><a href="/docs/visualisation-designer/">Widget Designer</a></li>
         
+        </ul>
+        
+        <h5>Groups</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
           
           
-          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
+          <li class=""><a href="/docs/groups/">Groups</a></li>
         
         </ul>
         
-        <h5>Structure & User Management</h5>
+        <h5>Structure</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
-          
-          
-          <li class=""><a href="/docs/groups/">Groups</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/user-management/">User Management</a></li>
-        
         </ul>
         
-        <h5>Transfer Configuration</h5>
+        <h5>User Management</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
-        
-        </ul>
-        
-        <h5>Developer</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/api/">API</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/liquid/">Liquid</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/options/">Options</a></li>
+          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
         
         </ul>
         
@@ -246,9 +223,9 @@
 
 
 
-<time datetime="2021-12-07T00:00:00+00:00" itemprop="datePublished">
+<time datetime="2021-07-08T00:00:00+00:00" itemprop="datePublished">
     
-    Dec 7, 2021
+    Jul 8, 2021
 </time>
 
                     </div>
@@ -260,12 +237,10 @@
 
 <ul>
   <li><a href="#required-permissions"><strong>Required Permissions</strong></a></li>
-  <li><a href="#change-subject-configuration"><strong>Change subject configuration</strong></a></li>
-  <li><a href="#unsolicited-inbound-messages"><strong>Unsolicited Inbound Messages</strong></a></li>
-  <li><a href="#subject-access"><strong>Subject Access</strong></a></li>
+  <li><a href="#configure-subject-provider"><strong>Configure Subject Provider</strong></a></li>
 </ul>
 
-<h3 id="required-permissions"><strong>Required Permissions</strong></h3>
+<h4 id="required-permissions"><strong>Required Permissions</strong></h4>
 
 <ul>
   <li>In order to change the subject configuration you will need the following permissions:
@@ -276,138 +251,26 @@
   </li>
 </ul>
 
-<h3 id="change-subject-configuration"><strong>Change Subject Configuration</strong></h3>
+<h4 id="change-subject-configuration"><strong>Change Subject Configuration</strong></h4>
 
 <p>Go to the subject configuration screen: Configuration -&gt; Subject Configuration.</p>
 
-<p><img src="/assets/screenshots/subject-configuration/subject-configuration.png" alt="Subject configuration page" /></p>
+<p><img src="/assets/screenshots/subject-configuration/subject-configuration.png" alt="subject configuration page" /></p>
 
 <p>Here you can:</p>
 <ul>
   <li>Change the subject name</li>
-  <li>Change the subject provider</li>
-  <li>Change the properties of the custom fields</li>
-  <li>Remove a custom field</li>
-  <li>Add a custom field - drag new fields from the left hand side into the relevant section</li>
-  <li>Re-order the subject banner - drag and drop fields to re-arrange</li>
-</ul>
-
-<h4 id="subject-banner-grouping">Subject banner grouping</h4>
-
-<p>On this page you can re-order the custom fields to alter how they are shown on the subject banner.</p>
-
-<ul>
-  <li>Primary field - A single field that is shown at the top of the banner, even when minimised</li>
-  <li>Secondary fields - These fields are shown when the banner is expanded, in the specified order (top to bottom)</li>
-  <li>Hidden fields - These are input fields that are not shown on the subject banner but still appear in subject forms. E.g. You can capture information about a subject using several input fields; then use a computed field to join these together and hide the induvidual fields.</li>
-</ul>
-
-<h4 id="dropdown-lists">Dropdown lists</h4>
-
-<p>Dropdown lists allow you to add your own custom options. This is useful when there are a set number of answers which are very long, or where it will useful to pull the data straight into a histogram or pie chart without needing any additional processing (e.g. natural language processing).</p>
-
-<p>To create a dropdown list:</p>
-<ul>
-  <li>Drag the ‘Dropdown List’ control from the list of available fields</li>
-  <li>Give the field a name, such as Nationality, Ethnicity, or even Favourite Colour</li>
-  <li>Click the plus symbol [ + ] next to ‘Add Value’ for as many options as you need</li>
-  <li>Write the text for each option</li>
-  <li>Use the cross [ x ] next to each option to remove any which are unnecessary</li>
+  <li>Change the name of an existing custom or computed field</li>
+  <li>Change whether a custom field should be required or not</li>
+  <li>Remove an existing custom or computed field</li>
+  <li>Add a custom field - There are a few different types available, click the plus (+) button to see what they are</li>
+  <li>Add a computed field - See <a href="#computed-fields">below</a> for more information</li>
 </ul>
 
 <h4 id="computed-fields">Computed Fields</h4>
 <p>Computed fields are flexible and allow you to reformat or combine the custom fields from the table above. This is achieved by using the <a href="https://shopify.github.io/liquid/basics/introduction/">liquid</a> syntax.</p>
 
 <p>To use the custom fields as variables in the liquid mapping of a computed field, use the value from the ‘key’ column in the corresponding row above.  <em>Please note, the field keys are automatically generated from the field names and must be unique.</em></p>
-
-<h4 id="unique-fields">Unique Fields</h4>
-<p>Input fields can be declared as <b>unique</b>. This means that only one subject in the entire tenant can use this value e.g. for unqiue indentifier fields.
-These fields are case and whitespace insensitive.</p>
-
-<h4 id="formatting">Formatting</h4>
-
-<p>We allow certain HTML tags to be rendered on the page. Currently these are:</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">&lt;b /&gt;</code></li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;strong /&gt;</code></li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;em /&gt;</code></li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;i /&gt;</code></li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;small /&gt;</code></li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;sub /&gt;</code></li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;sup /&gt;</code></li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;br /&gt;</code></li>
-  <li><code class="language-plaintext highlighter-rouge">&lt;span /&gt;</code>
-    <ul>
-      <li>The <code class="language-plaintext highlighter-rouge">style</code> attribute is allowed on the span tag. The allowed css properties are: <code class="language-plaintext highlighter-rouge">background-color</code>, <code class="language-plaintext highlighter-rouge">border</code>, <code class="language-plaintext highlighter-rouge">border-radius</code>, <code class="language-plaintext highlighter-rouge">color</code>, <code class="language-plaintext highlighter-rouge">font-weight</code>, <code class="language-plaintext highlighter-rouge">font-size</code>,  <code class="language-plaintext highlighter-rouge">letter-spacing</code>, <code class="language-plaintext highlighter-rouge">min-width</code>, <code class="language-plaintext highlighter-rouge">text-align</code>, <code class="language-plaintext highlighter-rouge">text-decoration</code>, <code class="language-plaintext highlighter-rouge">text-shadow</code>, <code class="language-plaintext highlighter-rouge">text-transform</code>, <code class="language-plaintext highlighter-rouge">text-emphasis</code>,</li>
-      <li>The <code class="language-plaintext highlighter-rouge">title</code> attribute is allowed on the span tag</li>
-    </ul>
-  </li>
-</ul>
-
-<p>It is possible to use these tags in both the computed fields and the actual subject data. However, we reccomend only using it on the computed fields since downstream systems may be not be expecting HTML tags.</p>
-
-<h4 id="subject-form-layout">Subject form layout</h4>
-
-<p>To change the order of the fields on the subject form page, click on the <b>Form Layout</b> then drag and drop the fields to change the order of the fields.</p>
-
-<h2 id="unsolicited-inbound-messages"><strong>Unsolicited Inbound Messages</strong></h2>
-
-<p>AireFrame can be configured to allow messages from outside the system to create/update subjects.</p>
-
-<p>To configure this you must enable unsolicited inbound messaging.</p>
-
-<p>Go to the unsolicited inbound messaging configuration screen: Configuration -&gt; Subject Configuration -&gt; Unsolicited Inbound Messages.</p>
-
-<h4 id="matching-fields">Matching Fields</h4>
-
-<p>To use this feature you must specify which fields are used to match a subject.</p>
-
-<p>These can only be unique fields - if the values of the inbound messages match a subject, then their record will be updated, otherwise a new record will be created.</p>
-
-<p>You must also specify the structural entity which unmatched subjects are assigned to.</p>
-
-<h4 id="override-structural-entity-assignment-behaviour">Override Structural Entity Assignment Behaviour</h4>
-
-<p>It is possible to override the ‘Location(s)’ a subject is assigned to from an inbound subject message. 
-This option defines the how AireFrame treats the structural entity keys that are sent on the inbound subject message.</p>
-
-<ul>
-  <li><em>Ignore</em>
-    <ul>
-      <li>This is the default option</li>
-      <li>For a new subject, they will be added to the Unmatched ‘Location’ and the structural entity keys passed in on the message will be ignored</li>
-      <li>For an existing subject, they will remain assigned to their existing ‘locations’ and the structural entity keys passed in on the message will be ignored</li>
-    </ul>
-  </li>
-  <li><em>Add</em>
-    <ul>
-      <li>For a new subject, they will be added to the Unmatched ‘Location’ and any ‘locations’ specified on the message</li>
-      <li>For an existing subject, they will be added to the ‘locations’ specified on the message while remaining in any existing ‘locations’</li>
-    </ul>
-  </li>
-  <li><em>Replace</em>
-    <ul>
-      <li>For a new subject, they will only be added to the ‘locations’ specified on the message</li>
-      <li>For an existing subject, they will be removed from any existing ‘locations’ and added to the ‘locations’ specified on the message</li>
-      <li>If no structural entity keys are specified on the message, the default (Ignore) behaviour will be followed</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="subject-access"><strong>Subject Access</strong></h2>
-
-<p>You can configure subject access on the subject configuration page. This allows you to map a tenants unique field to a claim type in identity.</p>
-
-<p>To configure this you must enable subject access.</p>
-
-<p>Go to the subject access configuration screen: Configuration -&gt; Subject Configuration -&gt; Subject Access.</p>
-
-<h4 id="linking-fields">Linking Fields</h4>
-
-<p>To use subject access you must specify which fields you want to link to a claim type. These can only be unique fields.</p>
-
-<p>For each linked field you must specify the claim type that it is linked to (e.g. email, nhs_number)</p>
 
                     </div>
 
@@ -441,60 +304,6 @@ This option defines the how AireFrame treats the structural entity keys that are
         <li><a href="/docs/subject-provider/">Subject Provider</a></li>
         
         
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
     
 
     
@@ -605,12 +414,17 @@ This option defines the how AireFrame treats the structural entity keys that are
         
         </ul>
         
-        <h5 class="uk-margin-top">Subject Configuration</h5>
+        <h5 class="uk-margin-top">Data Sources</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+        
+        </ul>
+        
+        <h5 class="uk-margin-top">Subject Configuration</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
@@ -627,66 +441,38 @@ This option defines the how AireFrame treats the structural entity keys that are
         
           
           
-          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
-        
-          
-          
-          <li class=""><a href=""></a></li>
+          <li class=""><a href="/docs/data-extract-config/">Data Extracts</a></li>
         
           
           
           <li class=""><a href="/docs/visualisation-designer/">Widget Designer</a></li>
         
+        </ul>
+        
+        <h5 class="uk-margin-top">Groups</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
           
           
-          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
+          <li class=""><a href="/docs/groups/">Groups</a></li>
         
         </ul>
         
-        <h5 class="uk-margin-top">Structure & User Management</h5>
+        <h5 class="uk-margin-top">Structure</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
-          
-          
-          <li class=""><a href="/docs/groups/">Groups</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/user-management/">User Management</a></li>
-        
         </ul>
         
-        <h5 class="uk-margin-top">Transfer Configuration</h5>
+        <h5 class="uk-margin-top">User Management</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
-        
-        </ul>
-        
-        <h5 class="uk-margin-top">Developer</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/api/">API</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/liquid/">Liquid</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/options/">Options</a></li>
+          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
         
         </ul>
         

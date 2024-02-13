@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Data Sources | AireFrame Docs</title>
-<meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="Data Sources" />
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Data Source Configuration | AireFrame Docs</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Data Source Configuration" />
 <meta name="author" content="Danny Heard" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="This page explains how to add data sources in AireFrame. For example you may want to add a FHIR data source so that you can consume subjects or structured data instead of using AireFrame’s internal data store." />
@@ -19,9 +19,9 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-01-25T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Data Sources" />
+<meta property="twitter:title" content="Data Source Configuration" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"dateModified":"2021-01-25T00:00:00+00:00","datePublished":"2021-01-25T00:00:00+00:00","description":"This page explains how to add data sources in AireFrame. For example you may want to add a FHIR data source so that you can consume subjects or structured data instead of using AireFrame’s internal data store.","headline":"Data Sources","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/data-source-config/"},"url":"https://docs.aireframe.com/docs/data-source-config/"}</script>
+{"dateModified":"2021-01-25T00:00:00+00:00","datePublished":"2021-01-25T00:00:00+00:00","description":"This page explains how to add data sources in AireFrame. For example you may want to add a FHIR data source so that you can consume subjects or structured data instead of using AireFrame’s internal data store.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/data-source-config/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"url":"https://docs.aireframe.com/docs/data-source-config/","headline":"Data Source Configuration","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -143,12 +143,17 @@
         
         </ul>
         
-        <h5>Subject Configuration</h5>
+        <h5>Data Sources</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class="uk-active"><a href="/docs/data-source-config/">Data Sources</a></li>
+          <li class="uk-active"><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+        
+        </ul>
+        
+        <h5>Subject Configuration</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
@@ -165,66 +170,38 @@
         
           
           
-          <li class="uk-active"><a href="/docs/data-source-config/">Data Sources</a></li>
-        
-          
-          
-          <li class=""><a href=""></a></li>
+          <li class=""><a href="/docs/data-extract-config/">Data Extracts</a></li>
         
           
           
           <li class=""><a href="/docs/visualisation-designer/">Widget Designer</a></li>
         
+        </ul>
+        
+        <h5>Groups</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
           
           
-          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
+          <li class=""><a href="/docs/groups/">Groups</a></li>
         
         </ul>
         
-        <h5>Structure & User Management</h5>
+        <h5>Structure</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
-          
-          
-          <li class=""><a href="/docs/groups/">Groups</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/user-management/">User Management</a></li>
-        
         </ul>
         
-        <h5>Transfer Configuration</h5>
+        <h5>User Management</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
-        
-        </ul>
-        
-        <h5>Developer</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/api/">API</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/liquid/">Liquid</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/options/">Options</a></li>
+          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
         
         </ul>
         
@@ -235,7 +212,7 @@
 
                 <article class="uk-article">
 
-                    <h1 class="uk-article-title">Data Sources</h1>
+                    <h1 class="uk-article-title">Data Source Configuration</h1>
 
                     <p class="subtitle uk-text-lead uk-text-muted">Add and configure the data sources</p>
 
@@ -285,32 +262,18 @@
 <h4 id="add-data-source"><strong>Add Data Source</strong></h4>
 
 <ol>
-  <li>Go to the data source configuration screen: Configuration -&gt; Dashboards and Data -&gt; Data Sources Tab.</li>
+  <li>Go to the data source configuration screen: Configuration -&gt; Data Sources.</li>
   <li>Click Add Data Source, you will see a screen as follows <img src="/assets/screenshots/data-source/add-data-source.png" alt="add data source" /></li>
-  <li>Choose between a bundled data source (These are out-of-the-box integrations) and a custom data source (a custom-built integration using the <a href="/docs/sdk/">SDK</a>)</li>
-</ol>
-
-<p>If adding a bundled data source:</p>
-<ol>
-  <li>Select the bundle</li>
+  <li>Select the data source type</li>
   <li>Enter a name for the data source</li>
   <li>Enter the data source specific configuration values. Required values are indicated with an (*). <img src="/assets/screenshots/data-source/config-options.png" alt="configuration values" /></li>
-  <li>Click save</li>
-</ol>
-
-<p>If adding a custom data source:</p>
-<ol>
-  <li>Enter the connection details for the custom data source. The authority server must be the same as the AireFrame instance (AireIdentity if using the SaaS instance)</li>
-  <li>Click connect to test the connection, you will not be able to continue if it does not connect successfuly</li>
-  <li>Enter a name for the data source</li>
-  <li>Enter the data source specific configuration values. Required values are indicated with an (*).</li>
   <li>Click save</li>
 </ol>
 
 <h4 id="edit-data-source"><strong>Edit Data Source</strong></h4>
 
 <ol>
-  <li>Go to the data source configuration screen: Configuration -&gt; Dashboards and Data -&gt; Data Sources Tab.</li>
+  <li>Go to the data source configuration screen: Configuration -&gt; Data Sources.</li>
   <li>Click the data source you wish to edit</li>
   <li>Enter the values you wish to change. For security reasons, secret values must be re-entered on every edit</li>
   <li>Click save</li>
@@ -328,60 +291,6 @@
     
 
     <ul class="uk-list">
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
-    
-
-    
-    
-
-    
-
-    
-
     
 
     
@@ -508,12 +417,17 @@
         
         </ul>
         
-        <h5 class="uk-margin-top">Subject Configuration</h5>
+        <h5 class="uk-margin-top">Data Sources</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class="uk-active"><a href="/docs/data-source-config/">Data Sources</a></li>
+          <li class="uk-active"><a href="/docs/data-source-config/">Data Source Configuration</a></li>
+        
+        </ul>
+        
+        <h5 class="uk-margin-top">Subject Configuration</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
@@ -530,66 +444,38 @@
         
           
           
-          <li class="uk-active"><a href="/docs/data-source-config/">Data Sources</a></li>
-        
-          
-          
-          <li class=""><a href=""></a></li>
+          <li class=""><a href="/docs/data-extract-config/">Data Extracts</a></li>
         
           
           
           <li class=""><a href="/docs/visualisation-designer/">Widget Designer</a></li>
         
+        </ul>
+        
+        <h5 class="uk-margin-top">Groups</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
           
           
-          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
+          <li class=""><a href="/docs/groups/">Groups</a></li>
         
         </ul>
         
-        <h5 class="uk-margin-top">Structure & User Management</h5>
+        <h5 class="uk-margin-top">Structure</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
-          
-          
-          <li class=""><a href="/docs/groups/">Groups</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/user-management/">User Management</a></li>
-        
         </ul>
         
-        <h5 class="uk-margin-top">Transfer Configuration</h5>
+        <h5 class="uk-margin-top">User Management</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
-        
-        </ul>
-        
-        <h5 class="uk-margin-top">Developer</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/api/">API</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/liquid/">Liquid</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
-        
-          
-          
-          <li class=""><a href="/docs/options/">Options</a></li>
+          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
         
         </ul>
         

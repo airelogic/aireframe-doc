@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Subject Provider | AireFrame Docs</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Subject Provider" />
 <meta name="author" content="Danny Heard" />
 <meta property="og:locale" content="en_US" />
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Subject Provider" />
 <script type="application/ld+json">
-{"dateModified":"2021-01-25T00:00:00+00:00","datePublished":"2021-01-25T00:00:00+00:00","description":"This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source.","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/subject-provider/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"url":"https://docs.aireframe.com/docs/subject-provider/","headline":"Subject Provider","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"dateModified":"2021-01-25T00:00:00+00:00","datePublished":"2021-01-25T00:00:00+00:00","description":"This page explains how to configure the subject provider in AireFrame. For example you may want to configure that the Subjects are provided by a FHIR data source.","headline":"Subject Provider","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/subject-provider/"},"url":"https://docs.aireframe.com/docs/subject-provider/"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -143,17 +143,12 @@
         
         </ul>
         
-        <h5>Data Sources</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
-        
-        </ul>
-        
         <h5>Subject Configuration</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
         
           
           
@@ -170,38 +165,66 @@
         
           
           
-          <li class=""><a href="/docs/data-extract-config/">Data Extracts</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
+        
+          
+          
+          <li class=""><a href=""></a></li>
         
           
           
           <li class=""><a href="/docs/visualisation-designer/">Widget Designer</a></li>
         
-        </ul>
-        
-        <h5>Groups</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
           
           
-          <li class=""><a href="/docs/groups/">Groups</a></li>
+          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
         
         </ul>
         
-        <h5>Structure</h5>
+        <h5>Structure & User Management</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
+          
+          
+          <li class=""><a href="/docs/groups/">Groups</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/user-management/">User Management</a></li>
+        
         </ul>
         
-        <h5>User Management</h5>
+        <h5>Transfer Configuration</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
+          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
+        
+        </ul>
+        
+        <h5>Developer</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class=""><a href="/docs/api/">API</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/liquid/">Liquid</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/options/">Options</a></li>
         
         </ul>
         
@@ -258,7 +281,12 @@
 <ol>
   <li>Go to the subject configuration screen: Configuration -&gt; Subject Configuration.</li>
   <li>Choose the data source you wish to serve your subjects from the drop down list <img src="/assets/screenshots/subject-configuration/subject-provider.png" alt="choose subject provider" /></li>
-  <li>Unless you are using the internal data store you will need to provide mappings for each of the custom fields so that the data source can provide the correct data for the subjects - In the case of the FHIR provider these are FHIR Paths.</li>
+  <li>Unless you are using the internal data store you will need to provide mappings for the external subject id and each of the custom fields so that the data source can provide the correct data for the subjects.
+    <ul>
+      <li>In the case of the FHIR provider these are FHIR Paths.</li>
+      <li>You will also need to provide a lookup expression that will be used to find subjects by id. This is a liquid expression that can reference the external subject id <code class="language-plaintext highlighter-rouge">{{ externalId }}</code>, and the internal subject id <code class="language-plaintext highlighter-rouge">{{ internalId }}</code></li>
+    </ul>
+  </li>
   <li>Click save</li>
 </ol>
 
@@ -345,9 +373,63 @@
     
 
     
+
+    
+
+    
+    
+
+    
+
+    
         <li><a href="/docs/subject-configuration/">Subject Configuration</a></li>
         
         
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
     
 
     
@@ -404,17 +486,12 @@
         
         </ul>
         
-        <h5 class="uk-margin-top">Data Sources</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
-        
-        </ul>
-        
         <h5 class="uk-margin-top">Subject Configuration</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
         
           
           
@@ -431,38 +508,66 @@
         
           
           
-          <li class=""><a href="/docs/data-extract-config/">Data Extracts</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
+        
+          
+          
+          <li class=""><a href=""></a></li>
         
           
           
           <li class=""><a href="/docs/visualisation-designer/">Widget Designer</a></li>
         
-        </ul>
-        
-        <h5 class="uk-margin-top">Groups</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
           
           
-          <li class=""><a href="/docs/groups/">Groups</a></li>
+          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
         
         </ul>
         
-        <h5 class="uk-margin-top">Structure</h5>
+        <h5 class="uk-margin-top">Structure & User Management</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
+          
+          
+          <li class=""><a href="/docs/groups/">Groups</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/user-management/">User Management</a></li>
+        
         </ul>
         
-        <h5 class="uk-margin-top">User Management</h5>
+        <h5 class="uk-margin-top">Transfer Configuration</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
+          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
+        
+        </ul>
+        
+        <h5 class="uk-margin-top">Developer</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class=""><a href="/docs/api/">API</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/liquid/">Liquid</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/options/">Options</a></li>
         
         </ul>
         

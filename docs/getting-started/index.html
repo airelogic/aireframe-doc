@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Getting Started | AireFrame Docs</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Getting Started" />
 <meta name="author" content="Danny Heard" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="The first time that you log into a new tenant on aireframe, you will be presented with this screen:" />
-<meta property="og:description" content="The first time that you log into a new tenant on aireframe, you will be presented with this screen:" />
+<meta name="description" content="The first time that you log into a new tenant on AireFrame, you will be presented with this screen:" />
+<meta property="og:description" content="The first time that you log into a new tenant on AireFrame, you will be presented with this screen:" />
 <link rel="canonical" href="https://docs.aireframe.com/docs/getting-started/" />
 <meta property="og:url" content="https://docs.aireframe.com/docs/getting-started/" />
 <meta property="og:site_name" content="AireFrame Docs" />
@@ -21,7 +21,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Getting Started" />
 <script type="application/ld+json">
-{"dateModified":"2021-06-22T00:00:00+00:00","datePublished":"2021-06-22T00:00:00+00:00","description":"The first time that you log into a new tenant on aireframe, you will be presented with this screen:","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/getting-started/"},"@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"url":"https://docs.aireframe.com/docs/getting-started/","headline":"Getting Started","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Danny Heard"},"dateModified":"2021-06-22T00:00:00+00:00","datePublished":"2021-06-22T00:00:00+00:00","description":"The first time that you log into a new tenant on AireFrame, you will be presented with this screen:","headline":"Getting Started","mainEntityOfPage":{"@type":"WebPage","@id":"https://docs.aireframe.com/docs/getting-started/"},"url":"https://docs.aireframe.com/docs/getting-started/"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://docs.aireframe.com/assets/posts/"/>
@@ -143,17 +143,12 @@
         
         </ul>
         
-        <h5>Data Sources</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
-        
-        </ul>
-        
         <h5>Subject Configuration</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
         
           
           
@@ -170,38 +165,66 @@
         
           
           
-          <li class=""><a href="/docs/data-extract-config/">Data Extracts</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
+        
+          
+          
+          <li class=""><a href=""></a></li>
         
           
           
           <li class=""><a href="/docs/visualisation-designer/">Widget Designer</a></li>
         
-        </ul>
-        
-        <h5>Groups</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
           
           
-          <li class=""><a href="/docs/groups/">Groups</a></li>
+          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
         
         </ul>
         
-        <h5>Structure</h5>
+        <h5>Structure & User Management</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
+          
+          
+          <li class=""><a href="/docs/groups/">Groups</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/user-management/">User Management</a></li>
+        
         </ul>
         
-        <h5>User Management</h5>
+        <h5>Transfer Configuration</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
+          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
+        
+        </ul>
+        
+        <h5>Developer</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class=""><a href="/docs/api/">API</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/liquid/">Liquid</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/options/">Options</a></li>
         
         </ul>
         
@@ -231,7 +254,7 @@
                     </div>
 
                     <div class="article-content">
-                        <p>The first time that you log into a new tenant on aireframe, you will be presented with this screen:</p>
+                        <p>The first time that you log into a new tenant on AireFrame, you will be presented with this screen:</p>
 
 <p><img src="/assets/screenshots/getting-started/access-denied.png" alt="access denied" /></p>
 
@@ -240,13 +263,13 @@ Click the cog icon in the bottom left to start configuring the tenant.</p>
 
 <h2 id="organisational-structure">Organisational Structure</h2>
 
-<p>AireFrame allows an organisation to flexibly define how their structure should be represented. This structured defines where the subjects can be assigned, so you must set this up before you can add subjects.</p>
+<p>AireFrame allows an organisation to flexibly define how their structure should be represented. This structure defines where the subjects can be assigned, so you must set this up before you can add subjects.</p>
 
 <p><em>See the guide on how to setup an organisation structure <a href="/docs/tenant-structure/">here</a></em>.</p>
 
 <h2 id="groups">Groups</h2>
 
-<p>Groups define the mapping between users and the organisation structure, i.e. users can only access parts of the organisation that they have been assigned to via groups. Once you have assinged your user to a group, the initial access denied message will dissapear.</p>
+<p>Groups define the mapping between users and the organisation structure, i.e. users can only access parts of the organisation that they have been assigned to via groups. Once you have assigned your user to a group, the initial access denied message will disappear.</p>
 
 <p><em>See the guide on how to setup groups <a href="/docs/groups/">here</a></em>.</p>
 
@@ -277,6 +300,60 @@ The default data source for this is the ‘Internal’ data source, where the su
     
 
     <ul class="uk-list">
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
     
 
     
@@ -403,17 +480,12 @@ The default data source for this is the ‘Internal’ data source, where the su
         
         </ul>
         
-        <h5 class="uk-margin-top">Data Sources</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
-          
-          
-          <li class=""><a href="/docs/data-source-config/">Data Source Configuration</a></li>
-        
-        </ul>
-        
         <h5 class="uk-margin-top">Subject Configuration</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
         
           
           
@@ -430,38 +502,66 @@ The default data source for this is the ‘Internal’ data source, where the su
         
           
           
-          <li class=""><a href="/docs/data-extract-config/">Data Extracts</a></li>
+          <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
+        
+          
+          
+          <li class=""><a href=""></a></li>
         
           
           
           <li class=""><a href="/docs/visualisation-designer/">Widget Designer</a></li>
         
-        </ul>
-        
-        <h5 class="uk-margin-top">Groups</h5>
-        <ul class="uk-nav uk-nav-default doc-nav">
-        
           
           
-          <li class=""><a href="/docs/groups/">Groups</a></li>
+          <li class=""><a href="/docs/dashboards/">Dashboards</a></li>
         
         </ul>
         
-        <h5 class="uk-margin-top">Structure</h5>
+        <h5 class="uk-margin-top">Structure & User Management</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
           <li class=""><a href="/docs/tenant-structure/">Tenant Structure</a></li>
         
+          
+          
+          <li class=""><a href="/docs/groups/">Groups</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/user-management/">User Management</a></li>
+        
         </ul>
         
-        <h5 class="uk-margin-top">User Management</h5>
+        <h5 class="uk-margin-top">Transfer Configuration</h5>
         <ul class="uk-nav uk-nav-default doc-nav">
         
           
           
-          <li class=""><a href="/docs/user-management/">User Mangagment</a></li>
+          <li class=""><a href="/docs/import-export-configuration/">Transfer Configuration</a></li>
+        
+        </ul>
+        
+        <h5 class="uk-margin-top">Developer</h5>
+        <ul class="uk-nav uk-nav-default doc-nav">
+        
+          
+          
+          <li class=""><a href="/docs/api/">API</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/liquid/">Liquid</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/sdk/">AireFrame SDK</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/options/">Options</a></li>
         
         </ul>
         

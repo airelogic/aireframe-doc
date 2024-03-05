@@ -152,6 +152,10 @@
         
           
           
+          <li class=""><a href="/docs/data-set-config/">Data Sets</a></li>
+        
+          
+          
           <li class=""><a href="/docs/subject-provider/">Subject Provider</a></li>
         
           
@@ -297,7 +301,7 @@
                 AUDIENCE)
         )
     )
-    .AddSubjectProvider&lt;YourSubjectProviderImplementation, YourSubjectLocationProviderImplementation&gt;()
+    .AddSubjectProvider&lt;YourSubjectProviderImplementation, YourSubjectLocationProviderImplementation&gt;(configurationOptions)
     .AddStructuredDataProvider&lt;YourStructuredDataProviderImplementation&gt;()
     .AddEventHandler&lt;YourEventHandlerImplementation&gt;();
 </code></pre></div></div>
@@ -313,6 +317,46 @@ app.UseEndpoints(endpoints =&gt;
     endpoints.MapDataProvider();
 });
 </code></pre></div></div>
+
+<h3 id="configuration">Configuration</h3>
+<p>Our Data Provider SDK supports configuring data sources with distinct read-only and read-write capabilities. This allows you to tailor the behavior based on runtime conditions.</p>
+<ul>
+  <li>Read-Only Capabilities: For scenarios where data modification is not required or should be restricted. Use <code class="language-plaintext highlighter-rouge">ReadOnlySubjectProviderOptions</code> to configure data sources that should only support read operations.</li>
+  <li>Read-Write Capabilities: Use <code class="language-plaintext highlighter-rouge">ReadWriteSubjectProviderOptions</code> for data sources that require both read and write operations. These options also support dynamically setting the data source to read-only mode based on runtime conditions.</li>
+</ul>
+
+<p>In <code class="language-plaintext highlighter-rouge">Startup.ConfigureServices</code>:</p>
+
+<ol>
+  <li>Define Read-Write Capabilities
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services
+ .AddDataProviderServer&lt;YourDataSource&gt;(
+     // Configuration settings
+ )
+ .AddSubjectProvider&lt;YourSubjectProviderImplementation, YourSubjectLocationProviderImplementation&gt;(options =&gt; {
+   options.Lifetime = ServiceLifetime.Scoped;
+   // Configure dynamic read-only check
+   options.IsReadOnly = (serviceProvider, dataSourceContext) =&gt; {
+       // Insert logic to determine if the provider should be read-only
+       return Task.FromResult(false); // Example: dynamically determine based on context
+   };
+ })
+ .AddStructuredDataProvider&lt;YourStructuredDataProviderImplementation&gt;()
+ .AddEventHandler&lt;YourEventHandlerImplementation&gt;();
+</code></pre></div>    </div>
+  </li>
+  <li>Define Read-Only Capabilities
+```
+services.AddDataProviderServer<YourDataSource>(config =&gt; {
+ // Configuration settings
+})
+.AddReadOnlySubjectProvider&lt;ReadOnlySubjectProvider, ReadOnlySubjectLocationProvider&gt;(options =&gt; {
+ options.Lifetime = ServiceLifetime.Scoped;
+ // Read-only options do not require IsReadOnly configuration
+});</YourDataSource></li>
+</ol>
+
+<p>```</p>
 
 <h3 id="authentication">Authentication</h3>
 
@@ -531,6 +575,10 @@ The application scope you created will be the <code class="language-plaintext hi
           
           
           <li class=""><a href="/docs/data-source-config/">Data Sources</a></li>
+        
+          
+          
+          <li class=""><a href="/docs/data-set-config/">Data Sets</a></li>
         
           
           

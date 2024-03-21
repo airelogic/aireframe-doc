@@ -285,9 +285,8 @@
 
 <p>These are the interfaces you can implement:</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">ISubjectProvider</code> and <code class="language-plaintext highlighter-rouge">ISubjectLocationProvider</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ISubjectProvider</code>, <code class="language-plaintext highlighter-rouge">ISubjectLocationProvider</code>, <code class="language-plaintext highlighter-rouge">IStructureTypeProvider</code>, <code class="language-plaintext highlighter-rouge">IStructuralEntityProvider</code>, <code class="language-plaintext highlighter-rouge">IGroupProvider</code> (or their read-only counterparts)</li>
   <li><code class="language-plaintext highlighter-rouge">IStructuredDataProvider</code></li>
-  <li><code class="language-plaintext highlighter-rouge">IEventHandler</code></li>
 </ul>
 
 <p>In <code class="language-plaintext highlighter-rouge">Startup.ConfigureServices</code>:</p>
@@ -301,9 +300,11 @@
                 AUDIENCE)
         )
     )
-    .AddSubjectProvider&lt;YourSubjectProviderImplementation, YourSubjectLocationProviderImplementation&gt;(configurationOptions)
-    .AddStructuredDataProvider&lt;YourStructuredDataProviderImplementation&gt;()
-    .AddEventHandler&lt;YourEventHandlerImplementation&gt;();
+    .AddSubjectProvider&lt;YourSubjectProviderImplementation, YourSubjectLocationProviderImplementation, YourStructureTypeProvider, YourStructuralEntityProvider, YourGroupProvider&gt;() // Or .AddReadOnlySubjectProvider
+    .AddStructuredDataProvider&lt;YourStructuredDataProviderImplementation&gt;(o =&gt; {
+        // This adds the IDataChangeNotificationClient which enables caching of structured data
+        options.ServerConfiguration = new AireFrameServerConfiguration(GrpcEndpoint, ClientCredentials);
+    });
 </code></pre></div></div>
 
 <p>In <code class="language-plaintext highlighter-rouge">Startup.Configure</code>:</p>

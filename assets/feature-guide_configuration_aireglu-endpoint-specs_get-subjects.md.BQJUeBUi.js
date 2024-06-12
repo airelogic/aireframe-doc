@@ -60,7 +60,10 @@ import{_ as t,c as s,o as n,a4 as a}from"./chunks/framework.CgMb17D3.js";const h
 <span class="line"><span>							],</span></span>
 <span class="line"><span>							&quot;properties&quot;: {</span></span>
 <span class="line"><span>								&quot;Value&quot;: {</span></span>
-<span class="line"><span>									&quot;type&quot;: [&quot;null&quot;, &quot;string&quot;]</span></span>
+<span class="line"><span>									&quot;type&quot;: [</span></span>
+<span class="line"><span>										&quot;string&quot;,</span></span>
+<span class="line"><span>										&quot;null&quot;</span></span>
+<span class="line"><span>									]</span></span>
 <span class="line"><span>								},</span></span>
 <span class="line"><span>								&quot;CustomField&quot;: {</span></span>
 <span class="line"><span>									&quot;type&quot;: &quot;object&quot;,</span></span>
@@ -108,7 +111,7 @@ import{_ as t,c as s,o as n,a4 as a}from"./chunks/framework.CgMb17D3.js";const h
 <span class="line"><span>						&quot;Key&quot;: &quot;campaign_no&quot;,</span></span>
 <span class="line"><span>						&quot;DataType&quot;: &quot;String&quot;</span></span>
 <span class="line"><span>					},</span></span>
-<span class="line"><span>					&quot;Value&quot;: 532,</span></span>
+<span class="line"><span>					&quot;Value&quot;: &quot;532&quot;,</span></span>
 <span class="line"><span>					&quot;CustomField&quot;: {</span></span>
 <span class="line"><span>						&quot;Key&quot;: &quot;highest_daily_sales&quot;,</span></span>
 <span class="line"><span>						&quot;DataType&quot;: &quot;Integer&quot;</span></span>
@@ -117,4 +120,4 @@ import{_ as t,c as s,o as n,a4 as a}from"./chunks/framework.CgMb17D3.js";const h
 <span class="line"><span>			]</span></span>
 <span class="line"><span>		}</span></span>
 <span class="line"><span>	]</span></span>
-<span class="line"><span>}</span></span></code></pre></div>`,17),l=[e];function o(u,i,c,q,r,d){return n(),s("div",null,l)}const b=t(p,[["render",o]]);export{h as __pageData,b as default};
+<span class="line"><span>}</span></span></code></pre></div><ul><li><strong>Explanation of properties</strong>: Value should either be null or string regardless of its corresponding CustomField DataType property. If the Value is not null, the following C# format should be used <em>within the string</em> depending on the DataType property: <ul><li><em>String</em> - string</li><li><em>Integer</em> - int32</li><li><em>Decimal</em> - double</li><li><em>Boolean</em> - bool</li><li><em>DateTime</em> - DateTime</li><li><em>Date</em> - DateOnly</li><li><em>Time</em> - TimeOnly</li></ul></li></ul>`,18),l=[e];function o(i,u,c,q,r,d){return n(),s("div",null,l)}const m=t(p,[["render",o]]);export{h as __pageData,m as default};

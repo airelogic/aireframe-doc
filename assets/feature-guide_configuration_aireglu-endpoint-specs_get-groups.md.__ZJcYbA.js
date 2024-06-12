@@ -43,7 +43,12 @@ import{_ as s,c as n,o as a,a4 as t}from"./chunks/framework.CgMb17D3.js";const h
 <span class="line"><span>                        &quot;type&quot;: &quot;string&quot;</span></span>
 <span class="line"><span>                    }</span></span>
 <span class="line"><span>                }</span></span>
-<span class="line"><span>            }</span></span>
+<span class="line"><span>            },</span></span>
+<span class="line"><span>            &quot;required&quot;: [</span></span>
+<span class="line"><span>                &quot;Key&quot;,</span></span>
+<span class="line"><span>                &quot;DisplayName&quot;,</span></span>
+<span class="line"><span>                &quot;StructuralEntityKeys&quot;</span></span>
+<span class="line"><span>            ]</span></span>
 <span class="line"><span>        }</span></span>
 <span class="line"><span>      }</span></span>
 <span class="line"><span>    }</span></span>

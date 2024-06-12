@@ -18,7 +18,7 @@ import{_ as a,c as t,o as s,a4 as n}from"./chunks/framework.CgMb17D3.js";const g
 <span class="line"><span>				],</span></span>
 <span class="line"><span>				&quot;properties&quot;: {</span></span>
 <span class="line"><span>					&quot;Key&quot;: {</span></span>
-<span class="line"><span>						&quot;type&quot;: &quot;string&quot;,</span></span>
+<span class="line"><span>						&quot;type&quot;: &quot;string&quot;</span></span>
 <span class="line"><span>					},</span></span>
 <span class="line"><span>					&quot;DataType&quot;: {</span></span>
 <span class="line"><span>						&quot;type&quot;: &quot;string&quot;,</span></span>

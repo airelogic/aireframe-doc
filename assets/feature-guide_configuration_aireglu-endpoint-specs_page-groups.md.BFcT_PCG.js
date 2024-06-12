@@ -148,10 +148,10 @@ import{_ as t,c as s,o as n,a4 as a}from"./chunks/framework.CgMb17D3.js";const h
 <span class="line"><span>						&quot;type&quot;: &quot;object&quot;,</span></span>
 <span class="line"><span>						&quot;properties&quot;: {</span></span>
 <span class="line"><span>							&quot;Key&quot;: {</span></span>
-<span class="line"><span>								&quot;type&quot;: &quot;string&quot;,</span></span>
+<span class="line"><span>								&quot;type&quot;: &quot;string&quot;</span></span>
 <span class="line"><span>							},</span></span>
 <span class="line"><span>							&quot;DisplayName&quot;: {</span></span>
-<span class="line"><span>								&quot;type&quot;: &quot;string&quot;,</span></span>
+<span class="line"><span>								&quot;type&quot;: &quot;string&quot;</span></span>
 <span class="line"><span>							},</span></span>
 <span class="line"><span>							&quot;StructuralEntityKeys&quot;: {</span></span>
 <span class="line"><span>								&quot;type&quot;: &quot;array&quot;,</span></span>
@@ -167,7 +167,7 @@ import{_ as t,c as s,o as n,a4 as a}from"./chunks/framework.CgMb17D3.js";const h
 <span class="line"><span>						]</span></span>
 <span class="line"><span>					},</span></span>
 <span class="line"><span>					&quot;Cursor&quot;: {</span></span>
-<span class="line"><span>						&quot;type&quot;: &quot;string&quot;,</span></span>
+<span class="line"><span>						&quot;type&quot;: &quot;string&quot;</span></span>
 <span class="line"><span>					}</span></span>
 <span class="line"><span>				}</span></span>
 <span class="line"><span>			}</span></span>

@@ -33,10 +33,10 @@ import{_ as s,c as t,o as n,a4 as a}from"./chunks/framework.CgMb17D3.js";const h
 <span class="line"><span>				],</span></span>
 <span class="line"><span>				&quot;properties&quot;: {</span></span>
 <span class="line"><span>					&quot;Key&quot;: {</span></span>
-<span class="line"><span>						&quot;type&quot;: &quot;string&quot;,</span></span>
+<span class="line"><span>						&quot;type&quot;: &quot;string&quot;</span></span>
 <span class="line"><span>					},</span></span>
 <span class="line"><span>					&quot;DisplayName&quot;: {</span></span>
-<span class="line"><span>						&quot;type&quot;: &quot;string&quot;,</span></span>
+<span class="line"><span>						&quot;type&quot;: &quot;string&quot;</span></span>
 <span class="line"><span>					},</span></span>
 <span class="line"><span>					&quot;IsSubjectAssignable&quot;: {</span></span>
 <span class="line"><span>						&quot;type&quot;: &quot;boolean&quot;</span></span>

@@ -201,7 +201,7 @@ import{_ as t,c as s,o as n,a5 as a}from"./chunks/framework.CPB9DHH7.js";const h
 <span class="line"><span>							&quot;ExternalId&quot;: {</span></span>
 <span class="line"><span>								&quot;type&quot;: &quot;string&quot;</span></span>
 <span class="line"><span>							},</span></span>
-<span class="line"><span>							&quot;AvatarBase64&quot;: {</span></span>
+<span class="line"><span>							&quot;AvatarHash&quot;: {</span></span>
 <span class="line"><span>								&quot;type&quot;: [</span></span>
 <span class="line"><span>									&quot;null&quot;,</span></span>
 <span class="line"><span>									&quot;string&quot;</span></span>
@@ -249,7 +249,7 @@ import{_ as t,c as s,o as n,a5 as a}from"./chunks/framework.CPB9DHH7.js";const h
 <span class="line"><span>						&quot;required&quot;: [</span></span>
 <span class="line"><span>							&quot;ExternalId&quot;,</span></span>
 <span class="line"><span>							&quot;CustomFieldValues&quot;,</span></span>
-<span class="line"><span>							&quot;AvatarBase64&quot;</span></span>
+<span class="line"><span>							&quot;AvatarHash&quot;</span></span>
 <span class="line"><span>						]</span></span>
 <span class="line"><span>					},</span></span>
 <span class="line"><span>					&quot;Cursor&quot;: {</span></span>
@@ -276,7 +276,7 @@ import{_ as t,c as s,o as n,a5 as a}from"./chunks/framework.CPB9DHH7.js";const h
 <span class="line"><span>		{</span></span>
 <span class="line"><span>			&quot;Node&quot;: {</span></span>
 <span class="line"><span>				&quot;ExternalId&quot;: &quot;subj-145&quot;,</span></span>
-<span class="line"><span>				&quot;AvatarBase64&quot;: null,</span></span>
+<span class="line"><span>				&quot;AvatarHash&quot;: null,</span></span>
 <span class="line"><span>				&quot;CustomFieldValues&quot;: [</span></span>
 <span class="line"><span>					{</span></span>
 <span class="line"><span>						&quot;Value&quot;: &quot;Campaign A&quot;,</span></span>
@@ -290,4 +290,4 @@ import{_ as t,c as s,o as n,a5 as a}from"./chunks/framework.CPB9DHH7.js";const h
 <span class="line"><span>			&quot;Cursor&quot;: &quot;subj-145&quot;</span></span>
 <span class="line"><span>		}</span></span>
 <span class="line"><span>	]</span></span>
-<span class="line"><span>}</span></span></code></pre></div><ul><li><strong>Explanation of properties</strong>: Value should either be null or string regardless of its corresponding CustomField DataType property. If the Value is not null, the following C# format should be used <em>within the string</em> depending on the DataType property: <ul><li><em>String</em> - string</li><li><em>Integer</em> - int32</li><li><em>Decimal</em> - double</li><li><em>Boolean</em> - bool</li><li><em>DateTime</em> - DateTime</li><li><em>Date</em> - DateOnly</li><li><em>Time</em> - TimeOnly</li></ul></li></ul><h2 id="previous-versions" tabindex="-1">Previous versions <a class="header-anchor" href="#previous-versions" aria-label="Permalink to &quot;Previous versions&quot;">​</a></h2><p>None</p>`,21),l=[e];function o(u,i,q,c,r,d){return n(),s("div",null,l)}const m=t(p,[["render",o]]);export{h as __pageData,m as default};
+<span class="line"><span>}</span></span></code></pre></div><ul><li><strong>Explanation of properties</strong>: Value should either be null or string regardless of its corresponding CustomField DataType property. If the Value is not null, the following C# format should be used <em>within the string</em> depending on the DataType property: <ul><li><em>String</em> - string</li><li><em>Integer</em> - int32</li><li><em>Decimal</em> - double</li><li><em>Boolean</em> - bool</li><li><em>DateTime</em> - DateTime</li><li><em>Date</em> - DateOnly</li><li><em>Time</em> - TimeOnly</li></ul></li></ul><h3 id="avatarhash" tabindex="-1">AvatarHash <a class="header-anchor" href="#avatarhash" aria-label="Permalink to &quot;AvatarHash&quot;">​</a></h3><p><code>AvatarHash</code> is a nullable string data type and should only change when the subject avatar changes.</p><p>When <code>AvatarHash</code> changes, it will trigger a call to the <code>get-subject-avatar</code> endpoint. For more information on this endpoint, please refer to the <a href="/feature-guide/configuration/aireglu-data-source/endpoint-specs/get-subject-avatar.html">Get Subject Avatar Documentation</a>.</p><p>If you are not using the subject avatar functionality, you can set <code>AvatarHash</code> to <code>null</code>.</p><h2 id="previous-versions" tabindex="-1">Previous versions <a class="header-anchor" href="#previous-versions" aria-label="Permalink to &quot;Previous versions&quot;">​</a></h2><p>None</p>`,25),l=[e];function o(u,i,q,c,r,d){return n(),s("div",null,l)}const m=t(p,[["render",o]]);export{h as __pageData,m as default};

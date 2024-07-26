@@ -56,24 +56,6 @@ import{_ as t,c as s,o as n,a5 as a}from"./chunks/framework.CPB9DHH7.js";const h
 <span class="line"><span>				&quot;OrderDirection&quot;</span></span>
 <span class="line"><span>			]</span></span>
 <span class="line"><span>		},</span></span>
-<span class="line"><span>		&quot;TimeFrame&quot;: {</span></span>
-<span class="line"><span>			&quot;type&quot;: [&quot;object&quot;, &quot;null&quot;],</span></span>
-<span class="line"><span>      		&quot;description&quot;: &quot;The requested TimeFrame. Note all DateTimes are UTC based.&quot;,</span></span>
-<span class="line"><span>			&quot;properties&quot;: {</span></span>
-<span class="line"><span>				&quot;From&quot;: {</span></span>
-<span class="line"><span>					&quot;type&quot;: &quot;string&quot;,</span></span>
-<span class="line"><span>					&quot;format&quot;: &quot;date-time&quot;</span></span>
-<span class="line"><span>				},</span></span>
-<span class="line"><span>				&quot;To&quot;: {</span></span>
-<span class="line"><span>					&quot;type&quot;: &quot;string&quot;,</span></span>
-<span class="line"><span>					&quot;format&quot;: &quot;date-time&quot;</span></span>
-<span class="line"><span>				}</span></span>
-<span class="line"><span>			},</span></span>
-<span class="line"><span>			&quot;required&quot;: [</span></span>
-<span class="line"><span>				&quot;From&quot;,</span></span>
-<span class="line"><span>				&quot;To&quot;</span></span>
-<span class="line"><span>			]</span></span>
-<span class="line"><span>		},</span></span>
 <span class="line"><span>		&quot;DataExtract&quot;: {</span></span>
 <span class="line"><span>			&quot;type&quot;: &quot;object&quot;,</span></span>
 <span class="line"><span>			&quot;properties&quot;: {</span></span>
@@ -93,7 +75,6 @@ import{_ as t,c as s,o as n,a5 as a}from"./chunks/framework.CPB9DHH7.js";const h
 <span class="line"><span>	&quot;required&quot;: [</span></span>
 <span class="line"><span>		&quot;SubjectIdentifiers&quot;,</span></span>
 <span class="line"><span>		&quot;PagingRequest&quot;,</span></span>
-<span class="line"><span>		&quot;TimeFrame&quot;,</span></span>
 <span class="line"><span>		&quot;DataExtract&quot;</span></span>
 <span class="line"><span>	]</span></span>
 <span class="line"><span>}</span></span></code></pre></div><ul><li><strong>Example</strong>:</li></ul><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>{</span></span>

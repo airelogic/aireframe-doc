@@ -90,7 +90,6 @@ import{_ as t,c as s,o as n,a5 as a}from"./chunks/framework.IdkiGMKn.js";const h
 <span class="line"><span>		&quot;OrderBy&quot;: null,</span></span>
 <span class="line"><span>		&quot;OrderDirection&quot;: &quot;Ascending&quot;</span></span>
 <span class="line"><span>	},</span></span>
-<span class="line"><span>	&quot;TimeFrame&quot;: null,</span></span>
 <span class="line"><span>	&quot;DataExtract&quot;: {</span></span>
 <span class="line"><span>		&quot;Key&quot;: &quot;sales-data-extract&quot;,</span></span>
 <span class="line"><span>		&quot;Options&quot;: {</span></span>

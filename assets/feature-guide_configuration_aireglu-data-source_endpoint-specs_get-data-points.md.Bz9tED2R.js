@@ -125,8 +125,6 @@ import{_ as s,c as n,a3 as a,o as p}from"./chunks/framework.Ci3wTLgQ.js";const d
 <span class="line"><span>			&quot;required&quot;: [</span></span>
 <span class="line"><span>				&quot;HasNextPage&quot;,</span></span>
 <span class="line"><span>				&quot;HasPreviousPage&quot;,</span></span>
-<span class="line"><span>				&quot;StartCursor&quot;,</span></span>
-<span class="line"><span>				&quot;EndCursor&quot;,</span></span>
 <span class="line"><span>				&quot;TotalCount&quot;</span></span>
 <span class="line"><span>			]</span></span>
 <span class="line"><span>		},</span></span>
@@ -187,8 +185,7 @@ import{_ as s,c as n,a3 as a,o as p}from"./chunks/framework.Ci3wTLgQ.js";const d
 <span class="line"><span>												}</span></span>
 <span class="line"><span>											},</span></span>
 <span class="line"><span>											&quot;required&quot;: [</span></span>
-<span class="line"><span>												&quot;DataType&quot;,</span></span>
-<span class="line"><span>												&quot;Value&quot;</span></span>
+<span class="line"><span>												&quot;DataType&quot;</span></span>
 <span class="line"><span>											]</span></span>
 <span class="line"><span>										}</span></span>
 <span class="line"><span>									}</span></span>

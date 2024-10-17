@@ -183,8 +183,6 @@ import{_ as s,c as n,a3 as a,o as p}from"./chunks/framework.Ci3wTLgQ.js";const d
 <span class="line"><span>			&quot;required&quot;: [</span></span>
 <span class="line"><span>				&quot;HasNextPage&quot;,</span></span>
 <span class="line"><span>				&quot;HasPreviousPage&quot;,</span></span>
-<span class="line"><span>				&quot;StartCursor&quot;,</span></span>
-<span class="line"><span>				&quot;EndCursor&quot;,</span></span>
 <span class="line"><span>				&quot;TotalCount&quot;</span></span>
 <span class="line"><span>			]</span></span>
 <span class="line"><span>		},</span></span>
@@ -211,7 +209,6 @@ import{_ as s,c as n,a3 as a,o as p}from"./chunks/framework.Ci3wTLgQ.js";const d
 <span class="line"><span>								&quot;type&quot;: &quot;array&quot;,</span></span>
 <span class="line"><span>								&quot;items&quot;: {</span></span>
 <span class="line"><span>									&quot;required&quot;: [</span></span>
-<span class="line"><span>										&quot;Value&quot;,</span></span>
 <span class="line"><span>										&quot;CustomField&quot;</span></span>
 <span class="line"><span>									],</span></span>
 <span class="line"><span>									&quot;properties&quot;: {</span></span>
@@ -248,8 +245,7 @@ import{_ as s,c as n,a3 as a,o as p}from"./chunks/framework.Ci3wTLgQ.js";const d
 <span class="line"><span>						},</span></span>
 <span class="line"><span>						&quot;required&quot;: [</span></span>
 <span class="line"><span>							&quot;ExternalId&quot;,</span></span>
-<span class="line"><span>							&quot;CustomFieldValues&quot;,</span></span>
-<span class="line"><span>							&quot;AvatarHash&quot;</span></span>
+<span class="line"><span>							&quot;CustomFieldValues&quot;</span></span>
 <span class="line"><span>						]</span></span>
 <span class="line"><span>					},</span></span>
 <span class="line"><span>					&quot;Cursor&quot;: {</span></span>

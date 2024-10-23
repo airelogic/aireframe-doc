@@ -1,4 +1,4 @@
-import{_ as a,c as s,a3 as n,o as t}from"./chunks/framework.ohJJpums.js";const h=JSON.parse('{"title":"API","description":"","frontmatter":{"prev":false},"headers":[],"relativePath":"developer/api.md","filePath":"developer/api.md"}'),i={name:"developer/api.md"};function p(o,e,l,c,d,u){return t(),s("div",null,e[0]||(e[0]=[n(`<h1 id="api" tabindex="-1">API <a class="header-anchor" href="#api" aria-label="Permalink to &quot;API&quot;">​</a></h1><p>This page explains how to create use AireFrame&#39;s APIs to build custom integrations.</p><h2 id="authentication" tabindex="-1">Authentication <a class="header-anchor" href="#authentication" aria-label="Permalink to &quot;Authentication&quot;">​</a></h2><p>All integration APIs require a bearer token provided by AireIdentity using the OAuth client credentials</p><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>These APIs cannot be called with a user&#39;s token</p></div><p>To get a client credentials token you must have setup an AireIdentity client that can request the <code>AireFrameApi</code> scope.</p><p>Example Request:</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>POST https://identity.aireinnovate.com/connect/token</span></span>
+import{_ as s,c as e,a3 as n,o as t}from"./chunks/framework.ohJJpums.js";const h=JSON.parse('{"title":"API","description":"","frontmatter":{"prev":false},"headers":[],"relativePath":"developer/api.md","filePath":"developer/api.md"}'),p={name:"developer/api.md"};function i(o,a,l,c,u,d){return t(),e("div",null,a[0]||(a[0]=[n(`<h1 id="api" tabindex="-1">API <a class="header-anchor" href="#api" aria-label="Permalink to &quot;API&quot;">​</a></h1><p>This page explains how to create use AireFrame&#39;s APIs to build custom integrations.</p><h2 id="authentication" tabindex="-1">Authentication <a class="header-anchor" href="#authentication" aria-label="Permalink to &quot;Authentication&quot;">​</a></h2><p>All integration APIs require a bearer token provided by AireIdentity using the OAuth client credentials</p><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>These APIs cannot be called with a user&#39;s token</p></div><p>To get a client credentials token you must have setup an AireIdentity client that can request the <code>AireFrameApi</code> scope.</p><p>Example Request:</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>POST https://identity.aireinnovate.com/connect/token</span></span>
 <span class="line"><span>CONTENT-TYPE application/x-www-form-urlencoded</span></span>
 <span class="line"><span>client_id=[MY_CLIENT]&amp;</span></span>
 <span class="line"><span>client_secret=[MY_CLIENT_SECRET]&amp;</span></span>
@@ -36,4 +36,22 @@ import{_ as a,c as s,a3 as n,o as t}from"./chunks/framework.ohJJpums.js";const h
 <span class="line"><span>[{</span></span>
 <span class="line"><span>    id: &quot;user-identifier&quot;,</span></span>
 <span class="line"><span>    displayName: &quot;Test User&quot;</span></span>
-<span class="line"><span>}]</span></span></code></pre></div>`,40)]))}const b=a(i,[["render",p]]);export{h as __pageData,b as default};
+<span class="line"><span>}]</span></span></code></pre></div><h2 id="subject-api" tabindex="-1">Subject API <a class="header-anchor" href="#subject-api" aria-label="Permalink to &quot;Subject API&quot;">​</a></h2><p>Endpoint: <code>api/v1/subject/{subjectId}</code></p><p>Returns details about a subject given their internal id.</p><p>Where:</p><ul><li><code>subjectId</code> is AireFrame&#39;s internal identifier for the subject</li></ul><p>Example response:</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span></span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>	&quot;Id&quot;: &quot;c4e44f3d-f7c8-42f7-a9c7-c1e6d35c714b&quot;,</span></span>
+<span class="line"><span>	&quot;ExternalId&quot;: &quot;6c5827d9-ae1e-4581-826b-7884596f929c&quot;,</span></span>
+<span class="line"><span>	&quot;CustomFieldValues&quot;: [</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			&quot;DataType&quot;: &quot;String&quot;,</span></span>
+<span class="line"><span>			&quot;Key&quot;: &quot;given_names&quot;,</span></span>
+<span class="line"><span>			&quot;Name&quot;: &quot;Given Names&quot;,</span></span>
+<span class="line"><span>			&quot;Value&quot;: &quot;Isaac&quot;</span></span>
+<span class="line"><span>		},</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>			&quot;DataType&quot;: &quot;String&quot;,</span></span>
+<span class="line"><span>			&quot;Key&quot;: &quot;family_name&quot;,</span></span>
+<span class="line"><span>			&quot;Name&quot;: &quot;Family Name&quot;,</span></span>
+<span class="line"><span>			&quot;Value&quot;: &quot;Newton&quot;</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>	]</span></span>
+<span class="line"><span>}</span></span></code></pre></div>`,47)]))}const b=s(p,[["render",i]]);export{h as __pageData,b as default};

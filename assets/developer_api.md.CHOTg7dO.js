@@ -1,4 +1,4 @@
-import{_ as s,c as e,a3 as n,o as t}from"./chunks/framework.ohJJpums.js";const q=JSON.parse('{"title":"API","description":"","frontmatter":{"prev":false},"headers":[],"relativePath":"developer/api.md","filePath":"developer/api.md"}'),p={name:"developer/api.md"};function o(i,a,l,u,c,d){return t(),e("div",null,a[0]||(a[0]=[n(`<h1 id="api" tabindex="-1">API <a class="header-anchor" href="#api" aria-label="Permalink to &quot;API&quot;">​</a></h1><p>This page explains how to create use AireFrame&#39;s APIs to build custom integrations.</p><h2 id="authentication" tabindex="-1">Authentication <a class="header-anchor" href="#authentication" aria-label="Permalink to &quot;Authentication&quot;">​</a></h2><p>All integration APIs require a bearer token provided by AireIdentity using the OAuth client credentials</p><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>These APIs cannot be called with a user&#39;s token</p></div><p>To get a client credentials token you must have setup an AireIdentity client that can request the <code>AireFrameApi</code> scope.</p><p>Example Request:</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>POST https://identity.aireinnovate.com/connect/token</span></span>
+import{_ as s,c as n,a3 as e,o as t}from"./chunks/framework.ohJJpums.js";const q=JSON.parse('{"title":"API","description":"","frontmatter":{"prev":false},"headers":[],"relativePath":"developer/api.md","filePath":"developer/api.md"}'),p={name:"developer/api.md"};function o(l,a,i,u,c,d){return t(),n("div",null,a[0]||(a[0]=[e(`<h1 id="api" tabindex="-1">API <a class="header-anchor" href="#api" aria-label="Permalink to &quot;API&quot;">​</a></h1><p>This page explains how to create use AireFrame&#39;s APIs to build custom integrations.</p><h2 id="authentication" tabindex="-1">Authentication <a class="header-anchor" href="#authentication" aria-label="Permalink to &quot;Authentication&quot;">​</a></h2><p>All integration APIs require a bearer token provided by AireIdentity using the OAuth client credentials</p><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>These APIs cannot be called with a user&#39;s token</p></div><p>To get a client credentials token you must have setup an AireIdentity client that can request the <code>AireFrameApi</code> scope.</p><p>Example Request:</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>POST https://identity.aireinnovate.com/connect/token</span></span>
 <span class="line"><span>CONTENT-TYPE application/x-www-form-urlencoded</span></span>
 <span class="line"><span>client_id=[MY_CLIENT]&amp;</span></span>
 <span class="line"><span>client_secret=[MY_CLIENT_SECRET]&amp;</span></span>
@@ -54,6 +54,47 @@ import{_ as s,c as e,a3 as n,o as t}from"./chunks/framework.ohJJpums.js";const q
 <span class="line"><span>			&quot;Value&quot;: &quot;Newton&quot;</span></span>
 <span class="line"><span>		}</span></span>
 <span class="line"><span>	]</span></span>
+<span class="line"><span>}</span></span></code></pre></div><h2 id="get-structural-entity-api" tabindex="-1">Get Structural Entity API <a class="header-anchor" href="#get-structural-entity-api" aria-label="Permalink to &quot;Get Structural Entity API&quot;">​</a></h2><p>Endpoint: <code>api/v1/structuralEntity</code></p><p>Query Parameters:</p><ul><li><p>Filtering: -- <code>ParentKey</code> : <code>String</code> -- <code>Depth</code> : <code>Integer</code> -- <code>SearchTerm</code> : <code>String</code> -- <code>SubjectAssignable</code> : <code>Boolean</code> -- <code>StructureTypeKey</code> : <code>String</code></p></li><li><p>Paging: -- <code>After</code> : <code>String</code> -- <code>Before</code> : <code>String</code> -- <code>First</code> : <code>Integer</code> -- <code>Last</code> : <code>Integer</code> -- <code>OrderBy</code> : <code>String</code> -- <code>OrderDirection</code> : <code>0 for ascending, 1 for descending</code></p></li></ul><p>Example response:</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>{</span></span>
+<span class="line"><span>  &quot;PageInfo&quot;: {</span></span>
+<span class="line"><span>    &quot;HasNextPage&quot;: true,</span></span>
+<span class="line"><span>    &quot;HasPreviousPage&quot;: false,</span></span>
+<span class="line"><span>    &quot;StartCursor&quot;: &quot;e060a545-b6cc-4c80-bad9-440484538627&quot;,</span></span>
+<span class="line"><span>    &quot;EndCursor&quot;: &quot;f8a2dd4c-aa4e-4215-a830-316543fed34a&quot;,</span></span>
+<span class="line"><span>    &quot;TotalCount&quot;: 1</span></span>
+<span class="line"><span>  },</span></span>
+<span class="line"><span>  &quot;Edges&quot;: [</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>      &quot;Node&quot;: {</span></span>
+<span class="line"><span>        &quot;Key&quot;: &quot;e060a545-b6cc-4c80-bad9-440484538627&quot;,</span></span>
+<span class="line"><span>        &quot;DisplayName&quot;: &quot;name&quot;,</span></span>
+<span class="line"><span>        &quot;ParentKey&quot;: null,</span></span>
+<span class="line"><span>        &quot;Depth&quot;: 1,</span></span>
+<span class="line"><span>        &quot;StructureType&quot;: {</span></span>
+<span class="line"><span>          &quot;Name&quot;: &quot;name&quot;,</span></span>
+<span class="line"><span>          &quot;Key&quot;: &quot;f36068c0-5b87-4b43-b3e0-6ee56d4865c2&quot;,</span></span>
+<span class="line"><span>          &quot;SubjectAssignable&quot;: true,</span></span>
+<span class="line"><span>          &quot;CustomFields&quot;: []</span></span>
+<span class="line"><span>        },</span></span>
+<span class="line"><span>        &quot;CustomFieldValues&quot;: []</span></span>
+<span class="line"><span>      },</span></span>
+<span class="line"><span>      &quot;Cursor&quot;: &quot;e060a545-b6cc-4c80-bad9-440484538627&quot;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  ],</span></span>
+<span class="line"><span>  &quot;EdgeNodes&quot;: [</span></span>
+<span class="line"><span>    {</span></span>
+<span class="line"><span>      &quot;Key&quot;: &quot;e060a545-b6cc-4c80-bad9-440484538627&quot;,</span></span>
+<span class="line"><span>      &quot;DisplayName&quot;: &quot;name&quot;,</span></span>
+<span class="line"><span>      &quot;ParentKey&quot;: null,</span></span>
+<span class="line"><span>      &quot;Depth&quot;: 1,</span></span>
+<span class="line"><span>      &quot;StructureType&quot;: {</span></span>
+<span class="line"><span>        &quot;Name&quot;: &quot;name&quot;,</span></span>
+<span class="line"><span>        &quot;Key&quot;: &quot;f36068c0-5b87-4b43-b3e0-6ee56d4865c2&quot;,</span></span>
+<span class="line"><span>        &quot;SubjectAssignable&quot;: true,</span></span>
+<span class="line"><span>        &quot;CustomFields&quot;: []</span></span>
+<span class="line"><span>      },</span></span>
+<span class="line"><span>      &quot;CustomFieldValues&quot;: []</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>  ]</span></span>
 <span class="line"><span>}</span></span></code></pre></div><h2 id="update-structural-entity-api" tabindex="-1">Update Structural Entity API <a class="header-anchor" href="#update-structural-entity-api" aria-label="Permalink to &quot;Update Structural Entity API&quot;">​</a></h2><p>Endpoint: <code>api/v1/structuralEntity</code></p><p>Body:</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>{</span></span>
 <span class="line"><span>    &quot;Key&quot;: string,</span></span>
 <span class="line"><span>    &quot;DisplayName&quot;: string,</span></span>
@@ -125,4 +166,4 @@ import{_ as s,c as e,a3 as n,o as t}from"./chunks/framework.ohJJpums.js";const q
 <span class="line"><span>      }</span></span>
 <span class="line"><span>    }</span></span>
 <span class="line"><span>  ]</span></span>
-<span class="line"><span>}</span></span></code></pre></div>`,63)]))}const h=s(p,[["render",o]]);export{q as __pageData,h as default};
+<span class="line"><span>}</span></span></code></pre></div>`,69)]))}const h=s(p,[["render",o]]);export{q as __pageData,h as default};

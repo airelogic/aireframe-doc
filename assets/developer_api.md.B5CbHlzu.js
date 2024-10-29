@@ -53,6 +53,21 @@ import{_ as s,c as n,a3 as e,o as t}from"./chunks/framework.ohJJpums.js";const q
 <span class="line"><span>			&quot;Name&quot;: &quot;Family Name&quot;,</span></span>
 <span class="line"><span>			&quot;Value&quot;: &quot;Newton&quot;</span></span>
 <span class="line"><span>		}</span></span>
+<span class="line"><span>	],</span></span>
+<span class="line"><span>	&quot;StructuralEntities&quot;: [</span></span>
+<span class="line"><span>        {</span></span>
+<span class="line"><span>              &quot;Key&quot;: &quot;e060a545-b6cc-4c80-bad9-440484538627&quot;,</span></span>
+<span class="line"><span>              &quot;DisplayName&quot;: &quot;name&quot;,</span></span>
+<span class="line"><span>              &quot;ParentKey&quot;: null,</span></span>
+<span class="line"><span>              &quot;Depth&quot;: 1,</span></span>
+<span class="line"><span>              &quot;StructureType&quot;: {</span></span>
+<span class="line"><span>                &quot;Name&quot;: &quot;name&quot;,</span></span>
+<span class="line"><span>                &quot;Key&quot;: &quot;f36068c0-5b87-4b43-b3e0-6ee56d4865c2&quot;,</span></span>
+<span class="line"><span>                &quot;SubjectAssignable&quot;: true,</span></span>
+<span class="line"><span>                &quot;CustomFields&quot;: []</span></span>
+<span class="line"><span>              },</span></span>
+<span class="line"><span>              &quot;CustomFieldValues&quot;: []</span></span>
+<span class="line"><span>        }</span></span>
 <span class="line"><span>	]</span></span>
 <span class="line"><span>}</span></span></code></pre></div><h2 id="get-structural-entity-api" tabindex="-1">Get Structural Entity API <a class="header-anchor" href="#get-structural-entity-api" aria-label="Permalink to &quot;Get Structural Entity API&quot;">​</a></h2><p>Endpoint: <code>api/v1/structuralEntity</code></p><p>Query Parameters:</p><ul><li><p>Filtering: -- <code>ParentKey</code> : <code>String</code> -- <code>Depth</code> : <code>Integer</code> -- <code>SearchTerm</code> : <code>String</code> -- <code>SubjectAssignable</code> : <code>Boolean</code> -- <code>StructureTypeKey</code> : <code>String</code></p></li><li><p>Paging: -- <code>After</code> : <code>String</code> -- <code>Before</code> : <code>String</code> -- <code>First</code> : <code>Integer</code> -- <code>Last</code> : <code>Integer</code> -- <code>OrderBy</code> : <code>String</code> -- <code>OrderDirection</code> : <code>0 for ascending, 1 for descending</code></p></li></ul><p>Example response:</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>{</span></span>
 <span class="line"><span>  &quot;PageInfo&quot;: {</span></span>

@@ -126,6 +126,19 @@ import{_ as a,c as n,a3 as e,o as t}from"./chunks/framework.ohJJpums.js";const q
 <span class="line"><span>      &quot;Cursor&quot;: &quot;e060a545-b6cc-4c80-bad9-440484538627&quot;</span></span>
 <span class="line"><span>    }</span></span>
 <span class="line"><span>  ]</span></span>
+<span class="line"><span>}</span></span></code></pre></div><h2 id="get-structuralentity-by-key" tabindex="-1">Get StructuralEntity By Key <a class="header-anchor" href="#get-structuralentity-by-key" aria-label="Permalink to &quot;Get StructuralEntity By Key&quot;">​</a></h2><p>Endpoint: <code>api/v1/structuralEntity/{structuralEntityKey}</code></p><p>Returns details about a structural entity given their key.</p><p>Where:</p><ul><li><code>structuralEntityKey</code> is the unique key for the structural entity</li></ul><div class="info custom-block"><p class="custom-block-title">Required Permission</p><p><code>View:StructuralEntity</code></p></div><p>Example response:</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span></span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>  &quot;Key&quot;: &quot;e060a545-b6cc-4c80-bad9-440484538627&quot;,</span></span>
+<span class="line"><span>  &quot;DisplayName&quot;: &quot;name&quot;,</span></span>
+<span class="line"><span>  &quot;ParentKey&quot;: null,</span></span>
+<span class="line"><span>  &quot;Depth&quot;: 1,</span></span>
+<span class="line"><span>  &quot;StructureType&quot;: {</span></span>
+<span class="line"><span>    &quot;Name&quot;: &quot;name&quot;,</span></span>
+<span class="line"><span>    &quot;Key&quot;: &quot;f36068c0-5b87-4b43-b3e0-6ee56d4865c2&quot;,</span></span>
+<span class="line"><span>    &quot;SubjectAssignable&quot;: true,</span></span>
+<span class="line"><span>    &quot;CustomFields&quot;: []</span></span>
+<span class="line"><span>  },</span></span>
+<span class="line"><span>  &quot;CustomFieldValues&quot;: []</span></span>
 <span class="line"><span>}</span></span></code></pre></div><h2 id="update-structural-entity" tabindex="-1">Update Structural Entity <a class="header-anchor" href="#update-structural-entity" aria-label="Permalink to &quot;Update Structural Entity&quot;">​</a></h2><p>Endpoint: <code>api/v1/structuralEntity</code></p><p>Body:</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>{</span></span>
 <span class="line"><span>    &quot;Key&quot;: string,</span></span>
 <span class="line"><span>    &quot;DisplayName&quot;: string,</span></span>
@@ -190,4 +203,4 @@ import{_ as a,c as n,a3 as e,o as t}from"./chunks/framework.ohJJpums.js";const q
 <span class="line"><span>      }</span></span>
 <span class="line"><span>    }</span></span>
 <span class="line"><span>  ]</span></span>
-<span class="line"><span>}</span></span></code></pre></div><h2 id="data-set-refresh" tabindex="-1">Data Set Refresh <a class="header-anchor" href="#data-set-refresh" aria-label="Permalink to &quot;Data Set Refresh&quot;">​</a></h2><p>Endpoint: <code>api/v1/dataSet/{dataExtractKey}/refresh</code></p><p>Where:</p><ul><li><code>dataExtractKey</code> is the key of the data extract you want to refresh the data set for</li></ul><p>Returns:</p><ul><li><code>200 OK</code> - If the data set was successfully refreshed</li><li><code>404 Not Found</code> - If the data extract key does not exist</li></ul>`,82)]))}const h=a(p,[["render",o]]);export{q as __pageData,h as default};
+<span class="line"><span>}</span></span></code></pre></div><h2 id="data-set-refresh" tabindex="-1">Data Set Refresh <a class="header-anchor" href="#data-set-refresh" aria-label="Permalink to &quot;Data Set Refresh&quot;">​</a></h2><p>Endpoint: <code>api/v1/dataSet/{dataExtractKey}/refresh</code></p><p>Where:</p><ul><li><code>dataExtractKey</code> is the key of the data extract you want to refresh the data set for</li></ul><p>Returns:</p><ul><li><code>200 OK</code> - If the data set was successfully refreshed</li><li><code>404 Not Found</code> - If the data extract key does not exist</li></ul>`,90)]))}const h=a(p,[["render",o]]);export{q as __pageData,h as default};

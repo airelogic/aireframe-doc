@@ -1,0 +1,10 @@
+import{_ as t,o as s,c as e,ag as n}from"./chunks/framework.uyO_piCG.js";const f=JSON.parse('{"title":"AireFlow Data Extracts","description":"","frontmatter":{},"headers":[],"relativePath":"feature-guide/advanced/data-extracts/aireflow.md","filePath":"feature-guide/advanced/data-extracts/aireflow.md","lastUpdated":1753776829000}'),o={name:"feature-guide/advanced/data-extracts/aireflow.md"};function i(l,a,p,r,d,c){return s(),e("div",null,a[0]||(a[0]=[n(`<h1 id="aireflow-data-extracts" tabindex="-1">AireFlow Data Extracts <a class="header-anchor" href="#aireflow-data-extracts" aria-label="Permalink to &quot;AireFlow Data Extracts&quot;">​</a></h1><p>This page shows the possible options when extracting data from the AireFlow data source.</p><p>To extract tasks from AireFlow, use:</p><div class="language- vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>{</span></span>
+<span class="line"><span>    &quot;workflowDefinitionKey&quot;: &quot;key&quot;,</span></span>
+<span class="line"><span>    &quot;taskKey&quot;: &quot;key&quot;,</span></span>
+<span class="line"><span>    &quot;stateDimensions&quot;: [</span></span>
+<span class="line"><span>        {</span></span>
+<span class="line"><span>            &quot;key&quot;: &quot;state-key&quot;,</span></span>
+<span class="line"><span>            &quot;dataType&quot;: &quot;Integer&quot;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    ]</span></span>
+<span class="line"><span>}</span></span></code></pre></div><p>Where:</p><ul><li>Workflow defintion key (optional, if omittied returns all tasks) is the key of the workflow definiton you want to see tasks for</li><li>Task key (optional, if omittied returns all tasks) is the key of the task you want to see</li><li>State dimensions (optional) allows dimensions to be populated with data from the AireFlow task state.</li></ul>`,6)]))}const h=t(o,[["render",i]]);export{f as __pageData,h as default};
